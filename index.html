@@ -2146,6 +2146,105 @@ Allow: /</pre></div>
       </div>
     </div>
 
+      </div>
+    </div>
+
+    <!-- VDS LAYER-BY-LAYER AUDIT DIAGNOSTICS -->
+    <div style="margin-top: 2.5rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+      <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+        🔍 Layer-by-Layer Diagnostic Breakdown
+      </h3>
+      <p style="color: var(--text2); font-size: 0.85rem; margin-bottom: 1.5rem;">
+        How failures at the base technical level cascade upwards, disrupting discoverability and blocking revenue mapping.
+      </p>
+
+      <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+        <!-- LAYER 1 -->
+        <div style="background: rgba(239, 68, 68, 0.02); border: 1px solid rgba(239, 68, 68, 0.15); border-left: 4px solid var(--critical); border-radius: 12px; padding: 1.25rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
+            <h4 style="color: #fca5a5; font-size: 0.92rem; font-weight: 700; display: flex; align-items: center; gap: 0.4rem;">
+              <span>Layer 1: Baseline Technical Foundation</span>
+            </h4>
+            <span class="badge badge-critical">Failed</span>
+          </div>
+          <div style="font-size: 0.82rem; line-height: 1.6; color: var(--text2);">
+            <p style="margin-bottom: 0.5rem;">
+              <strong>The Failures:</strong> 100% JS-dependent listing grids (0 products in raw HTML); variables resolving to <code>undefined</code> inside <code>&lt;h1&gt;</code> headers on 5,000+ templates; absolute CDN bundle scripts crashing client hydration on non-production hosts (throwing the Next.js Application Error).
+            </p>
+            <p style="margin-bottom: 0.5rem;">
+              <strong>The Upward Connection:</strong> Because the raw HTML shell is empty, spiders traversing taxonomy links discover no child directories. Because H1 headings contain "undefined", search spiders cannot associate page templates with target keywords.
+            </p>
+            <p>
+              <strong>The Fix:</strong> Implement async Server Components for listing grids and galleries to render product cards in initial server HTML. Strip out placeholder states causing raw undefined header renders.
+            </p>
+          </div>
+        </div>
+
+        <!-- LAYER 2 -->
+        <div style="background: rgba(239, 68, 68, 0.02); border: 1px solid rgba(239, 68, 68, 0.15); border-left: 4px solid var(--critical); border-radius: 12px; padding: 1.25rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
+            <h4 style="color: #fca5a5; font-size: 0.92rem; font-weight: 700; display: flex; align-items: center; gap: 0.4rem;">
+              <span>Layer 2: Logical Architecture & Routing</span>
+            </h4>
+            <span class="badge badge-critical">Failed</span>
+          </div>
+          <div style="font-size: 0.82rem; line-height: 1.6; color: var(--text2);">
+            <p style="margin-bottom: 0.5rem;">
+              <strong>The Failures:</strong> Level 1 and Level 2 subcategories sharing a single path slug, separated only by dynamic query filters (e.g. <code>?l2_category_ids=2996</code>); circular redirects, expired auth gates, and broken backlink profile paths on migrated domains.
+            </p>
+            <p style="margin-bottom: 0.5rem;">
+              <strong>The Upward Connection:</strong> Google triggers canonical collapse on query parameter categories, merging L2 page authority into L1. This excludes subcategories from indexing. Domain Authority collapsed to DR 10 due to redirect loops, starving product detail pages of ranking equity.
+            </p>
+            <p>
+              <strong>The Fix:</strong> Restructure URL layout to nested path parameter subfolders (<code>/categories/[l1]/[l2]</code>) and map permanent 301 redirects via CloudFront edge middleware.
+            </p>
+          </div>
+        </div>
+
+        <!-- LAYER 3 -->
+        <div style="background: rgba(249, 115, 22, 0.02); border: 1px solid rgba(249, 115, 22, 0.15); border-left: 4px solid var(--high); border-radius: 12px; padding: 1.25rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
+            <h4 style="color: #fed7aa; font-size: 0.92rem; font-weight: 700; display: flex; align-items: center; gap: 0.4rem;">
+              <span>Layer 3: Cognitive Search & AI Retrieval (AEO / GEO)</span>
+            </h4>
+            <span class="badge badge-high">Gaps Present</span>
+          </div>
+          <div style="font-size: 0.82rem; line-height: 1.6; color: var(--text2);">
+            <p style="margin-bottom: 0.5rem;">
+              <strong>The Failures:</strong> Missing standard <code>BreadcrumbList</code> schemas on product and category templates; incomplete <code>Product</code> JSON-LD schemas (lacking reviews, shipping, returns, and seller fields); live retrieval agents hitting blocks.
+            </p>
+            <p style="margin-bottom: 0.5rem;">
+              <strong>The Upward Connection:</strong> Search engines cannot display star ratings or shipping badges (reducing SERP click-through rate). AI search engines (ChatGPT, Perplexity) crawl raw HTML and find empty boxes, preventing citation inside AI Overviews.
+            </p>
+            <p>
+              <strong>The Fix:</strong> Inject dynamically generated breadcrumb list schemas and complete product JSON-LD configurations in Server Components. Set up robots.txt rules for live AI retrieval crawlers.
+            </p>
+          </div>
+        </div>
+
+        <!-- LAYER 4 -->
+        <div style="background: rgba(59, 130, 246, 0.02); border: 1px solid rgba(59, 130, 246, 0.15); border-left: 4px solid var(--accent); border-radius: 12px; padding: 1.25rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
+            <h4 style="color: #93c5fd; font-size: 0.92rem; font-weight: 700; display: flex; align-items: center; gap: 0.4rem;">
+              <span>Layer 4: Compounding Revenue Layer</span>
+            </h4>
+            <span class="badge badge-seo" style="background: rgba(59, 130, 246, 0.1); color: #93c5fd;">Stagnant</span>
+          </div>
+          <div style="font-size: 0.82rem; line-height: 1.6; color: var(--text2);">
+            <p style="margin-bottom: 0.5rem;">
+              <strong>The Failures:</strong> Completely disconnected customer conversion funnel. High dependency on paid search keyword bidding; lack of self-reinforcing link equity loop templates.
+            </p>
+            <p style="margin-bottom: 0.5rem;">
+              <strong>The Connection:</strong> Without organic search/AEO caching compounding traffic, BuildingWorld is stuck paying search margins for B2B buyer leads.
+            </p>
+            <p>
+              <strong>The Fix:</strong> Align inter-linking networks to distribute authority dynamically from transactional hubs to category and detail page endpoints.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
 
