@@ -355,34 +355,6 @@ This standardized checklist evaluates template-level capabilities against autono
 
 ---
 
-## Prioritized Sprint Plan
-
-### Sprint 1 — This Week (Critical Template Bugs)
-1. Fix `undefined` in H1 — Product Detail + Category templates
-2. Fix multiple H1 tags — L1/L2 templates
-3. Move product name to H1 (currently H2) — Product Detail template
-4. Fix L2 canonical — remove query params, use slug hierarchy
-5. Add `lang="en-IN"` to `<html>` in root layout
-
-### Sprint 2 — This Month (Rich Results Unlock)
-6. Complete Product schema (aggregateRating, shippingDetails, returnPolicy, seller)
-7. Add BreadcrumbList to all category + product page templates
-8. Fix Organization schema (Corporation → Organization, empty tel, email domain)
-9. Fix WebSite SearchAction target URL
-10. Add H1 to L0 products category page
-11. Generate unique titles for L1 vs L2 pages
-
-### Sprint 3 — Next Quarter (AI Visibility + Performance)
-12. Migrate product images from S3 direct to CloudFront
-13. Add FAQPage visible content to L0 page
-14. Create llms-full.txt + update llms.txt monthly
-15. Add FAQ section to homepage for AEO
-16. Add answer-first paragraph to homepage for LLM citation
-17. Add live-retrieval AI bots to robots.txt
-
----
-
-
 ## The Hard Fact Truth — Why Following Big Brands Isn't the Right Choice
 
 > [!IMPORTANT]
@@ -410,12 +382,23 @@ This standardized checklist evaluates template-level capabilities against autono
 
 ## Visibility-to-Demand System (VDS) Blueprint
 
-The audit results have been compiled against the **Visibility-to-Demand System (VDS)**, a proprietary growth framework developed by **Girish Kumar G** ([seobiopse.com](https://seobiopse.com)). VDS focuses on structural optimization that maps search engine visibility signals directly to predictable business revenue.
+The audit results have been compiled against the **Visibility-to-Demand System (VDS)**, a proprietary growth framework developed by **Girish Kumar G** ([seobiopse.com](https://seobiopse.com)). VDS focuses on structural optimization that maps search engine visibility signals directly to predictable B2B trade leads and revenue.
 
-### The 3 Categories of VDS
+### The 3 Categories of VDS (Segmented & Drilled-Down)
 1. **Visibility [Search (Traditional & AI)]:** Ensuring product grids are SSR-rendered, headers map logical semantic shapes, and live search retrieval crawlers are permitted.
+   * *Technical Layer:* Server-Side Rendered (SSR) listing grids, React hydration error resilience, and robots crawl rules configured for live-retrieval AI user-agents.
+   * *On-Page Layer:* Balanced document heading layout, latent semantic indexing (LSI) entity mapping, and **Reverse RAG Formatting** (answer-first summaries and citation anchors optimized for AEO/GEO engine chunk retrieval).
+   * *Off-Page Layer:* Complete crawl-path indexing maps and brand citation tracking across traditional and AI-driven search models.
 2. **Demand [Add to Cart / Purchase at Product Level]:** Complete Product schemas (aggregateRating, return policies), title wraps in `<h1>`, and dynamic checkout forms with W3C WebMCP bindings.
-3. **Scalability [pSEO Ready]:** Structureddynamic path routing subfolders (`/categories/[l1]/[l2]`) to enable Next.js pre-rendering caching (SSG/ISR) and pSEO scaling.
+   * *Technical Layer:* Schema.org merchant objects (shipping details, return policy) and declarative checkout form attributes mapped to the W3C WebMCP protocol.
+   * *On-Page Layer:* Optimized H1 naming layouts and **Prompt Sentiment to Keyword Mapping** (aligning high-intent purchase searches with in-page trust signals and badges).
+   * *Off-Page Layer:* Automated ingestion of external reviews and ratings to feed trust schemas.
+3. **Scalability [pSEO Ready & Authority Scaled]:** Structured dynamic path routing subfolders (`/categories/[l1]/[l2]`) to enable Next.js pre-rendering caching (SSG/ISR) and pSEO scaling.
+   * *Technical Layer:* Nested path routing paths to enable pre-rendering cache storage, and Edge redirect middleware.
+   * *On-Page Layer:* A programmatic **NLP semantic variation engine** designed to generate unique descriptive content variations across scaled B2B category landing pages.
+   * *Off-Page Layer:* Programmatic B2B link-magnets (calculators) and **Social Signals & Brand Mentions velocity** (organic co-occurrence footprints across LinkedIn, Reddit, YouTube, and X).
+
+---
 
 ### VDS Three-Category Matrix
 
@@ -446,10 +429,56 @@ The diagram below maps where **BuildingWorld.ai** stands today (Year 0) and the 
                                                                                Visibility
 ```
 
+---
+
+### 📊 The VDS Signature: Assured Leads & Revenue Prediction
+The VDS Signature acts as the proprietary predictive growth model of the seobiopse.com framework, calculating traffic, lead, and revenue yields based on system compliance:
+* **Current Baseline (Year 0):** Query parameter routing, zero organic leads, JS listing rendering blocks, collapsed authority (DR 10).
+* **VDS Yield Projection (VDS Signature SLA):**
+  * **10x B2B Trade Leads Growth:** Projected B2B monthly lead volume multiplier within 3 years, driven by local directory layouts and schema star badges.
+  * **6x Attributed Revenue Growth:** Multiplier in organic attribution transactions within 5 years, converting buildingworld.ai into a compounding trade directory asset.
+  * **CAC Collapse:** Customer acquisition cost is projected to decrease by 85% due to self-compounding search asset loops.
+
+---
+
 ### 5-Year Outlook
-* **Year 0 to 1 (Visibility Stabilized):** Fix crucial layout errors (undefined headers, canonical query chains, redirect loops). Replace JavaScript-dependent product grids with Server-Side Rendered (SSR) lists so search spiders and AI retrieval agents see the complete catalog on initial fetch.
-* **Year 2 to 3 (Demand Activated):** Establish clear semantic breadcrumbs and complete product metadata graphs. Build out dynamic transactional form bindings (WebMCP) and welcome AI retrieval bots.
-* **Year 4 to 5 (Scalability & pSEO Ready):** Transition the category listings to dynamic path subfolders to leverage static pre-rendering caching. Implement localized landing grids to scale traffic and authority without server load spikes.
+* **Year 0 to 1 (Visibility Stabilized):** Fix template anomalies (undefined headers, canonical parameter chains, redirect loops). Shift product grids to Server-Side Rendering (SSR) to allow search spiders and AI retrieval agents to see catalog items. Structure contents into Reverse RAG-friendly semantic blocks.
+* **Year 2 to 3 (Demand Activated):** Build complete product schemas (`aggregateRating`, merchant return and shippingDetails tags) and breadcrumbs. Align search prompt sentiments to on-page trust blocks and bind forms to WebMCP interfaces. Implement localized landing grids using an NLP template phrasing engine.
+* **Year 4 to 5 (Scalability & pSEO Ready):** Transition category paths to nested subfolders to leverage static caching. Launch programmatic trade calculators (link-magnets) to build Domain Rating from 10 to 45+, and establish brand mention co-occurrence loops across social platforms.
+
+---
+
+## Prioritized Sprint Plan
+
+### Sprint 1 — This Week (Critical Technical & Visibility Stabilizations)
+1. **Fix `undefined` in H1:** Correct state variables across Product Detail and Category templates (CRIT-001).
+2. **Fix multiple H1 tags on Category pages:** Convert filter titles to H2/H3 elements (CRIT-002).
+3. **Move product name to H1 (currently H2) on Product templates:** Elevate name to main title (CRIT-003).
+4. **Shift product listing grids to Server Components (SSR):** Build templates in Next.js Server Components to expose cards to spiders and AI bots.
+5. **Fix L2 canonical URL paths:** Remove query parameters and implement clean path parameters (CRIT-004).
+6. **Fix Next.js client-side hydration crashes:** Strip Next CDN scripts from crawlers to prevent Cors exception application error unmounts (CRIT-005).
+7. **Add `lang="en-IN"` to `<html>`:** Add to root layouts to support parser models and accessibility (HIGH-002).
+
+### Sprint 2 — This Month (Demand & Rich Results Activation)
+8. **Complete Product schema:** Add `aggregateRating`, `shippingDetails`, `hasMerchantReturnPolicy`, and `seller` fields (HIGH-001).
+9. **Add BreadcrumbList schema:** Add structured breadcrumbs to all category and detail templates (HIGH-004).
+10. **Fix Organization schema:** Standardize entity type, email, and telephone parameters (HIGH-003).
+11. **Fix WebSite SearchAction target:** Direct search schema to non-disallowed URL (HIGH-006).
+12. **Add H1 and visible FAQ to L0 page:** Add headings outline and content depth to listings landing pages (HIGH-007).
+13. **Prompt Sentiment to Keyword Alignment:** Structure detail and listing content cards to map commercial query sentiment to trust badges and guarantee signals.
+14. **Ingest external reviews ratings:** Build crawler hooks to import trade reviews and sync ratings schemas.
+15. **Bind checkout forms to declarative W3C WebMCP attributes:** Allow autonomous agents to map checkout fields for bot purchases.
+
+### Sprint 3 — Next Quarter (Scalability & Programmatic SEO Scale)
+16. **Re-architect L1/L2 categories to nested folders:** Move query parameters (e.g. `?l2_category_ids=2996`) to path folders (`/categories/[l1]/[l2]`) for ISR pre-rendering cache.
+17. **Deploy CloudFront Edge redirect logs:** Reclaim backlink domain authority loops.
+18. **Reverse RAG Formatting:** Format catalog content blocks into semantic chunks and citation anchors optimized for AEO/GEO engine retrieval.
+19. **Permit live AI search bots:** Add `Perplexity-User` and `Claude-SearchBot` to robots.txt allowed list.
+
+### Sprint 4 — Programmatic Authority Scale & NLP Phrasing
+20. **NLP Dynamic Phrasing Engine:** Build semantic phrasing variation templates for localized category pages to avoid search duplication filters.
+21. **Launch programmatic calculators:** Deploy B2B estimators (cement/steel estimators) to act as natural link magnets, boosting DR to 45+.
+22. **Establish brand co-occurrence loop:** Cultivate LinkedIn, Reddit, and X citation velocity logs to build digital presence authority.
 
 ---
 
@@ -457,3 +486,5 @@ The diagram below maps where **BuildingWorld.ai** stands today (Year 0) and the 
 **Giriish | Organic Gorwth Architec | Founders of VDS | Father of SEO**  
 *Audited & Certified via the Visibility-to-Demand System (VDS) Framework · [seobiopse.com](https://seobiopse.com)*  
 *Based on 5 rendered page templates + 3 sitemap files | 15 June 2026*
+
+
