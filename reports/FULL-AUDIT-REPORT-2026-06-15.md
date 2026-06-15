@@ -412,13 +412,12 @@ This standardized checklist evaluates template-level capabilities against autono
 
 The audit results have been compiled against the **Visibility-to-Demand System (VDS)**, a proprietary growth framework developed by **Girish Kumar G** ([seobiopse.com](https://seobiopse.com)). VDS focuses on structural optimization that maps search engine visibility signals directly to predictable business revenue.
 
-### The 4 Pillars of VDS
-1. **Signal Mapping:** Aligning search intent with clear buyer journey stages (transaction vs. discovery).
-2. **Architecture Design:** Structuring semantic crawl networks with clean path URLs (`/categories/[l1]/[l2]`) instead of volatile dynamic parameters.
-3. **Content Delivery:** Optimizing document nodes for simultaneous traditional crawl indexation and Generative AI search citations (GEO/AEO).
-4. **Compounding Layer:** Engineering update-resistant entity schemas (Breadcrumb, LocalBusiness, Product) and solid internal linking graphs.
+### The 3 Categories of VDS
+1. **Visibility [Search (Traditional & AI)]:** Ensuring product grids are SSR-rendered, headers map logical semantic shapes, and live search retrieval crawlers are permitted.
+2. **Demand [Add to Cart / Purchase at Product Level]:** Complete Product schemas (aggregateRating, return policies), title wraps in `<h1>`, and dynamic checkout forms with W3C WebMCP bindings.
+3. **Scalability [pSEO Ready]:** Structureddynamic path routing subfolders (`/categories/[l1]/[l2]`) to enable Next.js pre-rendering caching (SSG/ISR) and pSEO scaling.
 
-### VDS Four-Segment Matrix
+### VDS Three-Category Matrix
 
 The diagram below maps where **BuildingWorld.ai** stands today (Year 0) and the projected path over the next 5 years:
 
@@ -431,8 +430,9 @@ The diagram below maps where **BuildingWorld.ai** stands today (Year 0) and the 
                     │   - Isolated listing indexes        - Path-based SEO taxonomy routing
                     │   - Crawl/render blocks             - Entity graph schemas (AEO/GEO)
                     │   - Low search visibility           - 🎯 Target: Year 5 (Green)
-                    │
-     Low Visibility ┼─────────────────────────────────────┼ High Visibility
+                    │                                     │ (Compounding organic loop)
+                    │                                     │
+     Low Visibility ┼─────────────────────────────────────┼─────────────────────────► High Visibility
                     │                                     │
                     │   [Bottom-Left]                     [Bottom-Right]
                     │   TACTICAL CHASER                   TRAFFIC COLLECTOR
@@ -440,15 +440,16 @@ The diagram below maps where **BuildingWorld.ai** stands today (Year 0) and the 
                     │   - Query param categories          - Weak buyer journey alignment
                     │   - Broken undefined headers        - Disconnected from conversions
                     │   - 🔴 Current: Year 0 (Now)        - Low customer compounding
+                    │     (JS-dependent SPAs)
                     │
                     └────────────────────────────────────────────────────────► Crawl & AI Retrieval
                                                                                Visibility
 ```
 
 ### 5-Year Outlook
-* **Year 0 to 1 (The Core Fix):** Fix crucial layout errors (undefined headers, canonical query chains, redirect loops). Replace JavaScript-dependent product grids with Server-Side Rendered (SSR) lists so search spiders and AI retrieval agents see the complete catalog on initial fetch.
-* **Year 2 to 3 (Authority Pillar Growth):** Establish clear semantic breadcrumbs and product metadata graphs. Build out cluster content maps to secure first-pass rank signals inside AI Overviews (GEO/AEO).
-* **Year 4 to 5 (Compounding Asset Loop):** Transition the marketplace to a fully self-reinforcing authority asset. The organic engine compounds link equity fluidly across templates, making it resilient to algorithmic core updates and lowering customer acquisition costs (CAC) to near zero.
+* **Year 0 to 1 (Visibility Stabilized):** Fix crucial layout errors (undefined headers, canonical query chains, redirect loops). Replace JavaScript-dependent product grids with Server-Side Rendered (SSR) lists so search spiders and AI retrieval agents see the complete catalog on initial fetch.
+* **Year 2 to 3 (Demand Activated):** Establish clear semantic breadcrumbs and complete product metadata graphs. Build out dynamic transactional form bindings (WebMCP) and welcome AI retrieval bots.
+* **Year 4 to 5 (Scalability & pSEO Ready):** Transition the category listings to dynamic path subfolders to leverage static pre-rendering caching. Implement localized landing grids to scale traffic and authority without server load spikes.
 
 ---
 
