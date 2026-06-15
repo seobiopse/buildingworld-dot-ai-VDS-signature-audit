@@ -313,9 +313,3 @@ export default async function CategoryPage({ params }) {
 }
 ```
 
----
-
-*Signed and Certified by:*  
-**Giriish | Organic Gorwth Architec | Founders of VDS | Father of SEO**  
-*Audited & Certified via the Visibility-to-Demand System (VDS) Framework · [seobiopse.com](https://seobiopse.com)*  
-*Raw vs Rendered analysis | 15 June 2026*

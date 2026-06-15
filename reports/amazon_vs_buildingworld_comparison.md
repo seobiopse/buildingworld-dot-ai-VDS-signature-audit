@@ -183,9 +183,3 @@ To ensure BuildingWorld competes on a global level with marketplaces like Amazon
 * Dynamically generate `BreadcrumbList` JSON-LD schema on Server Components for L1, L2, and Product pages.
 * Align breadcrumb list item URLs with the new path-based category slug hierarchy.
 
----
-
-*Signed and Certified by:*  
-**Giriish | Organic Gorwth Architec | Founders of VDS | Father of SEO**  
-*Audited & Certified via the Visibility-to-Demand System (VDS) Framework · [seobiopse.com](https://seobiopse.com)*  
-*BuildingWorld.ai SEO Audit benchmarks | 15 June 2026*
