@@ -27,7 +27,7 @@
 - [x] Integrate VDS (Visibility-to-Demand System) Framework:
   - [x] Add VDS Blueprint section and style rules inside `index.html`.
   - [x] Create a premium interactive 2x2 matrix grid with SVG path connection, animating Year 0 and Year 5 positions.
-  - [x] Author the VDS Brief Diagnostic Report (`reports/vds_visibility_to_demand_report.md`).
+  - [x] Author the VDS Brief Diagnostic Report (`reports/vds-audit.md`).
   - [x] Update signatures across all documents to reference seobiopse.com certification.
   - [x] Update file outline map and links in `README.md`.
   - [x] Update `walkthrough.md` to reflect VDS implementation.

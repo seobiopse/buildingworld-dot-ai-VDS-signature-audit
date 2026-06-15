@@ -85,8 +85,8 @@ To certify the audit deliverables under the proprietary organic growth framework
      - `buildingworld.ai (Year 5 - Target)` in the top-right quadrant (**VDS Compounder / Authority Asset**).
    - Plotted a responsive SVG dashed curved path with an arrowhead vector connecting the current state to the 5-year destination.
 2. **VDS Brief Report Deliverable:**
-   - **[NEW] [vds_visibility_to_demand_report.md](file:///e:/Personal%20Project/SEO%20Biopse/Building%20World%20AI/reports/vds_visibility_to_demand_report.md):** Created a dedicated, executive-ready diagnostic report mapping BuildingWorld's current status and the 5-year growth trajectory across the 4 core VDS elements (Signal Mapping, Architecture Design, Content Delivery, and Compounding Layer).
+   - **[NEW] [vds-audit.md](file:///e:/Personal%20Project/SEO%20Biopse/Building%20World%20AI/reports/vds-audit.md):** Created a dedicated, executive-ready diagnostic report mapping BuildingWorld's current status and the 5-year growth trajectory across the 4 core VDS elements (Signal Mapping, Architecture Design, Content Delivery, and Compounding Layer).
 3. **Audit Certification Signatures:**
    - Updated all report signatures to include: `Audited & Certified via the Visibility-to-Demand System (VDS) Framework · seobiopse.com` across `index.html`, `FULL-AUDIT-REPORT-2026-06-15.md`, `RAW-vs-RENDERED-AUDIT-2026-06-15.md`, and `amazon_vs_buildingworld_comparison.md`.
-   - Updated `README.md` to index the new VDS report file.
+   - Updated `README.md` to index the new VDS report file `vds-audit.md`.
 

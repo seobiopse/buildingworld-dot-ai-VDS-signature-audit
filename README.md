@@ -15,7 +15,7 @@ The audit is structured into both human-readable interactive formats and machine
 │   ├── FULL-AUDIT-REPORT-2026-06-15.md        # Summary of findings & sprint plans
 │   ├── RAW-vs-RENDERED-AUDIT-2026-06-15.md    # HTML source vs post-JS rendering comparison
 │   ├── amazon_vs_buildingworld_comparison.md  # Amazon routing benchmark
-│   └── vds_visibility_to_demand_report.md     # VDS audit report & 5-year outlook
+│   └── vds-audit.md                           # VDS audit report & 5-year outlook
 ├── Amazon/               # 📦 Extracted Amazon source code files used as benchmark
 ├── raw-source-data/      # 📁 Sitemaps, Raw source logs, and JSON audit files
 └── README.md             # 📖 Deliverables overview map
@@ -25,7 +25,7 @@ Additionally, the following detailed reports are stored in the repository:
 * **[amazon_vs_buildingworld_comparison.md](./reports/amazon_vs_buildingworld_comparison.md):** Benchmark comparison challenging the client's comparison of their L2 URL query parameter structure against Amazon's path-based architecture.
 * **[FULL-AUDIT-REPORT-2026-06-15.md](./reports/FULL-AUDIT-REPORT-2026-06-15.md):** Template-level summary detailing the 31 specific findings, severity scores, and sprint plans.
 * **[RAW-vs-RENDERED-AUDIT-2026-06-15.md](./reports/RAW-vs-RENDERED-AUDIT-2026-06-15.md):** Analysis of client-side JS dependencies showing the gap between raw source HTML and fully-rendered outputs for SEO and AI models.
-* **[vds_visibility_to_demand_report.md](./reports/vds_visibility_to_demand_report.md):** Executive report covering the 4 pillars of the Visibility-to-Demand System (VDS) and the 5-year strategy matrix.
+* **[vds-audit.md](./reports/vds-audit.md):** Executive report covering the 4 pillars of the Visibility-to-Demand System (VDS) and the 5-year strategy matrix.
 
 ---
 
