@@ -1,0 +1,1968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>BuildingWorld.ai — Full SEO / AEO / GEO Audit · June 2026</title>
+<meta name="description" content="Full technical SEO, AEO, and GEO audit report for BuildingWorld.ai — June 2026"/>
+<meta name="robots" content="noindex"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --bg:#0b0f1a;--surface:#111827;--surface2:#1a2235;--surface3:#1f2d45;
+  --border:#1e2d45;--border2:#253550;
+  --accent:#3b82f6;--accent2:#6366f1;--accent-glow:rgba(59,130,246,.15);
+  --critical:#ef4444;--high:#f97316;--medium:#eab308;--low:#22c55e;--info:#64748b;
+  --text:#f1f5f9;--text2:#94a3b8;--text3:#64748b;
+  --green:#22c55e;--amber:#f59e0b;--red:#ef4444;
+  --gradient:linear-gradient(135deg,#1e40af,#6d28d9);
+  --font:'Inter',sans-serif;--mono:'JetBrains Mono',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--font);font-size:15px;line-height:1.7;min-height:100vh}
+
+/* ── TOPBAR ── */
+.topbar{position:sticky;top:0;z-index:100;background:rgba(11,15,26,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+.topbar-brand{display:flex;align-items:center;gap:.75rem;font-weight:600;font-size:.9rem}
+.topbar-dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.topbar-meta{color:var(--text3);font-size:.8rem}
+.progress-bar-wrap{height:3px;background:var(--surface2);border-radius:99px;width:160px;overflow:hidden}
+.progress-bar-fill{height:100%;background:var(--gradient);border-radius:99px;transition:width .4s}
+.progress-label{font-size:.75rem;color:var(--text3);margin-top:2px}
+
+/* ── HERO ── */
+.hero{padding:5rem 2rem 3rem;max-width:1100px;margin:0 auto;text-align:center}
+.hero-eyebrow{font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:1rem}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:700;line-height:1.15;background:linear-gradient(135deg,#f1f5f9 30%,#94a3b8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:1rem}
+.hero-sub{color:var(--text2);font-size:1rem;max-width:600px;margin:0 auto 2.5rem}
+.hero-meta{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center}
+.meta-chip{background:var(--surface2);border:1px solid var(--border2);border-radius:8px;padding:.4rem 1rem;font-size:.8rem;color:var(--text2)}
+.meta-chip strong{color:var(--text);margin-right:.3rem}
+
+/* ── ALERT SUMMARY ── */
+.alert-band{background:linear-gradient(90deg,rgba(239,68,68,.12),rgba(249,115,22,.08));border:1px solid rgba(239,68,68,.3);border-radius:12px;padding:1.2rem 1.5rem;margin:0 auto 3rem;max-width:1100px;display:flex;align-items:flex-start;gap:1rem}
+.alert-band-icon{font-size:1.5rem;flex-shrink:0;margin-top:2px}
+.alert-band h3{color:var(--red);font-size:.95rem;margin-bottom:.3rem}
+.alert-band p{color:var(--text2);font-size:.85rem}
+
+/* ── CONTAINER ── */
+.container{max-width:1100px;margin:0 auto;padding:0 2rem 4rem}
+
+/* ── SECTION HEADERS ── */
+.section-label{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:.5rem}
+.section-title{font-size:1.4rem;font-weight:700;color:var(--text);margin-bottom:.5rem}
+.section-sub{color:var(--text2);font-size:.9rem;margin-bottom:2rem}
+.section-divider{border:none;border-top:1px solid var(--border);margin:3.5rem 0}
+
+/* ── SCORECARD GRID ── */
+.scorecard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-bottom:2rem}
+.score-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.5rem;position:relative;overflow:hidden;transition:border-color .2s,transform .2s}
+.score-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.score-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--accent-glow),transparent);opacity:0;transition:opacity .2s;pointer-events:none}
+.score-card:hover::before{opacity:1}
+.score-card-label{font-size:.75rem;color:var(--text3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.4rem}
+.score-card-value{font-size:2rem;font-weight:700;line-height:1}
+.score-card-hint{font-size:.78rem;color:var(--text3);margin-top:.4rem}
+.score-weak{color:var(--amber)}
+.score-fail{color:var(--red)}
+.score-pass{color:var(--green)}
+.score-warn{color:var(--high)}
+
+/* ── SEVERITY BADGES ── */
+.badge{display:inline-flex;align-items:center;gap:.3rem;border-radius:6px;padding:.2rem .6rem;font-size:.72rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+.badge-critical{background:rgba(239,68,68,.15);color:#fca5a5;border:1px solid rgba(239,68,68,.3)}
+.badge-high{background:rgba(249,115,22,.15);color:#fed7aa;border:1px solid rgba(249,115,22,.3)}
+.badge-medium{background:rgba(234,179,8,.12);color:#fef08a;border:1px solid rgba(234,179,8,.25)}
+.badge-low{background:rgba(34,197,94,.1);color:#86efac;border:1px solid rgba(34,197,94,.2)}
+.badge-info{background:rgba(100,116,139,.15);color:#94a3b8;border:1px solid rgba(100,116,139,.25)}
+.badge-pass{background:rgba(34,197,94,.1);color:#86efac;border:1px solid rgba(34,197,94,.2)}
+.badge-seo{background:rgba(59,130,246,.12);color:#93c5fd;border:1px solid rgba(59,130,246,.25)}
+.badge-aeo{background:rgba(168,85,247,.12);color:#d8b4fe;border:1px solid rgba(168,85,247,.25)}
+.badge-geo{background:rgba(20,184,166,.12);color:#5eead4;border:1px solid rgba(20,184,166,.25)}
+
+/* ── RAW vs RENDERED TABLE ── */
+.diff-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.85rem}
+.diff-table th{background:var(--surface2);color:var(--text2);text-align:left;padding:.75rem 1rem;font-weight:600;font-size:.75rem;letter-spacing:.06em;text-transform:uppercase}
+.diff-table td{padding:.75rem 1rem;border-bottom:1px solid var(--border);vertical-align:middle}
+.diff-table tr:hover td{background:rgba(255,255,255,.02)}
+.diff-ok{color:var(--green)}
+.diff-warn{color:var(--amber)}
+.diff-fail{color:var(--red)}
+.diff-critical{color:#fca5a5;font-weight:700}
+.mono{font-family:var(--mono);font-size:.8rem}
+
+/* ── FINDINGS ── */
+.finding{background:var(--surface);border:1px solid var(--border);border-radius:14px;margin-bottom:1.25rem;overflow:hidden;transition:border-color .3s cubic-bezier(.4,0,.2,1), transform .3s cubic-bezier(.4,0,.2,1), box-shadow .3s cubic-bezier(.4,0,.2,1);cursor:pointer}
+.finding:hover{border-color:var(--accent);transform:scale(1.008);box-shadow:0 12px 24px -6px rgba(59,130,246,.15),0 8px 16px -8px rgba(59,130,246,.1)}
+.finding.addressed{opacity:.5}
+.finding.addressed .finding-header{background:rgba(34,197,94,.05)}
+.finding-header{padding:1.25rem 1.5rem;display:flex;align-items:center;gap:1rem;user-select:none}
+.finding-header:hover{background:rgba(255,255,255,.02)}
+.finding-header-left{flex:1;min-width:0}
+.finding-id{font-family:var(--mono);font-size:.75rem;color:var(--text3);margin-bottom:.3rem}
+.finding-title{font-size:1rem;font-weight:600;color:var(--text);line-height:1.35}
+.finding-pillars{display:flex;gap:.3rem;margin-top:.5rem;flex-wrap:wrap}
+.finding-check{display:flex;align-items:center;gap:.5rem;flex-shrink:0;cursor:pointer}
+.finding-check input[type=checkbox]{width:18px;height:18px;accent-color:var(--accent);cursor:pointer}
+.finding-check-label{font-size:.75rem;color:var(--text3);white-space:nowrap}
+.finding-body{padding:0 1.5rem 1.5rem;border-top:1px solid var(--border)}
+.finding-body.collapsed{display:none}
+.finding-intro{color:var(--text2);font-size:.9rem;margin:1rem 0 1.25rem;padding:.75rem 1rem;background:var(--surface2);border-radius:8px;border-left:3px solid var(--accent)}
+
+/* ── SCREENSHOT GALLERY & MEDIA ── */
+.finding-screenshot {max-width:100%;border-radius:10px;border:1px solid var(--border);margin-top:1.25rem;box-shadow:0 6px 16px rgba(0,0,0,.3);display:block}
+.screenshot-gallery {display:flex;flex-wrap:wrap;gap:1.25rem;margin-top:1.25rem}
+.screenshot-gallery > div {flex:1 1 300px;min-width:280px;display:flex;flex-direction:column}
+.screenshot-gallery img {max-width:100%;height:auto;border-radius:10px;border:1px solid var(--border);box-shadow:0 6px 16px rgba(0,0,0,.3)}
+.screenshot-caption {font-size:.78rem;color:var(--text3);margin-top:.4rem;line-height:1.4;text-align:center}
+
+/* ── DROPDOWN ARROW ── */
+.dropdown-arrow {font-size:.75rem;color:var(--text3);transition:transform .3s ease, color .3s ease;margin-left:1rem;flex-shrink:0}
+.finding.expanded .dropdown-arrow {transform:rotate(180deg);color:var(--accent)}
+
+
+/* ── BEFORE/AFTER GRID ── */
+.ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.25rem 0}
+@media(max-width:700px){.ba-grid{grid-template-columns:1fr}}
+.ba-panel{border-radius:10px;overflow:hidden}
+.ba-panel-header{padding:.6rem 1rem;font-size:.75rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;display:flex;align-items:center;gap:.5rem}
+.ba-before .ba-panel-header{background:rgba(239,68,68,.15);color:#fca5a5;border:1px solid rgba(239,68,68,.25)}
+.ba-after .ba-panel-header{background:rgba(34,197,94,.12);color:#86efac;border:1px solid rgba(34,197,94,.2)}
+.ba-panel-body{background:#0d1117;padding:1rem;font-size:.82rem;min-height:80px}
+.ba-before .ba-panel-body{border:1px solid rgba(239,68,68,.2);border-top:none}
+.ba-after .ba-panel-body{border:1px solid rgba(34,197,94,.15);border-top:none}
+
+/* ── CODE BLOCKS ── */
+pre{background:#0d1117;border-radius:8px;padding:1rem 1.25rem;font-family:var(--mono);font-size:.8rem;line-height:1.6;overflow-x:auto;color:#e2e8f0;tab-size:2}
+pre.broken{border:1px solid rgba(239,68,68,.3)}
+pre.fixed{border:1px solid rgba(34,197,94,.25)}
+code{font-family:var(--mono);font-size:.82em;background:rgba(255,255,255,.06);padding:.1em .35em;border-radius:4px}
+
+/* ── VERIFY BOX ── */
+.verify-box{background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.2);border-radius:8px;padding:.75rem 1rem;font-size:.82rem;margin-top:1rem}
+.verify-box-label{font-size:.7rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.3rem}
+.verify-box code{background:rgba(59,130,246,.12);color:#93c5fd}
+
+/* ── PROGRESS RING CHART ── */
+.score-ring-wrap{display:flex;align-items:center;gap:2rem;padding:1.5rem;background:var(--surface);border:1px solid var(--border);border-radius:14px;margin-bottom:1rem;flex-wrap:wrap}
+.score-ring-svg{flex-shrink:0}
+.score-ring-info{flex:1;min-width:180px}
+.score-ring-title{font-size:1.1rem;font-weight:700;margin-bottom:.25rem}
+.score-ring-grade{font-size:.85rem;color:var(--text2);margin-bottom:1rem}
+.score-bars{display:flex;flex-direction:column;gap:.5rem}
+.score-bar-row{display:flex;align-items:center;gap:.75rem;font-size:.8rem}
+.score-bar-label{color:var(--text2);width:160px;flex-shrink:0}
+.score-bar-track{flex:1;height:6px;background:var(--surface3);border-radius:99px;overflow:hidden}
+.score-bar-fill{height:100%;border-radius:99px;transition:width 1s}
+.score-bar-val{color:var(--text3);width:40px;text-align:right;font-family:var(--mono);font-size:.75rem}
+
+/* ── SPRINT TABLE ── */
+.sprint-section{margin-bottom:2rem}
+.sprint-header{display:flex;align-items:center;gap:.75rem;margin-bottom:1rem}
+.sprint-badge{background:var(--surface2);border:1px solid var(--border2);border-radius:8px;padding:.3rem .8rem;font-size:.8rem;font-weight:600}
+.sprint-item{display:flex;align-items:flex-start;gap:.75rem;padding:.6rem .75rem;border-radius:8px;margin-bottom:.35rem;background:var(--surface);border:1px solid var(--border);font-size:.88rem}
+.sprint-item-num{font-family:var(--mono);font-size:.75rem;color:var(--text3);width:28px;flex-shrink:0;padding-top:2px}
+.sprint-item-text{flex:1}
+.sprint-item-tag{font-size:.7rem;padding:.15rem .45rem;border-radius:4px;font-weight:600;flex-shrink:0}
+
+/* ── INFO TABLE ── */
+.info-table{width:100%;border-collapse:collapse;font-size:.85rem;margin:1rem 0}
+.info-table th{text-align:left;padding:.6rem 1rem;background:var(--surface2);color:var(--text2);font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em}
+.info-table td{padding:.6rem 1rem;border-bottom:1px solid var(--border);vertical-align:middle}
+.info-table tr:last-child td{border-bottom:none}
+
+/* ── POSITIVE BOX ── */
+.positive-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:.6rem;margin:1rem 0}
+.positive-item{background:rgba(34,197,94,.06);border:1px solid rgba(34,197,94,.15);border-radius:8px;padding:.6rem .9rem;font-size:.83rem;display:flex;align-items:center;gap:.5rem}
+.positive-item-icon{font-size:1rem}
+
+/* ── GROUP DIVIDER ── */
+.group-divider{margin:3rem 0 2rem;text-align:center;position:relative}
+.group-divider::before{content:'';position:absolute;left:0;right:0;top:50%;border-top:1px solid var(--border)}
+.group-divider-label{position:relative;display:inline-block;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-size:1rem;font-weight:700;letter-spacing:.05em;background-color:var(--bg);padding:0 1rem}
+.group-divider-bg{background:var(--bg);padding:0 1rem;position:relative}
+
+/* ── STICKY FOOTER ── */
+.sticky-footer{position:fixed;bottom:0;left:0;right:0;background:rgba(11,15,26,.95);backdrop-filter:blur(10px);border-top:1px solid var(--border);padding:.75rem 2rem;display:flex;align-items:center;gap:1.5rem;z-index:50;flex-wrap:wrap}
+.sticky-footer-label{font-size:.8rem;color:var(--text3)}
+.sticky-footer-count{font-size:.85rem;font-weight:600;color:var(--text)}
+.sticky-footer-bar{flex:1;height:4px;background:var(--surface2);border-radius:99px;overflow:hidden;min-width:80px}
+.sticky-footer-fill{height:100%;background:var(--gradient);border-radius:99px;transition:width .3s}
+.done-panel{display:none;background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.25);border-radius:8px;padding:.5rem 1rem;font-size:.8rem;color:var(--green)}
+
+/* ── COMPARISON SECTION ── */
+.comp-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+.comp-header {
+  background: linear-gradient(90deg, var(--surface2), var(--surface3));
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.comp-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.comp-badge-vs {
+  background: var(--gradient);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.comp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid var(--border);
+}
+.comp-grid:last-child {
+  border-bottom: none;
+}
+.comp-column {
+  padding: 1.5rem;
+}
+.comp-column.left {
+  border-right: 1px solid var(--border);
+  background: rgba(239, 68, 68, 0.02);
+}
+.comp-column.right {
+  background: rgba(34, 197, 94, 0.02);
+}
+.comp-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 700;
+}
+.comp-label.amazon {
+  color: #ff9900;
+}
+.comp-label.buildingworld {
+  color: var(--accent);
+}
+.comp-desc {
+  color: var(--text);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.comp-detail {
+  font-size: 0.85rem;
+  color: var(--text2);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+.comp-code {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  background: #0d1117;
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  overflow-x: auto;
+  color: #e2e8f0;
+}
+.comp-summary-card {
+  background: var(--surface2);
+  padding: 1rem 1.5rem;
+  font-size: 0.88rem;
+  border-top: 1px solid var(--border);
+  color: var(--text2);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  line-height: 1.6;
+}
+.comp-summary-icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+/* ── RESPONSIVE ── */
+@media(max-width:700px){
+  .topbar{padding:0 1rem}.hero{padding:3rem 1rem 2rem}.container{padding:0 1rem 3rem}
+  .ba-grid{grid-template-columns:1fr}.scorecard-grid{grid-template-columns:1fr 1fr}
+  .comp-grid {
+    grid-template-columns: 1fr;
+  }
+  .comp-column.left {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<nav class="topbar">
+  <div class="topbar-brand">
+    <div class="topbar-dot"></div>
+    BuildingWorld.ai — SEO Audit · June 2026
+  </div>
+  <div style="display:flex;flex-direction:column;align-items:flex-end;gap:2px">
+    <div class="progress-bar-wrap"><div class="progress-bar-fill" id="progressFill" style="width:0%"></div></div>
+    <div class="progress-label" id="progressLabel">0 of 23 addressed</div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-eyebrow">Full SEO / AEO / GEO Audit</div>
+  <h1>BuildingWorld.ai<br/>Technical Audit Report</h1>
+  <p class="hero-sub">Template-level analysis covering 5,000+ pages across all product, listing, and homepage templates — with Raw vs Rendered comparison.</p>
+  <div class="hero-meta">
+    <span class="meta-chip"><strong>Date</strong> 15 June 2026</span>
+    <span class="meta-chip"><strong>Stack</strong> Next.js App Router + CloudFront</span>
+    <span class="meta-chip"><strong>Archetype</strong> B2B Marketplace + AI SaaS</span>
+    <span class="meta-chip"><strong>Templates Audited</strong> 5 (covering 5,000+ URLs)</span>
+    <span class="meta-chip"><strong>Prepared by</strong> Giriish</span>
+  </div>
+</header>
+
+<!-- ALERT BAND -->
+<div class="container">
+<div class="alert-band">
+  <div class="alert-band-icon">⚠️</div>
+  <div>
+    <h3>Critical: Product Catalog Is Invisible to All AI Crawlers</h3>
+    <p>Raw HTML analysis confirms the L1 category page serves <strong>0 product listings</strong> and only <strong>1 product image</strong> (on the Product Detail page) to Googlebot wave-1 and all AI retrieval bots (ChatGPT, Perplexity, Claude, Gemini). The entire marketplace grid requires JavaScript to render — invisible to every search engine and AI model on first crawl.</p>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SCORES
+═══════════════════════════════════════════ -->
+<div class="section-label">Quality Scores</div>
+<div class="section-title">Homepage Performance</div>
+<div class="section-sub">Scored against SEO Quality and E-E-A-T rubrics on the Landing/Money page framework.</div>
+
+<div class="scorecard-grid">
+  <div class="score-card">
+    <div class="score-card-label">SEO Quality Score</div>
+    <div class="score-card-value score-weak">58<span style="font-size:1.1rem;font-weight:400">/100</span></div>
+    <div class="score-card-hint">Grade: <strong>Weak</strong> — Content thin on LSI + entities</div>
+  </div>
+  <div class="score-card">
+    <div class="score-card-label">E-E-A-T Score</div>
+    <div class="score-card-value score-weak">54<span style="font-size:1.1rem;font-weight:400">/100</span></div>
+    <div class="score-card-hint">Grade: <strong>Weak</strong> — Trust pillar at 21/35 is ceiling</div>
+  </div>
+  <div class="score-card">
+    <div class="score-card-label">Product Schema Completeness</div>
+    <div class="score-card-value score-fail">5<span style="font-size:1.1rem;font-weight:400">/11</span></div>
+    <div class="score-card-hint">Missing AggregateRating, shippingDetails, returnPolicy, seller, priceValidUntil</div>
+  </div>
+  <div class="score-card">
+    <div class="score-card-label">Critical Template Bugs</div>
+    <div class="score-card-value score-fail">5</div>
+    <div class="score-card-hint">Affecting thousands of pages simultaneously</div>
+  </div>
+</div>
+
+<!-- SCORE BARS -->
+<div class="score-ring-wrap">
+  <div class="score-ring-info">
+    <div class="score-ring-title">SEO Quality Breakdown — Homepage</div>
+    <div class="score-ring-grade">Landing / Money Page · 58/100 Weak</div>
+    <div class="score-bars">
+      <div class="score-bar-row"><span class="score-bar-label">LSI term coverage</span><div class="score-bar-track"><div class="score-bar-fill" style="width:65%;background:#3b82f6"></div></div><span class="score-bar-val">13/20</span></div>
+      <div class="score-bar-row"><span class="score-bar-label">Semantic variants</span><div class="score-bar-track"><div class="score-bar-fill" style="width:60%;background:#6366f1"></div></div><span class="score-bar-val">12/20</span></div>
+      <div class="score-bar-row"><span class="score-bar-label">Named entities</span><div class="score-bar-track"><div class="score-bar-fill" style="width:53%;background:#8b5cf6"></div></div><span class="score-bar-val">8/15</span></div>
+      <div class="score-bar-row"><span class="score-bar-label">Content depth</span><div class="score-bar-track"><div class="score-bar-fill" style="width:60%;background:#ec4899"></div></div><span class="score-bar-val">12/20</span></div>
+      <div class="score-bar-row"><span class="score-bar-label">Sentiment alignment</span><div class="score-bar-track"><div class="score-bar-fill" style="width:70%;background:#14b8a6"></div></div><span class="score-bar-val">7/10</span></div>
+      <div class="score-bar-row"><span class="score-bar-label">Keyword discipline</span><div class="score-bar-track"><div class="score-bar-fill" style="width:40%;background:#f59e0b"></div></div><span class="score-bar-val">4/10</span></div>
+      <div class="score-bar-row"><span class="score-bar-label">Trust signals</span><div class="score-bar-track"><div class="score-bar-fill" style="width:40%;background:#ef4444"></div></div><span class="score-bar-val">2/5</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="score-ring-wrap">
+  <div class="score-ring-info">
+    <div class="score-ring-title">E-E-A-T Breakdown — Homepage</div>
+    <div class="score-ring-grade">Landing / Money Page · 54/100 Weak · Trust ceiling active</div>
+    <div class="score-bars">
+      <div class="score-bar-row"><span class="score-bar-label">Trust (35 max)</span><div class="score-bar-track"><div class="score-bar-fill" style="width:60%;background:#ef4444"></div></div><span class="score-bar-val">21/35</span></div>
+      <div class="score-bar-row"><span class="score-bar-label">Experience (25 max)</span><div class="score-bar-track"><div class="score-bar-fill" style="width:48%;background:#f59e0b"></div></div><span class="score-bar-val">12/25</span></div>
+      <div class="score-bar-row"><span class="score-bar-label">Expertise (20 max)</span><div class="score-bar-track"><div class="score-bar-fill" style="width:50%;background:#f97316"></div></div><span class="score-bar-val">10/20</span></div>
+      <div class="score-bar-row"><span class="score-bar-label">Authoritativeness (20 max)</span><div class="score-bar-track"><div class="score-bar-fill" style="width:55%;background:#a78bfa"></div></div><span class="score-bar-val">11/20</span></div>
+    </div>
+  </div>
+</div>
+
+<hr class="section-divider"/>
+
+<!-- ═══════════════════════════════════════════
+     RAW vs RENDERED
+═══════════════════════════════════════════ -->
+<div class="section-label">Crawl Reality Check</div>
+<div class="section-title">Raw HTML vs Rendered — What Bots Actually See</div>
+<div class="section-sub">Ctrl+U = Raw source (Googlebot wave-1 + ALL AI crawlers). F12 = Rendered after JS (users only).</div>
+
+<table class="diff-table">
+  <thead><tr><th>Page</th><th>Raw KB</th><th>Rendered KB</th><th>H1 in Raw</th><th>Images Raw/Rendered</th><th>Schemas Raw/Rendered</th><th>Products Visible in Raw</th></tr></thead>
+  <tbody>
+    <tr>
+      <td><strong>Homepage</strong></td>
+      <td class="mono">367KB</td><td class="mono">760KB</td>
+      <td class="diff-warn">"View Ideas" ⚠️</td>
+      <td class="mono diff-warn">62 / 108</td>
+      <td class="mono diff-warn">3 / 4</td>
+      <td class="diff-warn">Partial</td>
+    </tr>
+    <tr>
+      <td><strong>L0 Products Hub</strong></td>
+      <td class="mono">280KB</td><td class="mono">810KB</td>
+      <td class="diff-critical">NONE 🔴</td>
+      <td class="mono diff-warn">49 / 99</td>
+      <td class="mono diff-warn">3 / 4</td>
+      <td class="diff-ok">33 category links ✅</td>
+    </tr>
+    <tr>
+      <td><strong>L1 Category</strong></td>
+      <td class="mono">2062KB</td><td class="mono">2152KB</td>
+      <td class="diff-critical">6× "undefined" H1s 🔴</td>
+      <td class="mono diff-critical">23 / 392 🔴</td>
+      <td class="mono diff-critical">1 / 3 🔴</td>
+      <td class="diff-critical">ZERO products 🔴</td>
+    </tr>
+    <tr>
+      <td><strong>Product Detail</strong></td>
+      <td class="mono">185KB</td><td class="mono">788KB</td>
+      <td class="diff-critical">"?31,999" only 🔴</td>
+      <td class="mono diff-critical">1 / 154 🔴</td>
+      <td class="mono diff-warn">3 / 4</td>
+      <td class="diff-critical">Product name in H2, not H1 🔴</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- DOMAIN MIGRATION AND REDIRECT LOOPS SECTION -->
+<div class="section-label">Domain Migration Audit</div>
+<div class="section-title">Domain Migration (.com to .ai) Redirect Loop Failures</div>
+<div class="section-sub">Analysis of the redirection loops that broke the backlink profiles and severely affected Domain Authority.</div>
+
+<div class="comp-card">
+  <div class="comp-header">
+    <div class="comp-title">🔄 Redirection Flow & Loops Gallery</div>
+    <span class="badge badge-critical">Critical Failure</span>
+  </div>
+  <div class="comp-column" style="padding: 1.5rem;">
+    <p class="comp-detail" style="margin-bottom: 1.5rem;">During the migration from <code>buildingworld.com</code> to <code>buildingworld.ai</code>, backlink URLs redirect to 404 pages or enter redirection loops instead of resolving to equivalent pages on the new domain. The visual flow below demonstrates the redirect sequence failing to resolve the dealer profiles, forcing users and search bots through authentication gates and resolving in a broken state.</p>
+    
+    <div class="screenshot-gallery">
+      <div>
+        <img src="./screenshots/step1_redirect_home_1781529924450.png" alt="Step 1 Redirection"/>
+        <div class="screenshot-caption">Step 1: Original .com URL redirects to homepage instead of matching page</div>
+      </div>
+      <div>
+        <img src="./screenshots/step2_redirect_dealers_1781529945033.png" alt="Step 2 Redirection"/>
+        <div class="screenshot-caption">Step 2: Redirects to login wall on /dealers profile path</div>
+      </div>
+      <div>
+        <img src="./screenshots/step3_ai_dealers_1781529960135.png" alt="Step 3 Redirection"/>
+        <div class="screenshot-caption">Step 3: Lacks auth state, redirects user back and forth</div>
+      </div>
+      <div>
+        <img src="./screenshots/step4_temp_login_1781529975185.png" alt="Step 4 Redirection"/>
+        <div class="screenshot-caption">Step 4: Temp authentication gate redirects with expired sessions</div>
+      </div>
+      <div>
+        <img src="./screenshots/step5_dealer_redirect_1781529991255.png" alt="Step 5 Redirection"/>
+        <div class="screenshot-caption">Step 5: Fails to find matching profile slug on .ai domain, resulting in a 404</div>
+      </div>
+    </div>
+    
+    <div style="margin-top: 1.25rem; text-align: center;">
+      <img class="finding-screenshot" src="./screenshots/domain_migration_issues_1781529899973.webp" alt="Backlink Profile Impact" style="margin: 0 auto; max-width: 600px;"/>
+      <div class="screenshot-caption">Analysis summary of domain authority collapse due to redirect faults</div>
+    </div>
+
+    <div class="verify-box" style="margin-top: 1.5rem;">
+      <div class="verify-box-label">Global Migration Impact</div>
+      <p style="color: var(--text2); font-size: 0.82rem;">Because old backlinks resolve to 404s or loops, BuildingWorld.ai has lost 80%+ of its historical link equity, resulting in a collapse of Domain Authority. Clean 1-to-1 redirects mapped via CloudFront functions or Next.js middleware must be deployed immediately to capture the incoming domain authority.</p>
+    </div>
+  </div>
+</div>
+
+<hr class="section-divider"/>
+
+<!-- ═══════════════════════════════════════════
+     COMPETITIVE BENCHMARK
+═══════════════════════════════════════════ -->
+<div class="section-label">Competitive Benchmark</div>
+<div class="section-title">Amazon vs. BuildingWorld.ai</div>
+<div class="section-sub">Detailed comparison challenging BuildingWorld's routing and design decisions against Amazon's actual codebase.</div>
+
+<!-- URL ROUTING CARD -->
+<div class="comp-card">
+  <div class="comp-header">
+    <div class="comp-title">
+      <span class="comp-badge-vs">VS</span> URL Path Routing & Category Structure
+    </div>
+    <span class="badge badge-critical">Critical Gap</span>
+  </div>
+  <div class="comp-grid">
+    <div class="comp-column left">
+      <div class="comp-label amazon">🛒 Amazon Benchmark</div>
+      <div class="comp-desc">Path-based unique slugs for every level</div>
+      <div class="comp-detail">Amazon uses a separate URL path for L1, L2, and L3 categories, appending the catalog node ID as a db lookup key. Paths are entirely distinct.</div>
+      <pre class="comp-code">
+<!-- Level 1 (Kitchen & Bath Fixtures) -->
+https://www.amazon.in/Kitchen-Bath-Fixtures/b?node=4286643031
+
+<!-- Level 2 (Kitchen Fixtures) -->
+https://www.amazon.in/Kitchen-Fixtures/b?node=4286657031
+
+<!-- Level 3 (Kitchen Sink Taps) -->
+https://www.amazon.in/Kitchen-Taps/b?node=8628358031</pre>
+    </div>
+    <div class="comp-column right">
+      <div class="comp-label buildingworld">🏗️ BuildingWorld.ai (Current)</div>
+      <div class="comp-desc">Single shared path slug + query parameter strings</div>
+      <div class="comp-detail">L1 and L2 categories share the exact same path slug, varying only by query parameter. This causes search engines to consolidate authority to the parent and de-index subcategories.</div>
+      <pre class="comp-code">
+<!-- Level 1 Category Listing -->
+/products/categories/lizpqk-furniture-and-home-decor
+  ?category_reference_id=12
+
+<!-- Level 2 Category Listing -->
+/products/categories/lizpqk-furniture-and-home-decor
+  ?category_reference_id=12&l2_category_ids=2996</pre>
+    </div>
+  </div>
+  <div class="comp-summary-card">
+    <div class="comp-summary-icon">⚠️</div>
+    <div><strong>The Counter-Argument:</strong> Comparing BuildingWorld's URL routing to Amazon's presents a different set of technical constraints. Amazon <em>never</em> serves multiple category levels on the same URL path. Each level has a distinct slug. BuildingWorld must use path-based routing (e.g. <code>/categories/[l1]/[l2]</code>) to allow Next.js SSG/ISR caching and prevent index consolidation.</div>
+  </div>
+</div>
+
+<!-- BREADCRUMBS CARD -->
+<div class="comp-card">
+  <div class="comp-header">
+    <div class="comp-title">
+      <span class="comp-badge-vs">VS</span> Breadcrumb Trail & Structured Schema
+    </div>
+    <span class="badge badge-high">High Gap</span>
+  </div>
+  <div class="comp-grid">
+    <div class="comp-column left">
+      <div class="comp-label amazon">🛒 Amazon Benchmark</div>
+      <div class="comp-desc">Inline Microdata (Schema.org) on all levels</div>
+      <div class="comp-detail">Amazon Store pages implement standard <code>BreadcrumbList</code> microdata embedded directly in the HTML markup. Links map to the path canonicals, indexing taxonomy.</div>
+      <pre class="comp-code">
+&lt;ol itemscope itemtype="http://schema.org/BreadcrumbList"&gt;
+  &lt;li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"&gt;
+    &lt;a href="/stores/..." itemprop="item"&gt;
+      &lt;span itemprop="name"&gt;Jaquar&lt;/span&gt;
+    &lt;/a&gt;
+    &lt;meta itemprop="position" content="1"&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</pre>
+    </div>
+    <div class="comp-column right">
+      <div class="comp-label buildingworld">🏗️ BuildingWorld.ai (Current)</div>
+      <div class="comp-desc">No breadcrumb schema on listing or detail templates</div>
+      <div class="comp-detail">The <code>BreadcrumbList</code> JSON-LD is only generated on the homepage. Product detail and category listing pages are missing breadcrumb schema entirely.</div>
+      <pre class="comp-code">
+&lt;!-- JSON-LD Breadcrumb block: --&gt;
+❌ MISSING on Product Detail pages
+❌ MISSING on L1 Category pages
+❌ MISSING on L2 Category pages
+
+&lt;!-- Result: --&gt;
+No rich snippet breadcrumbs in Google SERPs.</pre>
+    </div>
+  </div>
+  <div class="comp-summary-card">
+    <div class="comp-summary-icon">💡</div>
+    <div><strong>The Fix:</strong> Inject dynamically generated <code>BreadcrumbList</code> JSON-LD schemas in the Next.js Server Components for all listings and product detail pages, aligning item links with the nested path hierarchy.</div>
+  </div>
+</div>
+
+<!-- H1 HEADERS CARD -->
+<div class="comp-card">
+  <div class="comp-header">
+    <div class="comp-title">
+      <span class="comp-badge-vs">VS</span> Document Headings & H1 Structure
+    </div>
+    <span class="badge badge-critical">Critical Gap</span>
+  </div>
+  <div class="comp-grid">
+    <div class="comp-column left">
+      <div class="comp-label amazon">🛒 Amazon Benchmark</div>
+      <div class="comp-desc">Single semantic H1 matching page topic</div>
+      <div class="comp-detail">Amazon uses a single primary H1 for the page's topic. Category pages use clean banner text. Product pages wrap product names in a single <code>&lt;h1 id="title"&gt;</code>.</div>
+      <pre class="comp-code">
+&lt;!-- Category Listing --&gt;
+&lt;h1&gt;&lt;b&gt;Kitchen Sink Taps&lt;/b&gt;&lt;/h1&gt;
+
+&lt;!-- Product Detail --&gt;
+&lt;h1 id="title"&gt;
+  &lt;span id="productTitle"&gt;Jaquar Wall Mounted...&lt;/span&gt;
+&lt;/h1&gt;</pre>
+    </div>
+    <div class="comp-column right">
+      <div class="comp-label buildingworld">🏗️ BuildingWorld.ai (Current)</div>
+      <div class="comp-desc">Multiple utility headers & "undefined" string rendering</div>
+      <div class="comp-detail">L1 categories have 6 H1s, including filter options like 'FILTERS' and 'Price'. Product detail relegates product name to H2, and uses a broken "undefined" price string as H1.</div>
+      <pre class="comp-code">
+&lt;!-- L1 category (6 H1s): --&gt;
+&lt;h1&gt;undefinedFILTERSundefined&lt;/h1&gt;
+&lt;h1&gt;undefinedPrice undefined&lt;/h1&gt;
+
+&lt;!-- Product detail: --&gt;
+&lt;h1&gt;undefinedundefined? undefined 31,999...&lt;/h1&gt;
+&lt;h2&gt;Clarens Teak study chair&lt;/h2&gt;</pre>
+    </div>
+  </div>
+  <div class="comp-summary-card">
+    <div class="comp-summary-icon">🔧</div>
+    <div><strong>The Fix:</strong> Restructure Next.js templates. Ensure exactly one H1 per page: the category name on listings, and the product title on detail pages. Convert filter headings to H2/H3 or styled div elements. Strip out raw default states rendering "undefined".</div>
+  </div>
+</div>
+
+<!-- SSR AND AGENTIC READY CARD -->
+<div class="comp-card">
+  <div class="comp-header">
+    <div class="comp-title">
+      <span class="comp-badge-vs">VS</span> SSR and Agentic Browsing Readiness
+    </div>
+    <span class="badge badge-critical">Critical Gap</span>
+  </div>
+  <div class="comp-grid">
+    <div class="comp-column left">
+      <div class="comp-label amazon">🛒 Amazon Benchmark</div>
+      <div class="comp-desc">100% Server-Side Rendered (SSR) grids</div>
+      <div class="comp-detail">Amazon serves all product details, grid cards, images, titles, ratings, and prices in the initial raw HTML. Crawlers and no-JS bots see everything immediately.</div>
+      <pre class="comp-code">
+&lt;!-- Raw HTML source (Ctrl+U): --&gt;
+✅ Product cards rendered
+✅ Product titles in Raw HTML
+✅ Image tags with CDN URLs
+✅ Prices and links fully indexable</pre>
+    </div>
+    <div class="comp-column right">
+      <div class="comp-label buildingworld">🏗️ BuildingWorld.ai (Current)</div>
+      <div class="comp-desc">Client-side rendering (CSR) dependency</div>
+      <div class="comp-detail">BuildingWorld's listing grids and detail page image lists are dynamic and require JavaScript. Bots crawling raw HTML see empty pages, hiding catalog from search/AI engines.</div>
+      <pre class="comp-code">
+&lt;!-- Raw HTML source (Ctrl+U): --&gt;
+❌ 0 listings in Raw L1 category HTML
+❌ 23 of 392 images in Raw L1 HTML
+❌ 1 of 154 images in Product Detail HTML
+❌ Next.js flight data (self.__next_f.push) loads first</pre>
+    </div>
+  </div>
+  <div class="comp-summary-card">
+    <div class="comp-summary-icon">🤖</div>
+    <div><strong>The Agentic Impact:</strong> AI agents (ChatGPT, Perplexity, Claude Web) fetch raw HTML. For BuildingWorld.ai, they see zero products, meaning the platform is invisible in AI Overviews and agentic search results. Implementing async Server Components for the listing grids is mandatory.</div>
+  </div>
+</div>
+
+<hr class="section-divider"/>
+
+<!-- ═══════════════════════════════════════════
+     FINDINGS — TRADITIONAL SEO
+═══════════════════════════════════════════ -->
+<div class="group-divider"><div class="group-divider-bg"><span class="group-divider-label">⬛ Traditional SEO</span></div></div>
+
+<!-- CRIT-001 -->
+<div class="finding" id="CRIT-001">
+  <div class="finding-header" onclick="toggleFinding('CRIT-001')">
+    <div class="finding-header-left">
+      <div class="finding-id">CRIT-001 · Rendering</div>
+      <div class="finding-title">"undefined" text rendered in H1 on thousands of pages — Product Detail + Category templates</div>
+      <div class="finding-pillars">
+        <span class="badge badge-critical">Critical</span>
+        <span class="badge badge-seo">SEO</span><span class="badge badge-aeo">AEO</span><span class="badge badge-geo">GEO</span>
+        <span style="font-size:.78rem;color:var(--text3);margin-left:.25rem">5,000+ pages affected</span>
+      </div>
+    </div>
+    <label class="finding-check" onclick="event.stopPropagation()">
+      <input type="checkbox" onchange="updateProgress(this,'CRIT-001')"/>
+      <span class="finding-check-label">Mark addressed</span>
+    </label><div class="dropdown-arrow">▼</div>
+  </div>
+  <div class="finding-body collapsed" id="body-CRIT-001">
+    <div class="finding-intro">React SSR variable resolves to <code>undefined</code> during server render, baking the string <code>"undefined"</code> directly into the HTML output. Google reads <code>"undefined"</code> as the H1 text on thousands of product and category pages.</div>
+    <img class="finding-screenshot" src="./screenshots/canonical_issue_1781529265348.png" alt="Canonical Query Parameters Issue"/>
+    <div class="screenshot-caption" style="margin-bottom:1rem;">Canonical link containing raw query parameters causing duplicate indexing issues on Google</div>
+    <div class="ba-grid">
+      <div class="ba-panel ba-before">
+        <div class="ba-panel-header">🔴 Current — What Google Reads as H1</div>
+        <div class="ba-panel-body"><pre class="broken">&lt;!-- Product Detail H1 in Raw HTML: --&gt;
+&lt;h1&gt;?31,999&lt;/h1&gt;
+
+&lt;!-- Rendered H1 (still broken): --&gt;
+&lt;h1&gt;undefinedundefined? undefined
+31,999undefined undefinedundefined&lt;/h1&gt;
+
+&lt;!-- L1 Category (6 H1s): --&gt;
+&lt;h1&gt;undefinedFILTERSundefined&lt;/h1&gt;
+&lt;h1&gt;undefinedPrice undefined&lt;/h1&gt;</pre></div>
+      </div>
+      <div class="ba-panel ba-after">
+        <div class="ba-panel-header">✅ Fixed — Clean SSR H1</div>
+        <div class="ba-panel-body"><pre class="fixed">// app/products/[slug]/page.tsx
+// Server Component — guaranteed in Raw HTML
+
+export default async function ProductPage({ params }) {
+  const product = await getProduct(params.slug);
+  return (
+    &lt;main&gt;
+      &lt;h1 itemProp="name"&gt;
+        {product.name}
+      &lt;/h1&gt;
+      &lt;div className="price"&gt;
+        ₹{product.price.toLocaleString('en-IN')}
+      &lt;/div&gt;
+    &lt;/main&gt;
+  );
+}</pre></div>
+      </div>
+    </div>
+    <div class="verify-box">
+      <div class="verify-box-label">Verify</div>
+      <code>curl -s https://www.buildingworld.ai/products/3tzsfu-... | grep '&lt;h1'</code> — should return product name, not "undefined" or price.
+    </div>
+    <div class="screenshot-gallery">
+      <div>
+        <img src="./screenshots/product_h1_bug_1781528514945.webp" alt="Client H1 Undefined Bug"/>
+        <div class="screenshot-caption">Product template showing raw "undefined" string rendered in H1 tag in client view</div>
+      </div>
+      <div>
+        <img src="./screenshots/raw_h1_issue_1781529009109.png" alt="Raw HTML H1 Code Issue"/>
+        <div class="screenshot-caption">Raw HTML H1 issue showing duplicate and undefined headers processed by AI/crawlers</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CRIT-002 -->
+<div class="finding" id="CRIT-002">
+  <div class="finding-header" onclick="toggleFinding('CRIT-002')">
+    <div class="finding-header-left">
+      <div class="finding-id">CRIT-002 · Rendering</div>
+      <div class="finding-title">6 H1 tags on L1 pages, 5 H1s on L2 — filter sidebar components using wrong heading level</div>
+      <div class="finding-pillars">
+        <span class="badge badge-critical">Critical</span>
+        <span class="badge badge-seo">SEO</span>
+        <span style="font-size:.78rem;color:var(--text3);margin-left:.25rem">All L1 + L2 category pages</span>
+      </div>
+    </div>
+    <label class="finding-check" onclick="event.stopPropagation()">
+      <input type="checkbox" onchange="updateProgress(this,'CRIT-002')"/>
+      <span class="finding-check-label">Mark addressed</span>
+    </label><div class="dropdown-arrow">▼</div>
+  </div>
+  <div class="finding-body collapsed" id="body-CRIT-002">
+    <div class="finding-intro">Filter sidebar elements (FILTERS, Category, Price, Related Category) and the results count are all rendered as <code>&lt;h1&gt;</code> elements. Google's document structure is completely confused. Only one <code>&lt;h1&gt;</code> per page is the standard.</div>
+    <div class="ba-grid">
+      <div class="ba-panel ba-before">
+        <div class="ba-panel-header">🔴 Current — 6 H1s on L1 Page</div>
+        <div class="ba-panel-body"><pre class="broken">&lt;h1&gt;Furniture and interior decor&lt;/h1&gt; ← correct
+&lt;h1&gt;FILTERS&lt;/h1&gt;             ← wrong
+&lt;h1&gt;Category&lt;/h1&gt;            ← wrong
+&lt;h1&gt;Price&lt;/h1&gt;               ← wrong
+&lt;h1&gt;Related Category&lt;/h1&gt;    ← wrong
+&lt;h1&gt;Furniture - 19097 Products&lt;/h1&gt; ← wrong</pre></div>
+      </div>
+      <div class="ba-panel ba-after">
+        <div class="ba-panel-header">✅ Fixed — Single H1, correct hierarchy</div>
+        <div class="ba-panel-body"><pre class="fixed">&lt;h1 className="sr-only"&gt;{categoryName}&lt;/h1&gt;
+
+&lt;aside aria-label="Filters"&gt;
+  &lt;h2&gt;FILTERS&lt;/h2&gt;
+  &lt;h3&gt;Category&lt;/h3&gt;
+  &lt;h3&gt;Price&lt;/h3&gt;
+  &lt;h3&gt;Related Category&lt;/h3&gt;
+&lt;/aside&gt;
+
+&lt;p className="results-count"&gt;
+  {categoryName} — {count?.toLocaleString()} Products
+&lt;/p&gt;</pre></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CRIT-003 -->
+<div class="finding" id="CRIT-003">
+  <div class="finding-header" onclick="toggleFinding('CRIT-003')">
+    <div class="finding-header-left">
+      <div class="finding-id">CRIT-003 · Rendering / SSR</div>
+      <div class="finding-title">Product catalog grid is fully JavaScript-only — L1 Raw HTML shows 0 products, 23 of 392 images</div>
+      <div class="finding-pillars">
+        <span class="badge badge-critical">Critical</span>
+        <span class="badge badge-seo">SEO</span><span class="badge badge-geo">GEO</span>
+        <span style="font-size:.78rem;color:var(--text3);margin-left:.25rem">All L1/L2 pages · Googlebot wave-1 · ALL AI crawlers</span>
+      </div>
+    </div>
+    <label class="finding-check" onclick="event.stopPropagation()">
+      <input type="checkbox" onchange="updateProgress(this,'CRIT-003')"/>
+      <span class="finding-check-label">Mark addressed</span>
+    </label><div class="dropdown-arrow">▼</div>
+  </div>
+  <div class="finding-body collapsed" id="body-CRIT-003">
+    <div class="finding-intro">The product listing grid on category pages requires JavaScript to render. Googlebot wave-1, Bing, ChatGPT, Perplexity, Claude, and Gemini all see <strong>zero product cards</strong> on category pages. Your marketplace catalog is invisible to every AI model and search engine on first crawl.</div>
+    <div class="ba-grid">
+      <div class="ba-panel ba-before">
+        <div class="ba-panel-header">🔴 Current — Raw HTML product visibility</div>
+        <div class="ba-panel-body"><pre class="broken"># L1 Furniture category — what bots see:
+Images:   23 of 392 (94% JS-only)
+Products: 0 listings in Raw HTML
+Links:    2 product links only
+
+# Product Detail — what bots see:
+Images:   1 of 154 (99% JS-only)
+H1:       "?31,999" (price, not name)</pre></div>
+      </div>
+      <div class="ba-panel ba-after">
+        <div class="ba-panel-header">✅ Fix — SSR product grid with Server Component</div>
+        <div class="ba-panel-body"><pre class="fixed">// app/products/categories/[slug]/page.tsx
+export default async function CategoryPage({ params }) {
+  // DB fetch at server time = in Raw HTML
+  const products = await getProducts({
+    category: params.slug, limit: 24
+  });
+  return (
+    &lt;main&gt;
+      &lt;h1&gt;{category.name}&lt;/h1&gt;
+      &lt;section&gt;
+        {products.map(p =&gt; (
+          &lt;article key={p.id}&gt;
+            &lt;a href={`/products/${p.slug}`}&gt;
+              &lt;img src={cdnUrl(p.image)} alt={p.name}/&gt;
+              &lt;h2&gt;{p.name}&lt;/h2&gt;
+              &lt;p&gt;₹{p.price.toLocaleString('en-IN')}&lt;/p&gt;
+            &lt;/a&gt;
+          &lt;/article&gt;
+        ))}
+      &lt;/section&gt;
+      &lt;Suspense&gt;&lt;DynamicFilters/&gt;&lt;/Suspense&gt;
+    &lt;/main&gt;
+  );
+}</pre></div>
+      </div>
+    </div>
+    <div class="verify-box">
+      <div class="verify-box-label">Verify</div>
+      <code>curl -s https://www.buildingworld.ai/products/categories/lizpqk-furniture-and-home-decor | grep -c '&lt;article'</code> — should return ≥ 24 after fix.
+    </div>
+    <div class="screenshot-gallery">
+      <div>
+        <img src="./screenshots/category_raw_vs_rendered_1781529073420.webp" alt="Raw vs Rendered Grid"/>
+        <div class="screenshot-caption">Marketplace view showing 0 products in raw HTML vs fully loaded grid in browser view</div>
+      </div>
+      <div>
+        <img src="./screenshots/rendered_grid_1781529099622.png" alt="Rendered Product Grid"/>
+        <div class="screenshot-caption">Rendered grid template loaded dynamically after Client-Side JavaScript execution</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CRIT-004 -->
+<div class="finding" id="CRIT-004">
+  <div class="finding-header" onclick="toggleFinding('CRIT-004')">
+    <div class="finding-header-left">
+      <div class="finding-id">CRIT-004 · Canonical / URL Architecture</div>
+      <div class="finding-title">L2 canonical contains query parameters — creates infinite URL variants and L1/L2 duplication risk</div>
+      <div class="finding-pillars">
+        <span class="badge badge-critical">Critical</span>
+        <span class="badge badge-seo">SEO</span>
+        <span style="font-size:.78rem;color:var(--text3);margin-left:.25rem">All L2 subcategory pages</span>
+      </div>
+    </div>
+    <label class="finding-check" onclick="event.stopPropagation()">
+      <input type="checkbox" onchange="updateProgress(this,'CRIT-004')"/>
+      <span class="finding-check-label">Mark addressed</span>
+    </label><div class="dropdown-arrow">▼</div>
+  </div>
+  <div class="finding-body collapsed" id="body-CRIT-004">
+    <div class="finding-intro">L1 and L2 category pages share the same URL slug differentiated only by query parameters in the canonical. Sort/filter interactions add additional params, creating infinite crawlable URL variants.</div>
+    <div class="ba-grid">
+      <div class="ba-panel ba-before">
+        <div class="ba-panel-header">🔴 Current — Query params in canonical</div>
+        <div class="ba-panel-body"><pre class="broken">&lt;!-- L1 canonical: --&gt;
+.../lizpqk-furniture-and-home-decor
+  ?category_reference_id=12
+
+&lt;!-- L2 canonical: --&gt;
+.../lizpqk-furniture-and-home-decor
+  ?category_reference_id=12
+  &amp;l2_category_ids=2996
+
+&lt;!-- Problem: sorting adds more params --&gt;
+  &amp;sort=price_asc&amp;brand=kajaria...
+&lt;!-- = infinite URL variants --&gt;</pre></div>
+      </div>
+      <div class="ba-panel ba-after">
+        <div class="ba-panel-header">✅ Fix — Clean slug hierarchy</div>
+        <div class="ba-panel-body"><pre class="fixed">&lt;!-- L0: --&gt;
+/products/categories
+
+&lt;!-- L1: --&gt;
+/products/categories/lizpqk-furniture-and-home-decor
+
+&lt;!-- L2: --&gt;
+/products/categories/
+  lizpqk-furniture-and-home-decor/
+  seating
+
+&lt;!-- Filters: query params OK (not canonical) --&gt;
+/products/categories/furniture/seating
+  ?sort=price_asc  (no canonical impact)</pre></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CRIT-005 -->
+<div class="finding" id="CRIT-005">
+  <div class="finding-header" onclick="toggleFinding('CRIT-005')">
+    <div class="finding-header-left">
+      <div class="finding-id">CRIT-005 · Hydration / Fragility</div>
+      <div class="finding-title">Next.js client-side hydration crash (Application Error) when page is loaded outside of production host</div>
+      <div class="finding-pillars">
+        <span class="badge badge-critical">Critical</span>
+        <span class="badge badge-seo">SEO</span><span class="badge badge-aeo">AEO</span><span class="badge badge-geo">GEO</span>
+        <span style="font-size:.78rem;color:var(--text3);margin-left:.25rem">All templates</span>
+      </div>
+    </div>
+    <label class="finding-check" onclick="event.stopPropagation()">
+      <input type="checkbox" onchange="updateProgress(this,'CRIT-005')"/>
+      <span class="finding-check-label">Mark addressed</span>
+    </label><div class="dropdown-arrow">▼</div>
+  </div>
+  <div class="finding-body collapsed" id="body-CRIT-005">
+    <div class="finding-intro">Pasting BuildingWorld's fully-rendered HTML into an external HTML viewer, beautifier, or loading it locally from the file system triggers a client-side execution that attempts hydration. Because the scripts run on a host/origin that does not match <code>www.buildingworld.ai</code> and lacks relative webpack chunks, it throws an uncaught JS exception and React unmounts the page body, replacing it with a Next.js Application Error.</div>
+    <div class="ba-grid">
+      <div class="ba-panel ba-before">
+        <div class="ba-panel-header">🔴 Fragile Client Hydration (BuildingWorld.ai)</div>
+        <div class="ba-panel-body">
+          <p>Runs React/Next.js script hydration immediately on load. Mismatches in environment, origin, or missing chunk segments throw fatal exceptions:</p>
+          <pre class="broken">"Application error: a client-side exception has occurred (see the browser console for more information)."</pre>
+        </div>
+      </div>
+      <div class="ba-panel ba-after">
+        <div class="ba-panel-header">✅ Resilient Progressive Enhancement (Amazon Benchmark)</div>
+        <div class="ba-panel-body">
+          <p>Amazon serves fully-rendered static HTML that does not depend on a root React component remaining mounted. If script execution fails or origin issues arise, they fail silently in the background, leaving the layout, content, and images completely loaded and visible.</p>
+        </div>
+      </div>
+    </div>
+    <img class="finding-screenshot" src="./screenshots/view_source_empty_1781529229882.png" alt="Next.js Client Hydration Crash Screenshot"/>
+    <div class="screenshot-caption">Next.js application crash unmounting page body when loaded outside origin domain</div>
+  </div>
+</div>
+
+<!-- HIGH-001 -->
+<div class="finding" id="HIGH-001">
+  <div class="finding-header" onclick="toggleFinding('HIGH-001')">
+    <div class="finding-header-left">
+      <div class="finding-id">HIGH-001 · Structured Data</div>
+      <div class="finding-title">Product schema missing 6 of 11 fields — no star ratings, no shipping badge, no return policy in SERPs</div>
+      <div class="finding-pillars">
+        <span class="badge badge-high">High</span>
+        <span class="badge badge-seo">SEO</span>
+        <span style="font-size:.78rem;color:var(--text3);margin-left:.25rem">All 5,000+ product detail pages</span>
+      </div>
+    </div>
+    <label class="finding-check" onclick="event.stopPropagation()">
+      <input type="checkbox" onchange="updateProgress(this,'HIGH-001')"/>
+      <span class="finding-check-label">Mark addressed</span>
+    </label><div class="dropdown-arrow">▼</div>
+  </div>
+  <div class="finding-body collapsed" id="body-HIGH-001">
+    <div class="finding-intro">The Product JSON-LD schema is present but incomplete. Missing fields block Google Shopping-style rich results, star ratings, and "Free shipping" / "Free returns" SERP badges.</div>
+    <table class="info-table" style="margin:1rem 0">
+      <thead><tr><th>Missing Field</th><th>SERP Impact</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td><code>aggregateRating</code></td><td>No star ratings in SERPs</td><td><span class="badge badge-critical">Missing</span></td></tr>
+        <tr><td><code>priceValidUntil</code></td><td>Price ineligible for stable display</td><td><span class="badge badge-critical">Missing</span></td></tr>
+        <tr><td><code>shippingDetails</code></td><td>No "Free delivery" badge</td><td><span class="badge badge-critical">Missing</span></td></tr>
+        <tr><td><code>hasMerchantReturnPolicy</code></td><td>No "Free returns" badge</td><td><span class="badge badge-critical">Missing</span></td></tr>
+        <tr><td><code>seller</code></td><td>Seller identity missing</td><td><span class="badge badge-high">Missing</span></td></tr>
+        <tr><td><code>image</code> (array)</td><td>Only first image passed</td><td><span class="badge badge-medium">Partial</span></td></tr>
+      </tbody>
+    </table>
+    <div class="ba-grid">
+      <div class="ba-panel ba-before">
+        <div class="ba-panel-header">🔴 Current Product Schema</div>
+        <div class="ba-panel-body"><pre class="broken">{
+  "@type": "Product",
+  "name": "Clarens Teak Study Chair",
+  "image": "https://s3.../image.webp",
+  "sku": "bw_lapanddado_e2a3c2",
+  "brand": {"@type":"Brand","name":"..."},
+  "offers": {
+    "price": "31999",
+    "availability": "InStock"
+    // ❌ No priceValidUntil
+    // ❌ No seller
+    // ❌ No shippingDetails
+    // ❌ No returnPolicy
+  }
+  // ❌ No aggregateRating
+}</pre></div>
+      </div>
+      <div class="ba-panel ba-after">
+        <div class="ba-panel-header">✅ Complete Product Schema</div>
+        <div class="ba-panel-body"><pre class="fixed">{
+  "@type": "Product",
+  "image": ["url1.webp","url2.webp"],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.2",
+    "reviewCount": "47"
+  },
+  "offers": {
+    "priceValidUntil": "2026-12-31",
+    "seller": {"@type":"Organization",
+               "name":"BuildingWorld"},
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": {
+        "@type": "MonetaryAmount",
+        "value":"0","currency":"INR"}
+    },
+    "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "merchantReturnDays": 7
+    }
+  }
+}</pre></div>
+      </div>
+    </div>
+    <div class="verify-box">
+      <div class="verify-box-label">Verify</div>
+      Paste product URL into <code>https://search.google.com/test/rich-results</code> — Product rich result should pass with all fields green.
+    </div>
+    <img class="finding-screenshot" src="./screenshots/rendered_product_page_1781529044567.png" alt="Rendered Product Detail Images"/>
+    <div class="screenshot-caption">Product detail template images requiring full JavaScript execution to render, missing from raw HTML</div>
+  </div>
+</div>
+
+<!-- HIGH-002 -->
+<div class="finding" id="HIGH-002">
+  <div class="finding-header" onclick="toggleFinding('HIGH-002')">
+    <div class="finding-header-left">
+      <div class="finding-id">HIGH-002 · Accessibility / Technical</div>
+      <div class="finding-title">&lt;html&gt; tag missing lang attribute on ALL page templates</div>
+      <div class="finding-pillars">
+        <span class="badge badge-high">High</span>
+        <span class="badge badge-seo">SEO</span>
+        <span style="font-size:.78rem;color:var(--text3);margin-left:.25rem">100% of all pages</span>
+      </div>
+    </div>
+    <label class="finding-check" onclick="event.stopPropagation()">
+      <input type="checkbox" onchange="updateProgress(this,'HIGH-002')"/>
+      <span class="finding-check-label">Mark addressed</span>
+    </label><div class="dropdown-arrow">▼</div>
+  </div>
+  <div class="finding-body collapsed" id="body-HIGH-002">
+    <div class="finding-intro">The <code>&lt;html&gt;</code> element on every page template has no <code>lang</code> attribute. WCAG 2.1 Level A failure. Google uses lang for language clustering; screen readers mispronounce all text.</div>
+    <div class="ba-grid">
+      <div class="ba-panel ba-before"><div class="ba-panel-header">🔴 Current</div><div class="ba-panel-body"><pre class="broken">&lt;html&gt;  &lt;!-- no lang --&gt;</pre></div></div>
+      <div class="ba-panel ba-after"><div class="ba-panel-header">✅ Fixed</div><div class="ba-panel-body"><pre class="fixed">// app/layout.tsx
+&lt;html lang="en-IN"&gt;</pre></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- HIGH-003 -->
+<div class="finding" id="HIGH-003">
+  <div class="finding-header" onclick="toggleFinding('HIGH-003')">
+    <div class="finding-header-left">
+      <div class="finding-id">HIGH-003 · Structured Data</div>
+      <div class="finding-title">Organization schema wrong type (Corporation), empty telephone, email domain mismatch (.com vs .ai)</div>
+      <div class="finding-pillars">
+        <span class="badge badge-high">High</span>
+        <span class="badge badge-seo">SEO</span><span class="badge badge-geo">GEO</span>
+        <span style="font-size:.78rem;color:var(--text3);margin-left:.25rem">Homepage</span>
+      </div>
+    </div>
+    <label class="finding-check" onclick="event.stopPropagation()">
+      <input type="checkbox" onchange="updateProgress(this,'HIGH-003')"/>
+      <span class="finding-check-label">Mark addressed</span>
+    </label><div class="dropdown-arrow">▼</div>
+  </div>
+  <div class="finding-body collapsed" id="body-HIGH-003">
+    <div class="finding-intro">Three separate schema errors on the root Organization block: wrong type, invalid empty telephone string, and email using <code>buildingworld.com</code> while the site is <code>buildingworld.ai</code>.</div>
+    <div class="ba-grid">
+      <div class="ba-panel ba-before"><div class="ba-panel-header">🔴 Current Issues</div><div class="ba-panel-body"><pre class="broken">{"@type": "Corporation"}
+// ❌ Should be Organization
+
+"telephone": ""
+// ❌ Empty string = invalid JSON-LD
+
+"email": "info@buildingworld.com"
+// ❌ Domain mismatch — site is .ai
+
+"url": "https://www.buildingworld.ai/"
+// ❌ Trailing slash ≠ canonical</pre></div></div>
+      <div class="ba-panel ba-after"><div class="ba-panel-header">✅ Fixed</div><div class="ba-panel-body"><pre class="fixed">{"@type": "Organization",
+ "@id": "https://www.buildingworld.ai/#org",
+ "url": "https://www.buildingworld.ai",
+ // telephone: omit if no number
+ "contactPoint": {
+   "@type": "ContactPoint",
+   "contactType": "customer support",
+   "email": "info@buildingworld.ai",
+   "url": ".../contact-us"
+ }
+}</pre></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- HIGH-004 -->
+<div class="finding" id="HIGH-004">
+  <div class="finding-header" onclick="toggleFinding('HIGH-004')">
+    <div class="finding-header-left">
+      <div class="finding-id">HIGH-004 · Structured Data</div>
+      <div class="finding-title">BreadcrumbList schema missing on ALL product and category page templates</div>
+      <div class="finding-pillars">
+        <span class="badge badge-high">High</span>
+        <span class="badge badge-seo">SEO</span>
+        <span style="font-size:.78rem;color:var(--text3);margin-left:.25rem">L0, L1, L2, Product Detail — all templates</span>
+      </div>
+    </div>
+    <label class="finding-check" onclick="event.stopPropagation()">
+      <input type="checkbox" onchange="updateProgress(this,'HIGH-004')"/>
+      <span class="finding-check-label">Mark addressed</span>
+    </label><div class="dropdown-arrow">▼</div>
+  </div>
+  <div class="finding-body collapsed" id="body-HIGH-004">
+    <div class="finding-intro">BreadcrumbList JSON-LD exists only on the homepage. All product and category pages are missing it — no breadcrumb rich results in SERPs for any product query. This is a missed CTR opportunity across 5,000+ pages.</div>
+    <pre class="fixed" style="margin-top:1rem">{
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.buildingworld.ai"},
+    {"@type":"ListItem","position":2,"name":"Products","item":".../products/categories"},
+    {"@type":"ListItem","position":3,"name":"Furniture & Home Decor","item":".../lizpqk-furniture-and-home-decor"},
+    {"@type":"ListItem","position":4,"name":"Clarens Teak Study Chair"}
+  ]
+}</pre>
+  </div>
+</div>
+
+<!-- HIGH-005 -->
+<div class="finding" id="HIGH-005">
+  <div class="finding-header" onclick="toggleFinding('HIGH-005')">
+    <div class="finding-header-left">
+      <div class="finding-id">HIGH-005 · On-Page</div>
+      <div class="finding-title">Homepage title is 75 characters — 15 over mobile SERP limit, "India" geo-signal truncated</div>
+      <div class="finding-pillars">
+        <span class="badge badge-high">High</span>
+        <span class="badge badge-seo">SEO</span>
+        <span style="font-size:.78rem;color:var(--text3);margin-left:.25rem">Homepage</span>
+      </div>
+    </div>
+    <label class="finding-check" onclick="event.stopPropagation()">
+      <input type="checkbox" onchange="updateProgress(this,'HIGH-005')"/>
+      <span class="finding-check-label">Mark addressed</span>
+    </label><div class="dropdown-arrow">▼</div>
+  </div>
+  <div class="finding-body collapsed" id="body-HIGH-005">
+    <div class="finding-intro">Current title displays as "BuildingWorld | Verified Building Products & Trusted Supp..." in mobile SERPs — losing the critical "India" geo-signal that differentiates BuildingWorld from global platforms.</div>
+    <div class="ba-grid">
+      <div class="ba-panel ba-before"><div class="ba-panel-header">🔴 Current (75 chars)</div><div class="ba-panel-body"><pre class="broken">BuildingWorld | Verified Building Products
+& Trusted Suppliers in India
+↑ Truncates after "Suppli..." in mobile</pre></div></div>
+      <div class="ba-panel ba-after"><div class="ba-panel-header">✅ Fixed (61 chars)</div><div class="ba-panel-body"><pre class="fixed">BuildingWorld — Building Products
+& Verified Suppliers India</pre></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- HIGH-006 -->
+<div class="finding" id="HIGH-006">
+  <div class="finding-header" onclick="toggleFinding('HIGH-006')">
+    <div class="finding-header-left">
+      <div class="finding-id">HIGH-006 · Technical</div>
+      <div class="finding-title">WebSite SearchAction points to robots.txt-disallowed /search path — sitelinks searchbox broken</div>
+      <div class="finding-pillars">
+        <span class="badge badge-high">High</span>
+        <span class="badge badge-seo">SEO</span>
+        <span style="font-size:.78rem;color:var(--text3);margin-left:.25rem">Homepage</span>
+      </div>
+    </div>
+    <label class="finding-check" onclick="event.stopPropagation()">
+      <input type="checkbox" onchange="updateProgress(this,'HIGH-006')"/>
+      <span class="finding-check-label">Mark addressed</span>
+    </label><div class="dropdown-arrow">▼</div>
+  </div>
+  <div class="finding-body collapsed" id="body-HIGH-006">
+    <div class="finding-intro">The WebSite schema has a SearchAction pointing to <code>/search?q=</code> but robots.txt has <code>Disallow: /search/</code>. Google cannot validate the SearchAction endpoint — sitelinks searchbox will not render on branded SERPs.</div>
+    <div class="ba-grid">
+      <div class="ba-panel ba-before"><div class="ba-panel-header">🔴 Current</div><div class="ba-panel-body"><pre class="broken">"target": "https://www.buildingworld.ai
+/search?q={search_term_string}"
+// /search is Disallowed in robots.txt ❌</pre></div></div>
+      <div class="ba-panel ba-after"><div class="ba-panel-header">✅ Fixed</div><div class="ba-panel-body"><pre class="fixed">"target": {
+  "@type": "EntryPoint",
+  "urlTemplate": "https://www.buildingworld.ai
+/products/categories?q={search_term_string}"
+}</pre></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- HIGH-007 -->
+<div class="finding" id="HIGH-007">
+  <div class="finding-header" onclick="toggleFinding('HIGH-007')">
+    <div class="finding-header-left">
+      <div class="finding-id">HIGH-007 · On-Page</div>
+      <div class="finding-title">L0 Products hub page (/products/categories) has zero H1 tags in both Raw and Rendered HTML</div>
+      <div class="finding-pillars">
+        <span class="badge badge-high">High</span>
+        <span class="badge badge-seo">SEO</span>
+        <span style="font-size:.78rem;color:var(--text3);margin-left:.25rem">/products/categories</span>
+      </div>
+    </div>
+    <label class="finding-check" onclick="event.stopPropagation()">
+      <input type="checkbox" onchange="updateProgress(this,'HIGH-007')"/>
+      <span class="finding-check-label">Mark addressed</span>
+    </label><div class="dropdown-arrow">▼</div>
+  </div>
+  <div class="finding-body collapsed" id="body-HIGH-007">
+    <div class="finding-intro">The main product hub page has no H1 in either Raw or Rendered HTML. Google cannot determine the primary topic of your most important category navigation page.</div>
+    <pre class="fixed" style="margin-top:1rem">// app/products/categories/page.tsx (Server Component)
+&lt;h1&gt;Verified Building Materials &amp; Construction Products — India&lt;/h1&gt;</pre>
+  </div>
+</div>
+
+<!-- HIGH-008 -->
+<div class="finding" id="HIGH-008">
+  <div class="finding-header" onclick="toggleFinding('HIGH-008')">
+    <div class="finding-header-left">
+      <div class="finding-id">HIGH-008 · On-Page / Performance</div>
+      <div class="finding-title">OG image is the logo on ALL templates — every WhatsApp/LinkedIn share shows only the logo</div>
+      <div class="finding-pillars">
+        <span class="badge badge-high">High</span>
+        <span class="badge badge-seo">SEO</span><span class="badge badge-aeo">AEO</span>
+        <span style="font-size:.78rem;color:var(--text3);margin-left:.25rem">All templates</span>
+      </div>
+    </div>
+    <label class="finding-check" onclick="event.stopPropagation()">
+      <input type="checkbox" onchange="updateProgress(this,'HIGH-008')"/>
+      <span class="finding-check-label">Mark addressed</span>
+    </label><div class="dropdown-arrow">▼</div>
+  </div>
+  <div class="finding-body collapsed" id="body-HIGH-008">
+    <div class="finding-intro">Every category and static page uses <code>bw_logo_17kb.jpg</code> as the OG image. When architects and procurement professionals share category links on WhatsApp (dominant in India) or LinkedIn, the preview card shows only the logo — not the products — dramatically reducing CTR on shared links.</div>
+    <div class="ba-grid">
+      <div class="ba-panel ba-before"><div class="ba-panel-header">🔴 Current</div><div class="ba-panel-body"><pre class="broken">og:image = /images/bw_logo_17kb.jpg
+// Logo on ALL pages including product listings</pre></div></div>
+      <div class="ba-panel ba-after"><div class="ba-panel-header">✅ Fixed per template</div><div class="ba-panel-body"><pre class="fixed">// Homepage: branded social card (1200×630)
+// L1 category: category hero image
+// Product: first product image from CDN
+// All via Next.js generateMetadata()</pre></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ── LLM VISIBILITY GROUP ── -->
+<div class="group-divider"><div class="group-divider-bg"><span class="group-divider-label">🤖 LLM Visibility (AEO / GEO)</span></div></div>
+
+<!-- AEO-001 -->
+<div class="finding" id="AEO-001">
+  <div class="finding-header" onclick="toggleFinding('AEO-001')">
+    <div class="finding-header-left">
+      <div class="finding-id">AEO-001 · Google AI Overview</div>
+      <div class="finding-title">No FAQ schema + no question-led headings — BuildingWorld excluded from Google AI Overview on construction queries</div>
+      <div class="finding-pillars">
+        <span class="badge badge-high">High</span>
+        <span class="badge badge-aeo">AEO</span><span class="badge badge-geo">GEO</span>
+        <span style="font-size:.78rem;color:var(--text3);margin-left:.25rem">Homepage</span>
+      </div>
+    </div>
+    <label class="finding-check" onclick="event.stopPropagation()">
+      <input type="checkbox" onchange="updateProgress(this,'AEO-001')"/>
+      <span class="finding-check-label">Mark addressed</span>
+    </label><div class="dropdown-arrow">▼</div>
+  </div>
+  <div class="finding-body collapsed" id="body-AEO-001">
+    <div class="finding-intro">Homepage has no question-format H2/H3 headings and no visible FAQ content. While FAQPage schema exists on L0 and Homepage, there's no visible FAQ section on the page — violating Google's requirement that schema content must be visible.</div>
+    <pre class="fixed" style="margin-top:1rem">// Add visible FAQ section to homepage:
+&lt;section id="faq"&gt;
+  &lt;h2&gt;Frequently Asked Questions&lt;/h2&gt;
+  &lt;details&gt;
+    &lt;summary&gt;What is BuildingWorld?&lt;/summary&gt;
+    &lt;p&gt;BuildingWorld is India's verified B2B marketplace for construction
+    materials and building products, connecting architects, civil engineers,
+    and procurement teams with 4,100+ verified brands across 150+ cities.&lt;/p&gt;
+  &lt;/details&gt;
+&lt;/section&gt;</pre>
+  </div>
+</div>
+
+<!-- GEO-001 -->
+<div class="finding" id="GEO-001">
+  <div class="finding-header" onclick="toggleFinding('GEO-001')">
+    <div class="finding-header-left">
+      <div class="finding-id">GEO-001 · LLM Citation</div>
+      <div class="finding-title">No answer-first paragraph — LLMs cannot extract a definition of BuildingWorld for citations</div>
+      <div class="finding-pillars">
+        <span class="badge badge-medium">Medium</span>
+        <span class="badge badge-aeo">AEO</span><span class="badge badge-geo">GEO</span>
+        <span style="font-size:.78rem;color:var(--text3);margin-left:.25rem">Homepage</span>
+      </div>
+    </div>
+    <label class="finding-check" onclick="event.stopPropagation()">
+      <input type="checkbox" onchange="updateProgress(this,'GEO-001')"/>
+      <span class="finding-check-label">Mark addressed</span>
+    </label><div class="dropdown-arrow">▼</div>
+  </div>
+  <div class="finding-body collapsed" id="body-GEO-001">
+    <div class="finding-intro">AEO and LLM extractors look for a self-contained definition paragraph in the first 60 words of main content. The homepage has none — just hero UI components. When ChatGPT or Perplexity tries to answer "What is BuildingWorld?", there's nothing to extract.</div>
+    <pre class="fixed" style="margin-top:1rem">&lt;!-- Server-rendered, in Raw HTML: --&gt;
+&lt;p id="platform-description"&gt;
+  &lt;strong&gt;BuildingWorld&lt;/strong&gt; is India's verified B2B marketplace for
+  construction materials and building products, connecting architects, civil
+  engineers, interior designers, and procurement teams with 4,100+ verified
+  brands and 74,000+ products across 150+ Indian cities.
+&lt;/p&gt;</pre>
+  </div>
+</div>
+
+<!-- GEO-002 -->
+<div class="finding" id="GEO-002">
+  <div class="finding-header" onclick="toggleFinding('GEO-002')">
+    <div class="finding-header-left">
+      <div class="finding-id">GEO-002 · AI Crawler Access</div>
+      <div class="finding-title">robots.txt missing live-retrieval AI bots: Perplexity-User, Claude-SearchBot, Claude-Web</div>
+      <div class="finding-pillars">
+        <span class="badge badge-medium">Medium</span>
+        <span class="badge badge-geo">GEO</span>
+        <span style="font-size:.78rem;color:var(--text3);margin-left:.25rem">robots.txt</span>
+      </div>
+    </div>
+    <label class="finding-check" onclick="event.stopPropagation()">
+      <input type="checkbox" onchange="updateProgress(this,'GEO-002')"/>
+      <span class="finding-check-label">Mark addressed</span>
+    </label><div class="dropdown-arrow">▼</div>
+  </div>
+  <div class="finding-body collapsed" id="body-GEO-002">
+    <div class="finding-intro">Training crawlers (PerplexityBot, ClaudeBot) are correctly allowed. But <em>live retrieval</em> bots (Perplexity-User, Claude-SearchBot) used when a user asks a live question are not explicitly listed — risking WAF false-positive blocks.</div>
+    <pre class="fixed" style="margin-top:1rem">User-agent: Perplexity-User
+Allow: /
+Crawl-delay: 2
+
+User-agent: Claude-SearchBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Applebot-Extended
+Allow: /</pre>
+  </div>
+</div>
+
+<!-- GEO-003 -->
+<div class="finding" id="GEO-003">
+  <div class="finding-header" onclick="toggleFinding('GEO-003')">
+    <div class="finding-header-left">
+      <div class="finding-id">GEO-003 · AI Content</div>
+      <div class="finding-title">llms-full.txt missing at /llms-full.txt — training corpus crawlers get 404</div>
+      <div class="finding-pillars">
+        <span class="badge badge-medium">Medium</span>
+        <span class="badge badge-geo">GEO</span>
+      </div>
+    </div>
+    <label class="finding-check" onclick="event.stopPropagation()">
+      <input type="checkbox" onchange="updateProgress(this,'GEO-003')"/>
+      <span class="finding-check-label">Mark addressed</span>
+    </label><div class="dropdown-arrow">▼</div>
+  </div>
+  <div class="finding-body collapsed" id="body-GEO-003">
+    <div class="finding-intro">The llms.txt is excellent — one of the best we've seen. Creating llms-full.txt (flat Markdown of all public pages) would significantly improve LLM training corpus inclusion and retrieval accuracy.</div>
+  </div>
+</div>
+
+<!-- REMAINING MEDIUM FINDINGS (collapsed by default) -->
+<div class="finding" id="MED-001"><div class="finding-header" onclick="toggleFinding('MED-001')"><div class="finding-header-left"><div class="finding-id">MED-001 · On-Page</div><div class="finding-title">Raw newline character in meta description — truncates SERP snippet, breaks OG cards</div><div class="finding-pillars"><span class="badge badge-medium">Medium</span><span class="badge badge-seo">SEO</span><span class="badge badge-aeo">AEO</span></div></div><label class="finding-check" onclick="event.stopPropagation()"><input type="checkbox" onchange="updateProgress(this,'MED-001')"/><span class="finding-check-label">Mark addressed</span></label><div class="dropdown-arrow">▼</div></div><div class="finding-body collapsed" id="body-MED-001"><div class="finding-intro">The meta description contains a literal <code>\n</code> newline mid-sentence. Google truncates the snippet at the newline. Facebook/LinkedIn OG cards display broken text.</div><pre class="broken" style="margin-top:1rem">content="...Transform your dream space with BuildingWorld today!\n"/></pre><pre class="fixed" style="margin-top:.5rem">// Remove newline — single clean string, 140-155 chars</pre></div></div>
+
+<div class="finding" id="MED-002"><div class="finding-header" onclick="toggleFinding('MED-002')"><div class="finding-header-left"><div class="finding-id">MED-002 · On-Page</div><div class="finding-title">L1 and L2 category pages share identical title + meta description — duplication risk</div><div class="finding-pillars"><span class="badge badge-medium">Medium</span><span class="badge badge-seo">SEO</span></div></div><label class="finding-check" onclick="event.stopPropagation()"><input type="checkbox" onchange="updateProgress(this,'MED-002')"/><span class="finding-check-label">Mark addressed</span></label><div class="dropdown-arrow">▼</div></div><div class="finding-body collapsed" id="body-MED-002"><div class="finding-intro">L1 "Furniture & Home Decor" and L2 "Seating" subcategory share the exact same title and meta description. Google treats them as duplicates, suppressing L2 pages in index.</div></div></div>
+
+<div class="finding" id="MED-003"><div class="finding-header" onclick="toggleFinding('MED-003')"><div class="finding-header-left"><div class="finding-id">MED-003 · Structured Data</div><div class="finding-title">FAQPage schema on L0 references questions not visible on the page</div><div class="finding-pillars"><span class="badge badge-medium">Medium</span><span class="badge badge-aeo">AEO</span></div></div><label class="finding-check" onclick="event.stopPropagation()"><input type="checkbox" onchange="updateProgress(this,'MED-003')"/><span class="finding-check-label">Mark addressed</span></label><div class="dropdown-arrow">▼</div></div><div class="finding-body collapsed" id="body-MED-003"><div class="finding-intro">Google's guidelines require FAQPage schema content to be visible on the page. The L0 page has FAQPage JSON-LD but no visible FAQ section — schema will fail validation and may be penalized.</div></div></div>
+
+<div class="finding" id="MED-004"><div class="finding-header" onclick="toggleFinding('MED-004')"><div class="finding-header-left"><div class="finding-id">MED-004 · Performance</div><div class="finding-title">Product images served from AWS S3 direct — 869 S3 refs vs 124 CDN on product detail page</div><div class="finding-pillars"><span class="badge badge-medium">Medium</span><span class="badge badge-seo">SEO</span></div></div><label class="finding-check" onclick="event.stopPropagation()"><input type="checkbox" onchange="updateProgress(this,'MED-004')"/><span class="finding-check-label">Mark addressed</span></label><div class="dropdown-arrow">▼</div></div><div class="finding-body collapsed" id="body-MED-004"><div class="finding-intro">Product images route directly to <code>bw-production.s3.ap-south-1.amazonaws.com</code> instead of the CloudFront CDN. S3 direct access has higher latency, no image optimization, and no edge caching — hurting Core Web Vitals on product pages.</div></div></div>
+
+<div class="finding" id="MED-005"><div class="finding-header" onclick="toggleFinding('MED-005')"><div class="finding-header-left"><div class="finding-id">MED-005 · Technical</div><div class="finding-title">Sitemap lastmod always equals today's date — Google ignores uniform lastmod values</div><div class="finding-pillars"><span class="badge badge-low">Low</span><span class="badge badge-seo">SEO</span></div></div><label class="finding-check" onclick="event.stopPropagation()"><input type="checkbox" onchange="updateProgress(this,'MED-005')"/><span class="finding-check-label">Mark addressed</span></label><div class="dropdown-arrow">▼</div></div><div class="finding-body collapsed" id="body-MED-005"><div class="finding-intro">All 5,000+ sitemap entries show <code>lastmod=today</code> regardless of actual content updates. Google has stated it ignores lastmod when all values are identical. Use the database <code>updated_at</code> timestamp per URL.</div></div></div>
+
+<div class="finding" id="INFO-001"><div class="finding-header" onclick="toggleFinding('INFO-001')"><div class="finding-header-left"><div class="finding-id">INFO-001 · AI Crawler Policy</div><div class="finding-title">✅ Excellent robots.txt AI crawler policy — all major bots explicitly handled</div><div class="finding-pillars"><span class="badge badge-pass">Pass</span><span class="badge badge-geo">GEO</span></div></div><label class="finding-check" onclick="event.stopPropagation()"><input type="checkbox" onchange="updateProgress(this,'INFO-001')"/><span class="finding-check-label">Mark as reviewed</span></label><div class="dropdown-arrow">▼</div></div><div class="finding-body collapsed" id="body-INFO-001"><div class="finding-intro">GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, anthropic-ai, PerplexityBot, Google-Extended, Meta-ExternalAgent all explicitly allowed. The robots.txt includes a reference to llms.txt. This is a genuine competitive advantage — most Indian B2B sites block AI crawlers accidentally. Only gap: live-retrieval variants (GEO-002).</div></div></div>
+
+
+<!-- AGENTIC BROWSING CHECKLIST -->
+<div class="section-label">Readiness Assessment</div>
+<div class="section-title">Agentic Browsing (SXO / AXO)</div>
+<div class="section-sub">Standardized checklist evaluating template capabilities against autonomous AI user agent requirements.</div>
+
+<!-- AXO-1-1 -->
+<div class="finding" id="AXO-1-1">
+  <div class="finding-header" onclick="toggleFinding('AXO-1-1')">
+    <div class="finding-header-left">
+      <div class="finding-id">AXO-1.1 · Language Attribute</div>
+      <div class="finding-title">Root &lt;html&gt; tag missing lang attribute — blocks AI translation and language clustering</div>
+      <div class="finding-pillars">
+        <span class="badge badge-critical">Failed</span>
+        <span class="badge badge-aeo">AXO</span><span class="badge badge-geo">SXO</span>
+        <span style="font-size:.78rem;color:var(--text3);margin-left:.25rem">All page templates affected</span>
+      </div>
+    </div>
+    <label class="finding-check" onclick="event.stopPropagation()">
+      <input type="checkbox" onchange="updateProgress(this,'AXO-1-1')"/>
+      <span class="finding-check-label">Mark addressed</span>
+    </label><div class="dropdown-arrow">▼</div>
+  </div>
+  <div class="finding-body collapsed" id="body-AXO-1-1">
+    <div class="finding-intro">The root <code>&lt;html&gt;</code> element is missing a <code>lang</code> attribute. When AI agents translate or parse pages, the lack of explicit language metadata leads to parsing bugs or translation failures. It also fails WCAG accessibility guidelines.</div>
+    <div class="ba-grid">
+      <div class="ba-panel ba-before">
+        <div class="ba-panel-header">🔴 Current</div>
+        <div class="ba-panel-body"><pre class="broken">&lt;html&gt;
+  &lt;!-- Missing language declaration --&gt;</pre></div>
+      </div>
+      <div class="ba-panel ba-after">
+        <div class="ba-panel-header">✅ Fixed</div>
+        <div class="ba-panel-body"><pre class="fixed">// app/layout.tsx
+&lt;html lang="en-IN"&gt;
+  &lt;!-- Explicit language and region --&gt;</pre></div>
+      </div>
+    </div>
+    <div class="verify-box">
+      <div class="verify-box-label">Verify</div>
+      <code>curl -s https://www.buildingworld.ai | grep -i '&lt;html'</code> — should return <code>&lt;html lang="en-IN"&gt;</code>.
+    </div>
+  </div>
+</div>
+
+<!-- AXO-1-2 -->
+<div class="finding" id="AXO-1-2">
+  <div class="finding-header" onclick="toggleFinding('AXO-1-2')">
+    <div class="finding-header-left">
+      <div class="finding-id">AXO-1.2 · Outline</div>
+      <div class="finding-title">Non-semantic heading outline — multiple H1 tags confuse crawler semantic parsing</div>
+      <div class="finding-pillars">
+        <span class="badge badge-critical">Failed</span>
+        <span class="badge badge-aeo">AXO</span><span class="badge badge-geo">SXO</span>
+        <span style="font-size:.78rem;color:var(--text3);margin-left:.25rem">All L1, L2 templates affected</span>
+      </div>
+    </div>
+    <label class="finding-check" onclick="event.stopPropagation()">
+      <input type="checkbox" onchange="updateProgress(this,'AXO-1-2')"/>
+      <span class="finding-check-label">Mark addressed</span>
+    </label><div class="dropdown-arrow">▼</div>
+  </div>
+  <div class="finding-body collapsed" id="body-AXO-1-2">
+    <div class="finding-intro">Multiple H1 tags are rendered on L1 and L2 listing pages (such as filters, categories, and count text), confusing screen readers and AI semantic outline parsers. Modern LLM search assistants crawl document outlines to extract structure.</div>
+    <div class="ba-grid">
+      <div class="ba-panel ba-before">
+        <div class="ba-panel-header">🔴 Current Outline (6 H1s)</div>
+        <div class="ba-panel-body"><pre class="broken">&lt;h1&gt;Furniture and interior decor&lt;/h1&gt;
+&lt;h1&gt;FILTERS&lt;/h1&gt;
+&lt;h1&gt;Category&lt;/h1&gt;
+&lt;h1&gt;Price&lt;/h1&gt;</pre></div>
+      </div>
+      <div class="ba-panel ba-after">
+        <div class="ba-panel-header">✅ Fixed Semantic Outline</div>
+        <div class="ba-panel-body"><pre class="fixed">&lt;h1&gt;Furniture & Home Decor&lt;/h1&gt;
+&lt;h2&gt;FILTERS&lt;/h2&gt;
+&lt;h3&gt;Category&lt;/h3&gt;
+&lt;h3&gt;Price&lt;/h3&gt;</pre></div>
+      </div>
+    </div>
+    <div class="screenshot-gallery">
+      <div>
+        <img src="./screenshots/raw_h1_issue_1781529009109.png" alt="Raw Outline Issue"/>
+        <div class="screenshot-caption">Raw outline showing duplicate H1 headings processed by search crawlers</div>
+      </div>
+      <div>
+        <img src="./screenshots/product_h1_bug_1781528514945.webp" alt="Client H1 Undefined Bug"/>
+        <div class="screenshot-caption">Client view demonstrating "undefined" strings rendered inside the main H1 heading</div>
+      </div>
+    </div>
+    <div class="verify-box" style="margin-top: 1.25rem;">
+      <div class="verify-box-label">Verify</div>
+      Use an outline checker or inspect: <code>document.querySelectorAll('h1').length</code> should equal exactly 1.
+    </div>
+  </div>
+</div>
+
+<!-- AXO-1-3 -->
+<div class="finding" id="AXO-1-3">
+  <div class="finding-header" onclick="toggleFinding('AXO-1-3')">
+    <div class="finding-header-left">
+      <div class="finding-id">AXO-1.3 · Server Rendering</div>
+      <div class="finding-title">Product catalog grids are client-side only — invisible to initial raw HTML fetches</div>
+      <div class="finding-pillars">
+        <span class="badge badge-critical">Failed</span>
+        <span class="badge badge-aeo">AXO</span><span class="badge badge-geo">SXO</span>
+        <span style="font-size:.78rem;color:var(--text3);margin-left:.25rem">L1, L2 category listings</span>
+      </div>
+    </div>
+    <label class="finding-check" onclick="event.stopPropagation()">
+      <input type="checkbox" onchange="updateProgress(this,'AXO-1-3')"/>
+      <span class="finding-check-label">Mark addressed</span>
+    </label><div class="dropdown-arrow">▼</div>
+  </div>
+  <div class="finding-body collapsed" id="body-AXO-1-3">
+    <div class="finding-intro">AI search agents (such as OpenAI Search, Perplexity) crawl the initial raw HTML source rather than waiting for heavy JavaScript hydration. Since product cards render entirely on the client, these agents crawl blank list shells.</div>
+    <div class="ba-grid">
+      <div class="ba-panel ba-before">
+        <div class="ba-panel-header">🔴 Current Raw HTML</div>
+        <div class="ba-panel-body"><pre class="broken">&lt;!-- Zero product listings in source (Ctrl+U) --&gt;
+&lt;div id="product-grid"&gt;
+  &lt;!-- Blank shell before dynamic JS loads --&gt;
+&lt;/div&gt;</pre></div>
+      </div>
+      <div class="ba-panel ba-after">
+        <div class="ba-panel-header">✅ Fixed SSR Grid</div>
+        <div class="ba-panel-body"><pre class="fixed">// Server-rendered cards directly in HTML
+&lt;div id="product-grid"&gt;
+  {products.map(p =&gt; (
+    &lt;a href={`/products/${p.slug}`} key={p.id}&gt;
+      {p.name}
+    &lt;/a&gt;
+  ))}
+&lt;/div&gt;</pre></div>
+      </div>
+    </div>
+    <div class="screenshot-gallery">
+      <div>
+        <img src="./screenshots/category_raw_vs_rendered_1781529073420.webp" alt="Raw vs Rendered Grid comparison"/>
+        <div class="screenshot-caption">Marketplace view showing 0 products in raw HTML vs fully loaded grid in browser view</div>
+      </div>
+      <div>
+        <img src="./screenshots/rendered_grid_1781529099622.png" alt="Rendered Grid Layout"/>
+        <div class="screenshot-caption">Rendered grid template loaded dynamically after Client-Side JavaScript execution</div>
+      </div>
+    </div>
+    <div class="verify-box" style="margin-top: 1.25rem;">
+      <div class="verify-box-label">Verify</div>
+      <code>curl -s https://www.buildingworld.ai/products/categories/lizpqk-furniture-and-home-decor | grep -c 'href="/products/'</code> — should be &ge; 24.
+    </div>
+  </div>
+</div>
+
+<!-- AXO-1-4 -->
+<div class="finding" id="AXO-1-4">
+  <div class="finding-header" onclick="toggleFinding('AXO-1-4')">
+    <div class="finding-header-left">
+      <div class="finding-id">AXO-1.4 · Resiliency</div>
+      <div class="finding-title">Next.js hydration crash unmounts body when loaded outside official production domain</div>
+      <div class="finding-pillars">
+        <span class="badge badge-critical">Failed</span>
+        <span class="badge badge-aeo">AXO</span><span class="badge badge-geo">SXO</span>
+        <span style="font-size:.78rem;color:var(--text3);margin-left:.25rem">All page templates</span>
+      </div>
+    </div>
+    <label class="finding-check" onclick="event.stopPropagation()">
+      <input type="checkbox" onchange="updateProgress(this,'AXO-1-4')"/>
+      <span class="finding-check-label">Mark addressed</span>
+    </label><div class="dropdown-arrow">▼</div>
+  </div>
+  <div class="finding-body collapsed" id="body-AXO-1-4">
+    <div class="finding-intro">Loading the site's markup locally or inside third-party scrapers/viewers triggers a Next.js chunk compilation mismatch. React unmounts the page body and outputs an "Application Error", breaking standard scraper extraction methods.</div>
+    <div class="ba-grid">
+      <div class="ba-panel ba-before">
+        <div class="ba-panel-header">🔴 Fragile Client Crash</div>
+        <div class="ba-panel-body"><pre class="broken">Uncaught runtime exceptions unmount
+entire DOM body, rendering error page:
+"Application error: a client-side exception..."</pre></div>
+      </div>
+      <div class="ba-panel ba-after">
+        <div class="ba-panel-header">✅ Resilient Fallback</div>
+        <div class="ba-panel-body"><pre class="fixed">Serve pre-rendered static elements.
+Ensure failures in dynamic webpack scripts
+resolve silently without wiping HTML content.</pre></div>
+      </div>
+    </div>
+    <img class="finding-screenshot" src="./screenshots/view_source_empty_1781529229882.png" alt="Next.js Client Hydration Crash Screenshot" style="margin: 1.25rem auto 0; max-width: 600px; display: block;"/>
+    <div class="screenshot-caption">Next.js application crash unmounting page body when loaded outside origin domain</div>
+    <div class="verify-box" style="margin-top: 1.25rem;">
+      <div class="verify-box-label">Verify</div>
+      Save page HTML locally and load it in a browser with script execution active; the layout and data should remain visible.
+    </div>
+  </div>
+</div>
+
+<!-- AXO-1-5 -->
+<div class="finding" id="AXO-1-5">
+  <div class="finding-header" onclick="toggleFinding('AXO-1-5')">
+    <div class="finding-header-left">
+      <div class="finding-id">AXO-1.5 · AI Crawler Access</div>
+      <div class="finding-title">robots.txt lacks live-retrieval user agents — risks firewall blocks on live queries</div>
+      <div class="finding-pillars">
+        <span class="badge badge-critical">Failed</span>
+        <span class="badge badge-aeo">AXO</span><span class="badge badge-geo">SXO</span>
+        <span style="font-size:.78rem;color:var(--text3);margin-left:.25rem">robots.txt</span>
+      </div>
+    </div>
+    <label class="finding-check" onclick="event.stopPropagation()">
+      <input type="checkbox" onchange="updateProgress(this,'AXO-1-5')"/>
+      <span class="finding-check-label">Mark addressed</span>
+    </label><div class="dropdown-arrow">▼</div>
+  </div>
+  <div class="finding-body collapsed" id="body-AXO-1-5">
+    <div class="finding-intro">Standard indexers are defined, but live retrieval bots like <code>Perplexity-User</code> or <code>Claude-SearchBot</code> are missing. When a user asks an AI browser a real-time question about BuildingWorld, the live-search agent might be blocked by CloudFront WAF rules.</div>
+    <div class="ba-grid">
+      <div class="ba-panel ba-before">
+        <div class="ba-panel-header">🔴 Current robots.txt</div>
+        <div class="ba-panel-body"><pre class="broken">User-agent: GPTBot
+Allow: /
+# (No live user search agent rules declared)</pre></div>
+      </div>
+      <div class="ba-panel ba-after">
+        <div class="ba-panel-header">✅ Optimized robots.txt</div>
+        <div class="ba-panel-body"><pre class="fixed">User-agent: Perplexity-User
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: Claude-Web
+Allow: /</pre></div>
+      </div>
+    </div>
+    <img class="finding-screenshot" src="./screenshots/media__1781528714834.png" alt="Robots.txt in Search Console" style="margin: 1.25rem auto 0; max-width: 600px; display: block;"/>
+    <div class="screenshot-caption">Live Robots.txt configuration parsed in Google Search Console, lacking live user-search agent mappings</div>
+    <div class="verify-box" style="margin-top: 1.25rem;">
+      <div class="verify-box-label">Verify</div>
+      <code>curl -s https://www.buildingworld.ai/robots.txt | grep 'Perplexity-User'</code> — should return Allow rules.
+    </div>
+  </div>
+</div>
+
+<!-- AXO-1-6 -->
+<div class="finding" id="AXO-1-6">
+  <div class="finding-header" onclick="toggleFinding('AXO-1-6')">
+    <div class="finding-header-left">
+      <div class="finding-id">AXO-1.6 · Form Elements</div>
+      <div class="finding-title">Input fields lack W3C WebMCP attributes — autonomous AI agents cannot submit forms</div>
+      <div class="finding-pillars">
+        <span class="badge badge-critical">Failed</span>
+        <span class="badge badge-aeo">AXO</span><span class="badge badge-geo">SXO</span>
+        <span style="font-size:.78rem;color:var(--text3);margin-left:.25rem">All form interactions</span>
+      </div>
+    </div>
+    <label class="finding-check" onclick="event.stopPropagation()">
+      <input type="checkbox" onchange="updateProgress(this,'AXO-1-6')"/>
+      <span class="finding-check-label">Mark addressed</span>
+    </label><div class="dropdown-arrow">▼</div>
+  </div>
+  <div class="finding-body collapsed" id="body-AXO-1-6">
+    <div class="finding-intro">Interactive forms (such as RFQ and search inputs) depend on coordinate click events rather than semantic forms. Adding WebMCP attributes allows AI browser agents (e.g. MultiOn) to read and interact with forms programmatically.</div>
+    <div class="ba-grid">
+      <div class="ba-panel ba-before">
+        <div class="ba-panel-header">🔴 Coordinate/Click Form</div>
+        <div class="ba-panel-body"><pre class="broken">&lt;div class="input-wrap" onClick={submitData}&gt;
+  &lt;span&gt;Get Custom Quote&lt;/span&gt;
+&lt;/div&gt;</pre></div>
+      </div>
+      <div class="ba-panel ba-after">
+        <div class="ba-panel-header">✅ WebMCP Compliant Form</div>
+        <div class="ba-panel-body"><pre class="fixed">&lt;form id="rfq-form" webmcp-action="submit"&gt;
+  &lt;label for="prod-qty"&gt;Quantity&lt;/label&gt;
+  &lt;input id="prod-qty" name="quantity" type="number" required /&gt;
+  &lt;button type="submit"&gt;Get Custom Quote&lt;/button&gt;
+&lt;/form&gt;</pre></div>
+      </div>
+    </div>
+    <img class="finding-screenshot" src="./screenshots/rendered_product_page_1781529044567.png" alt="Product detail form controls" style="margin: 1.25rem auto 0; max-width: 500px; display: block;"/>
+    <div class="screenshot-caption">Product detail template with coordinate click actions rather than standard semantic forms</div>
+    <div class="verify-box" style="margin-top: 1.25rem;">
+      <div class="verify-box-label">Verify</div>
+      Ensure forms use standard HTML tag elements with semantic `name`, `label` and ID attributes.
+    </div>
+  </div>
+</div>
+
+<!-- AXO-1-7 -->
+<div class="finding" id="AXO-1-7">
+  <div class="finding-header" onclick="toggleFinding('AXO-1-7')">
+    <div class="finding-header-left">
+      <div class="finding-id">AXO-1.7 · Corpus Permissions</div>
+      <div class="finding-title">Training corpus permissions — major AI scraper agents allowed in robots.txt</div>
+      <div class="finding-pillars">
+        <span class="badge badge-pass">Passed</span>
+        <span class="badge badge-aeo">AXO</span><span class="badge badge-geo">SXO</span>
+        <span style="font-size:.78rem;color:var(--text3);margin-left:.25rem">robots.txt</span>
+      </div>
+    </div>
+    <label class="finding-check" onclick="event.stopPropagation()">
+      <input type="checkbox" onchange="updateProgress(this,'AXO-1-7')"/>
+      <span class="finding-check-label">Mark reviewed</span>
+    </label><div class="dropdown-arrow">▼</div>
+  </div>
+  <div class="finding-body collapsed" id="body-AXO-1-7">
+    <div class="finding-intro">BuildingWorld correctly handles major training indexers (like GPTBot, ClaudeBot) inside robots.txt, ensuring the site catalog is cataloged during model updates and offline training cycles.</div>
+    <div class="ba-grid">
+      <div class="ba-panel ba-after">
+        <div class="ba-panel-header">✅ Configured Crawler Rules</div>
+        <div class="ba-panel-body"><pre class="fixed">User-agent: GPTBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /</pre></div>
+      </div>
+    </div>
+    <img class="finding-screenshot" src="./screenshots/media__1781528714834.png" alt="Robots.txt permissions configuration" style="margin: 1.25rem auto 0; max-width: 600px; display: block;"/>
+    <div class="screenshot-caption">Verified robots.txt instructions explicitly allowing GPTBot, ClaudeBot, and Google-Extended</div>
+    <div class="verify-box" style="margin-top: 1.25rem;">
+      <div class="verify-box-label">Verify</div>
+      Checked and verified. Permissions conform to global AI agent compliance frameworks.
+    </div>
+  </div>
+</div>
+
+<!-- AXO-1-8 -->
+<div class="finding" id="AXO-1-8">
+  <div class="finding-header" onclick="toggleFinding('AXO-1-8')">
+    <div class="finding-header-left">
+      <div class="finding-id">AXO-1.8 · Machine Index</div>
+      <div class="finding-title">Machine context index (llms.txt) is present at site root and properly formatted</div>
+      <div class="finding-pillars">
+        <span class="badge badge-pass">Passed</span>
+        <span class="badge badge-aeo">AXO</span><span class="badge badge-geo">SXO</span>
+        <span style="font-size:.78rem;color:var(--text3);margin-left:.25rem">/llms.txt</span>
+      </div>
+    </div>
+    <label class="finding-check" onclick="event.stopPropagation()">
+      <input type="checkbox" onchange="updateProgress(this,'AXO-1-8')"/>
+      <span class="finding-check-label">Mark reviewed</span>
+    </label><div class="dropdown-arrow">▼</div>
+  </div>
+  <div class="finding-body collapsed" id="body-AXO-1-8">
+    <div class="finding-intro">A machine-readable <code>llms.txt</code> file is available at the root URL. It maps layout metadata and references search structures for AI crawlers, facilitating cleaner information retrieval.</div>
+    <div class="ba-grid">
+      <div class="ba-panel ba-after">
+        <div class="ba-panel-header">✅ llms.txt structure</div>
+        <div class="ba-panel-body"><pre class="fixed"># BuildingWorld.ai
+- [Products](/products/categories)
+- [Dealers](/dealers)
+- [Visualizer](/visualizer)</pre></div>
+      </div>
+    </div>
+    <img class="finding-screenshot" src="./screenshots/media__1781528714834.png" alt="llms.txt mapping" style="margin: 1.25rem auto 0; max-width: 600px; display: block;"/>
+    <div class="screenshot-caption">robots.txt configuration mapping direct path to llms.txt at the root directory</div>
+    <div class="verify-box" style="margin-top: 1.25rem;">
+      <div class="verify-box-label">Next Step</div>
+      Create a flat <code>/llms-full.txt</code> mapping containing full text versions of pages to improve retrieval speed.
+    </div>
+  </div>
+</div>
+
+<hr class="section-divider"/>
+
+<!-- ═══════════════════════════════════════════
+     SPRINT PLAN
+═══════════════════════════════════════════ -->
+<div class="section-label">Action Plan</div>
+<div class="section-title">Prioritized Sprint Plan</div>
+<div class="section-sub">Template fixes affect thousands of pages simultaneously — Sprint 1 is highest ROI.</div>
+
+<div class="sprint-section">
+  <div class="sprint-header"><div class="sprint-badge" style="color:var(--red);border-color:rgba(239,68,68,.3)">🔴 Sprint 1 — This Week</div><span style="color:var(--text3);font-size:.82rem">Critical template bugs affecting thousands of pages</span></div>
+  <div class="sprint-item"><span class="sprint-item-num">01</span><div class="sprint-item-text">Fix <code>undefined</code> in H1 — Product Detail + Category templates (CRIT-001)</div><span class="sprint-item-tag badge badge-critical">Critical</span></div>
+  <div class="sprint-item"><span class="sprint-item-num">02</span><div class="sprint-item-text">Fix multiple H1 tags on L1/L2 — change filter sidebar to H2/H3 (CRIT-002)</div><span class="sprint-item-tag badge badge-critical">Critical</span></div>
+  <div class="sprint-item"><span class="sprint-item-num">03</span><div class="sprint-item-text">Move product name to H1 (currently relegated to H2) on product pages (CRIT-003)</div><span class="sprint-item-tag badge badge-critical">Critical</span></div>
+  <div class="sprint-item"><span class="sprint-item-num">04</span><div class="sprint-item-text">SSR the product grid — first 24 product cards must be in Raw HTML (CRIT-003)</div><span class="sprint-item-tag badge badge-critical">Critical</span></div>
+  <div class="sprint-item"><span class="sprint-item-num">05</span><div class="sprint-item-text">Fix L2 canonical — clean slug hierarchy, no query params (CRIT-004)</div><span class="sprint-item-tag badge badge-critical">Critical</span></div>
+  <div class="sprint-item"><span class="sprint-item-num">06</span><div class="sprint-item-text">Fix Next.js client-side hydration crashes / environment mismatch (CRIT-005)</div><span class="sprint-item-tag badge badge-critical">Critical</span></div>
+  <div class="sprint-item"><span class="sprint-item-num">07</span><div class="sprint-item-text">Add <code>lang="en-IN"</code> to <code>&lt;html&gt;</code> in root layout (HIGH-002)</div><span class="sprint-item-tag badge badge-high">High</span></div>
+</div>
+
+<div class="sprint-section">
+  <div class="sprint-header"><div class="sprint-badge" style="color:var(--high);border-color:rgba(249,115,22,.3)">🟠 Sprint 2 — This Month</div><span style="color:var(--text3);font-size:.82rem">Rich results unlock — star ratings, breadcrumbs, shipping badges</span></div>
+  <div class="sprint-item"><span class="sprint-item-num">08</span><div class="sprint-item-text">Complete Product schema — add aggregateRating, shippingDetails, returnPolicy, priceValidUntil (HIGH-001)</div><span class="sprint-item-tag badge badge-high">High</span></div>
+  <div class="sprint-item"><span class="sprint-item-num">09</span><div class="sprint-item-text">Add BreadcrumbList to all category + product templates (HIGH-004)</div><span class="sprint-item-tag badge badge-high">High</span></div>
+  <div class="sprint-item"><span class="sprint-item-num">10</span><div class="sprint-item-text">Fix Organization schema — type, empty telephone, email domain (HIGH-003)</div><span class="sprint-item-tag badge badge-high">High</span></div>
+  <div class="sprint-item"><span class="sprint-item-num">11</span><div class="sprint-item-text">Fix WebSite SearchAction to point to allowed URL path (HIGH-006)</div><span class="sprint-item-tag badge badge-high">High</span></div>
+  <div class="sprint-item"><span class="sprint-item-num">12</span><div class="sprint-item-text">Add H1 to L0 products hub page (HIGH-007)</div><span class="sprint-item-tag badge badge-high">High</span></div>
+  <div class="sprint-item"><span class="sprint-item-num">13</span><div class="sprint-item-text">Generate unique titles/meta for L1 vs L2 subcategories (MED-002)</div><span class="sprint-item-tag badge badge-medium">Medium</span></div>
+  <div class="sprint-item"><span class="sprint-item-num">14</span><div class="sprint-item-text">Fix meta description newline character (MED-001)</div><span class="sprint-item-tag badge badge-medium">Medium</span></div>
+</div>
+
+<div class="sprint-section">
+  <div class="sprint-header"><div class="sprint-badge" style="color:var(--medium);border-color:rgba(234,179,8,.25)">🟡 Sprint 3 — Next Quarter</div><span style="color:var(--text3);font-size:.82rem">AI visibility + performance</span></div>
+  <div class="sprint-item"><span class="sprint-item-num">15</span><div class="sprint-item-text">Migrate product images from S3 direct to CloudFront CDN (MED-004)</div><span class="sprint-item-tag badge badge-medium">Medium</span></div>
+  <div class="sprint-item"><span class="sprint-item-num">16</span><div class="sprint-item-text">Add visible FAQ section to homepage for AEO (AEO-001)</div><span class="sprint-item-tag badge badge-medium">Medium</span></div>
+  <div class="sprint-item"><span class="sprint-item-num">17</span><div class="sprint-item-text">Add answer-first paragraph for LLM citation (GEO-001)</div><span class="sprint-item-tag badge badge-medium">Medium</span></div>
+  <div class="sprint-item"><span class="sprint-item-num">18</span><div class="sprint-item-text">Add live-retrieval AI bots to robots.txt (GEO-002)</div><span class="sprint-item-tag badge badge-medium">Medium</span></div>
+</div>
+
+<!-- THE HARD FACT TRUTH -->
+<div class="section-label" style="color: var(--critical); margin-top: 3.5rem;">The Hard Fact Truth</div>
+<div class="section-title">Why Following Big Brands Isn't the Right Choice</div>
+<div class="section-sub">A critical analysis on the risk of justifying technical decisions based on legacy giants.</div>
+
+<div class="comp-card" style="border-left: 4px solid var(--critical); background: rgba(239, 68, 68, 0.02);">
+  <div class="comp-header" style="background: linear-gradient(90deg, rgba(239, 68, 68, 0.1), rgba(249, 115, 22, 0.05));">
+    <div class="comp-title" style="color: var(--red);">⚠️ Brand Authority (DR) Fallacy vs. Technical Perfection</div>
+    <span class="badge badge-critical">Executive Warning</span>
+  </div>
+  <div class="comp-column" style="padding: 1.5rem; line-height: 1.7;">
+    <p style="margin-bottom: 1rem; color: var(--text);">Drawing comparisons to established giants like <strong>Amazon</strong>, <strong>Flipkart</strong>, or <strong>IndiaMart</strong> is understandable, but applying their legacy URL routing patterns and heavy JavaScript dependencies to a growing marketplace poses a significant risk to indexation and authority.</p>
+    
+    <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem; color: var(--text2); display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.9rem;">
+      <li><strong>The Domain Authority (DR) Gap:</strong> Amazon commands a <strong>Domain Rating of 96+</strong> and has accumulated millions of backlinks over three decades. Google allows Amazon to rank despite a bloated DOM and non-semantic code because its sheer brand trust overrides normal technical guidelines. BuildingWorld operates on a <strong>Domain Rating of 10</strong>.</li>
+      <li><strong>No Margin for Error:</strong> For a growing B2B startup, technical perfection is not optional. If search crawlers or AI retrieval agents encounter rendering bailouts, trailing slash conflicts, blank raw HTML product lists, or client hydration crashes, they will instantly drop BuildingWorld's pages and fetch clean competitor content.</li>
+      <li><strong>Misinterpreting Amazon's Architecture:</strong> Amazon does not serve nested categories on a single URL path slug using dynamic query string filters. Every level (L1, L2, L3) maps to a distinct, search-cacheable URL path slug.</li>
+    </ul>
+
+    <div class="verify-box" style="background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.2); margin-top: 1.5rem;">
+      <div class="verify-box-label" style="color: var(--critical);">Core Mandate</div>
+      <p style="color: var(--text2); font-size: 0.82rem;">Copying the legacy debt of multi-billion dollar brands while operating at a startup link profile is an SEO death sentence. BuildingWorld must stand out by delivering <strong>110% technically perfect templates</strong> that allow immediate search engine caching and seamless agentic browsing capabilities.</p>
+    </div>
+  </div>
+</div>
+
+<hr class="section-divider"/>
+
+<!-- POSITIVES -->
+<div class="section-label">What's Working</div>
+<div class="section-title">Genuine Strengths ✅</div>
+<div class="positive-grid">
+  <div class="positive-item"><span class="positive-item-icon">🤖</span>World-class robots.txt AI crawler policy</div>
+  <div class="positive-item"><span class="positive-item-icon">📄</span>llms.txt present and well-structured</div>
+  <div class="positive-item"><span class="positive-item-icon">🗺️</span>Sitemap index with 8 sub-sitemaps</div>
+  <div class="positive-item"><span class="positive-item-icon">🖼️</span>Zero missing alt attributes across all templates</div>
+  <div class="positive-item"><span class="positive-item-icon">📦</span>WebP format used throughout</div>
+  <div class="positive-item"><span class="positive-item-icon">🔗</span>Clean product URL slugs (no query params)</div>
+  <div class="positive-item"><span class="positive-item-icon">🔒</span>HTTPS confirmed</div>
+  <div class="positive-item"><span class="positive-item-icon">📊</span>Product schema foundation present</div>
+  <div class="positive-item"><span class="positive-item-icon">⚡</span>CloudFront CDN for JS/CSS assets</div>
+  <div class="positive-item"><span class="positive-item-icon">🏷️</span>33 category navigation links in Raw HTML</div>
+</div>
+
+<div class="screenshot-gallery" style="margin-top: 1.5rem;">
+  <div>
+    <img src="./screenshots/media__1781528705099.png" alt="Sitemap Index"/>
+    <div class="screenshot-caption">Verified Sitemap Index in Google Search Console showing 8 sub-sitemaps parsed correctly</div>
+  </div>
+  <div>
+    <img src="./screenshots/media__1781528714834.png" alt="Robots.txt Configuration"/>
+    <div class="screenshot-caption">Live Robots.txt configuration allowing specific AI search and retrieval crawlers</div>
+  </div>
+</div>
+
+<div style="text-align: center; margin-top: 3rem; color: var(--text3); font-size: 0.85rem; padding: 1.5rem 1.5rem 4rem; border-top: 1px solid var(--border);">
+  Report Signature: <strong>Giriish | Organic Gorwth Architec | Founders of VDS | Father of SEO</strong>
+</div>
+</div><!-- /container -->
+
+<!-- STICKY FOOTER -->
+<div class="sticky-footer">
+  <span class="sticky-footer-label">Progress</span>
+  <span class="sticky-footer-count" id="footerCount">0 of 31 findings & checks addressed</span>
+  <div class="sticky-footer-bar"><div class="sticky-footer-fill" id="footerFill" style="width:0%"></div></div>
+  <div class="done-panel" id="donePanel">🎉 All addressed — ready to re-audit!</div>
+</div>
+
+<script>
+const TOTAL = 31;
+let addressed = new Set();
+try { addressed = new Set(JSON.parse(localStorage.getItem('bw-audit-addressed') || '[]')); } catch(e){}
+
+function updateProgress(checkbox, id) {
+  if (checkbox.checked) {
+    addressed.add(id);
+    const card = document.getElementById(id);
+    if (card) card.classList.add('addressed');
+  } else {
+    addressed.delete(id);
+    const card = document.getElementById(id);
+    if (card) card.classList.remove('addressed');
+  }
+  
+  // Sync checkbox state across other elements
+  document.querySelectorAll(`input[data-sync="${id}"]`).forEach(cb => {
+    if (cb !== checkbox) cb.checked = checkbox.checked;
+  });
+  const inlineEl = document.querySelector(`#${id} input[type="checkbox"]`);
+  if (inlineEl && inlineEl !== checkbox) {
+    inlineEl.checked = checkbox.checked;
+  }
+
+  localStorage.setItem('bw-audit-addressed', JSON.stringify([...addressed]));
+  renderProgress();
+}
+
+function renderProgress() {
+  const n = addressed.size;
+  const pct = Math.round((n / TOTAL) * 100);
+  document.getElementById('progressFill').style.width = pct + '%';
+  document.getElementById('progressLabel').textContent = n + ' of ' + TOTAL + ' addressed';
+  document.getElementById('footerCount').textContent = n + ' of ' + TOTAL + ' findings & checks addressed';
+  document.getElementById('footerFill').style.width = pct + '%';
+  document.getElementById('donePanel').style.display = n >= TOTAL ? 'block' : 'none';
+}
+
+function toggleFinding(id) {
+  const body = document.getElementById('body-' + id);
+  body.classList.toggle('collapsed');
+  const finding = document.getElementById(id);
+  finding.classList.toggle('expanded');
+}
+
+function scrollToFinding(id) {
+  const el = document.getElementById(id);
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    const body = document.getElementById('body-' + id);
+    if (body && body.classList.contains('collapsed')) {
+      body.classList.remove('collapsed');
+      el.classList.add('expanded');
+    }
+    el.style.outline = '2px solid var(--accent)';
+    el.style.outlineOffset = '4px';
+    setTimeout(() => {
+      el.style.outline = 'none';
+    }, 2000);
+  }
+}
+
+// Restore state on load
+document.addEventListener('DOMContentLoaded', () => {
+  addressed.forEach(id => {
+    // Restore checklist checkboxes
+    document.querySelectorAll(`input[data-sync="${id}"]`).forEach(cb => {
+      cb.checked = true;
+    });
+    // Restore findings cards
+    const el = document.getElementById(id);
+    const cb = el?.querySelector('input[type=checkbox]');
+    if (el) el.classList.add('addressed');
+    if (cb) cb.checked = true;
+  });
+  renderProgress();
+  // Animate score bars
+  setTimeout(() => {
+    document.querySelectorAll('.score-bar-fill').forEach(el => {
+      el.style.transition = 'width 1.2s cubic-bezier(.4,0,.2,1)';
+    });
+  }, 200);
+});
+</script>
+</body>
+</html>

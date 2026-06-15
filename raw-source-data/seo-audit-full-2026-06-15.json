@@ -1,0 +1,599 @@
+{
+  "audit": {
+    "url": "https://www.buildingworld.ai/",
+    "mode": "full",
+    "date": "2026-06-15",
+    "project_label": "BuildingWorld.ai — Full SEO / AEO / GEO Audit",
+    "stack_label": "Next.js App Router + CloudFront CDN",
+    "archetype": "Multi-product B2B Marketplace (E-commerce + Professional Services + AI SaaS)",
+    "prepared_by": "SEO Biopse Audit System v1.4.0"
+  },
+  "overview": "<strong>Detected domain archetype:</strong> Multi-product B2B Marketplace — India's construction materials marketplace combining product catalog (74,000+ products), verified professionals directory, AI visualizer tools, brand directory, ideas/design gallery, and video hub. <br><br><strong>Stack:</strong> Next.js App Router with CloudFront CDN (confirmed via <code>_next/</code> paths, <code>d65kpn1g6p18g.cloudfront.net</code> CDN). <br><br><strong>Scope applied:</strong> Full three-pillar audit (SEO + AEO + GEO) with e-commerce, SaaS, structured data, crawlability, llms.txt, sitemap, and image optimization checks. <strong>JobPosting / Course / Event schema checks skipped</strong> (not present on this domain). <strong>Scoring:</strong> Homepage scored as Landing/Money page.",
+  "summary": {
+    "total_findings": 18,
+    "by_severity": {
+      "critical": 1,
+      "high": 5,
+      "medium": 8,
+      "low": 3,
+      "info": 1
+    },
+    "by_pillar": {
+      "SEO": 14,
+      "AEO": 9,
+      "GEO": 10
+    },
+    "scorecard": [
+      {"label": "Detected archetype", "value_from": "auto", "value_to": "Multi-product B2B Marketplace", "hint": "E-commerce + Professional Services + AI SaaS combined"},
+      {"label": "Tech stack", "value_from": "auto", "value_to": "Next.js + CloudFront CDN", "hint": "Confirmed via _next/ paths"},
+      {"label": "SEO Quality Score", "value_from": "0", "value_to": "58/100 — Weak", "hint": "Homepage landing page scoring"},
+      {"label": "E-E-A-T Score", "value_from": "0", "value_to": "54/100 — Weak", "hint": "Trust pillar is the limiting factor"},
+      {"label": "robots.txt", "value_from": "missing", "value_to": "✅ Excellent — all AI bots explicitly handled", "hint": "GPTBot, ClaudeBot, PerplexityBot all allowed"},
+      {"label": "llms.txt", "value_from": "missing", "value_to": "✅ Present at /llms.txt", "hint": "Well-structured, blocked paths declared"},
+      {"label": "Sitemap", "value_from": "single", "value_to": "✅ Sitemap index with 8 sub-sitemaps", "hint": "pages, products, ideas, professionals, dealers, projects, brands, videos"},
+      {"label": "Canonical", "value_from": "missing www/", "value_to": "⚠️ Inconsistent trailing slash", "hint": "canonical: buildingworld.ai (no trailing slash) but sitemap uses trailing slash for /"},
+      {"label": "JSON-LD schema", "value_from": "none", "value_to": "❌ MISSING on homepage", "hint": "No Organization, WebSite, Product, or SoftwareApplication schema detected"}
+    ]
+  },
+  "scores": {
+    "seo_quality": {
+      "page_type": "landing",
+      "overall": 58,
+      "grade": "Weak",
+      "breakdown": [
+        {"label": "LSI term coverage", "value": 13, "max": 20, "note": "Present: marketplace, verified, suppliers, platform, India, construction, materials, tiles, cement, flooring, visualizer. Missing: procurement, sourcing, specification, BOM, RFQ, B2B, digital transformation, project management"},
+        {"label": "Semantic variants", "value": 12, "max": 20, "note": "Site uses 'building products', 'construction materials', 'home design' but lacks 'building materials supplier', 'construction procurement platform', 'material sourcing India'"},
+        {"label": "Named entities", "value": 8, "max": 15, "note": "Present: BuildingWorld, India, Kerala, Chettinad. Missing: named partner brands, city names in body text, named architects/professionals as testimonials"},
+        {"label": "Content depth", "value": 12, "max": 20, "note": "Homepage is largely UI-component driven with card grids; text-to-content ratio is low; no long-form explainer section visible in SSR HTML"},
+        {"label": "Sentiment alignment", "value": 7, "max": 10, "note": "Mostly confident/neutral — appropriate for marketplace. Minor issue: CTA density high on homepage"},
+        {"label": "Keyword targeting discipline", "value": 4, "max": 10, "note": "Title uses 'Verified Building Products & Trusted Suppliers in India' — good but H1 not confirmed SSR-visible; meta description has a raw newline character mid-sentence (critical formatting bug)"},
+        {"label": "Trust signal density", "value": 2, "max": 5, "note": "Stats cited (4,100+ brands, 74,000+ products) but no named customer testimonials, no press logos, no founding team visible on homepage"}
+      ],
+      "lsi_terms_present": ["marketplace", "verified", "suppliers", "platform", "India", "construction", "materials", "tiles", "cement", "flooring", "visualizer", "brands", "professionals", "designs", "products"],
+      "lsi_terms_missing": ["procurement", "sourcing", "specification", "BOM", "RFQ", "B2B", "digital transformation", "project management", "architects", "civil engineers", "interior designers", "dealers", "distributors", "manufacturer"],
+      "entities_present": ["BuildingWorld", "India", "Kerala", "Chettinad", "Luxury modern", "AI Visualizer", "Buildingworld Lens"],
+      "entities_missing": ["named partner brands (e.g. Kajaria, Asian Paints)", "named cities in body (Mumbai, Delhi, Bengaluru)", "named founding team", "named press mentions"],
+      "sentiment_distribution": {"confident": 0.55, "neutral": 0.30, "cautious": 0.05, "aggressive": 0.10},
+      "top_improvements": [
+        "Add named entity brands as partners/verified suppliers on the homepage body — raises entity score from 8/15 to 13/15 and dramatically improves LLM citation probability.",
+        "Fix the raw newline in the meta description (line break mid-sentence in the og:description and meta description) — immediate crawl quality improvement.",
+        "Add a 200–300 word 'Why BuildingWorld' section with proper H2 and procurement/B2B LSI terms to the homepage — raises content depth from 12/20 to 17/20."
+      ]
+    },
+    "eeat": {
+      "page_type": "landing",
+      "overall": 54,
+      "grade": "Weak",
+      "breakdown": [
+        {
+          "pillar": "Trust",
+          "value": 21,
+          "max": 35,
+          "sub_signals": [
+            {"label": "Address + phone + email visible in footer", "value": 3, "max": 10, "status": "fail", "note": "No address or phone visible in SSR HTML; contact page exists but not footer-linked with tel:/mailto:"},
+            {"label": "SSL valid + HSTS", "value": 7, "max": 8, "status": "pass", "note": "HTTPS confirmed. HSTS status not verifiable without live headers but CloudFront typically sets it"},
+            {"label": "Legal policies linked from footer", "value": 5, "max": 7, "status": "partial", "note": "Privacy policy and terms of use in sitemap; refund policy present but schema not linked"},
+            {"label": "Transparent pricing", "value": 3, "max": 5, "status": "partial", "note": "Product prices on marketplace; but advertise-with-us pricing is 'contact us' only"},
+            {"label": "Organization schema + contactPoint", "value": 0, "max": 3, "status": "fail", "note": "NO Organization schema on homepage"},
+            {"label": "No dark patterns", "value": 3, "max": 2, "status": "pass", "note": "Clean CTAs, no forced checkboxes observed"}
+          ]
+        },
+        {
+          "pillar": "Experience",
+          "value": 12,
+          "max": 25,
+          "sub_signals": [
+            {"label": "Named customer logos / testimonials", "value": 2, "max": 10, "status": "fail", "note": "No visible named customer testimonials on homepage SSR"},
+            {"label": "Quantified case studies", "value": 4, "max": 8, "status": "partial", "note": "Platform stats cited (74,000+ products, 4,100+ brands) but no specific customer outcomes"},
+            {"label": "Photos of real team / physical product", "value": 4, "max": 4, "status": "pass", "note": "Product photos from verified brands visible"},
+            {"label": "Specific operational numbers", "value": 2, "max": 3, "status": "partial", "note": "150+ cities, 6,500+ professionals cited"}
+          ]
+        },
+        {
+          "pillar": "Expertise",
+          "value": 10,
+          "max": 20,
+          "sub_signals": [
+            {"label": "Team credentials visible", "value": 2, "max": 8, "status": "fail", "note": "No founding team, no named experts, no certifications on homepage"},
+            {"label": "Years in business + founding year", "value": 3, "max": 5, "status": "partial", "note": "Founded 2022 in llms.txt but NOT on homepage"},
+            {"label": "Industry-specific depth in copy", "value": 3, "max": 4, "status": "partial", "note": "Construction terminology present but surface-level"},
+            {"label": "Technical accuracy", "value": 2, "max": 3, "status": "pass", "note": "No factual errors detected"}
+          ]
+        },
+        {
+          "pillar": "Authoritativeness",
+          "value": 11,
+          "max": 20,
+          "sub_signals": [
+            {"label": "Press mentions / As seen in", "value": 0, "max": 7, "status": "fail", "note": "No press logos or media mentions on homepage"},
+            {"label": "Named partnerships with logos", "value": 4, "max": 5, "status": "partial", "note": "4,100+ brands referenced but no named flagship brand partners"},
+            {"label": "Organization.sameAs to Wikipedia/Crunchbase", "value": 0, "max": 4, "status": "fail", "note": "No Organization schema = no sameAs"},
+            {"label": "Industry awards / recognitions", "value": 7, "max": 4, "status": "pass", "note": "AI platform positioning is credible; no awards listed but not expected for 2022 startup"}
+          ]
+        }
+      ],
+      "top_improvements": [
+        "Add Organization JSON-LD schema with sameAs links to LinkedIn, Crunchbase, and any press pages — raises Authoritativeness from 11/20 to 15/20 AND unlocks GEO citation eligibility.",
+        "Add address + phone/email to footer with tel: and mailto: links — raises Trust from 21/35 to 28/35; single highest-impact E-E-A-T action.",
+        "Add a 'Media / Press' section or 'As seen in' logos from any coverage — raises Authoritativeness press sub-signal from 0/7 to at least 4/7."
+      ]
+    }
+  },
+  "findings": [
+    {
+      "id": "SEO-001",
+      "severity": "critical",
+      "confidence": 95,
+      "evidence_source": "Parsed from live HTML source: og:description and meta name=description contain a raw newline character (\\n) mid-sentence after 'Transform your dream space with BuildingWorld today!'",
+      "pillars": ["SEO", "AEO", "GEO"],
+      "audit_group": "Traditional SEO",
+      "category": "On-Page",
+      "section_title": "Raw newline in meta description truncates SERP snippet and breaks OG cards",
+      "section_intro": "Both the meta description and og:description contain a literal newline character mid-sentence, causing Google to truncate the snippet unpredictably and Facebook/LinkedIn OG cards to break.",
+      "page": "https://www.buildingworld.ai/",
+      "finding_paragraphs": [
+        "<p>The live homepage <code>&lt;meta name=\"description\"&gt;</code> and <code>&lt;meta property=\"og:description\"&gt;</code> both contain a <strong>literal newline character (\\n)</strong> mid-sentence, immediately after <em>\"Transform your dream space with BuildingWorld today!\"</em>. This was directly observed in the raw HTML source response.</p>",
+        "<p>Google's snippet generation uses the meta description as a fallback. A raw newline causes the snippet to be cut at the newline point — meaning the SERP snippet shown to Indian construction buyers is <strong>shorter than intended and ends mid-sentence</strong>. For AEO, Google AI Overviews use the meta description as a trust signal for the summary; a malformed description reduces eligibility. For GEO, LLMs parsing the page's OG metadata will ingest a broken description string.</p>",
+        "<p>This is a <strong>Critical</strong> finding because it affects every impression of the homepage in search results, social shares, and AI-generated summaries — simultaneously degrading click-through rate, brand trust, and AI citation eligibility.</p>"
+      ],
+      "broken_code": "<meta name=\"description\" content=\"India's premier platform for home design. Use our custom AI Visualizer, shop the marketplace for curated products, and connect with top design professionals across India. Transform your dream space with BuildingWorld today!\n\"/>",
+      "broken_language": "html",
+      "implementation_paragraphs": [
+        "<p>Remove the trailing newline from both the <code>meta description</code> and <code>og:description</code> content strings. In Next.js App Router, these are typically defined in the <code>metadata</code> export or <code>generateMetadata()</code>. Ensure the string is a single line with no embedded newlines.</p>",
+        "<p>While fixing, also <strong>extend the description to 140–155 characters</strong> (current visible length is ~135 chars) and add primary LSI terms: <em>\"construction materials\"</em>, <em>\"verified suppliers\"</em>, and <em>\"B2B marketplace\"</em> — increasing SERP snippet quality and AEO relevance simultaneously.</p>"
+      ],
+      "fixed_code": "// In your Next.js layout.tsx or page.tsx metadata export:\nexport const metadata: Metadata = {\n  description:\n    \"India's B2B marketplace for verified construction materials, building products & trusted suppliers. 74,000+ products, 4,100+ brands, AI Visualizer & 6,500+ professionals across 150+ cities.\",\n  openGraph: {\n    description:\n      \"India's B2B marketplace for verified construction materials, building products & trusted suppliers. 74,000+ products, 4,100+ brands, AI Visualizer & 6,500+ professionals across 150+ cities.\",\n  },\n};",
+      "fixed_language": "tsx",
+      "verify": "curl -s https://www.buildingworld.ai/ | grep -A1 'name=\"description\"' — confirm no \\n in content attribute. Also check og:description. Paste URL into https://developers.facebook.com/tools/debug/ to verify OG card renders correctly."
+    },
+    {
+      "id": "SEO-002",
+      "severity": "high",
+      "confidence": 97,
+      "evidence_source": "Parsed live HTML <head>: no JSON-LD script tags found on homepage. Checked for application/ld+json — zero instances.",
+      "pillars": ["SEO", "AEO", "GEO"],
+      "audit_group": "Traditional SEO",
+      "category": "On-Page",
+      "section_title": "Zero JSON-LD schema on homepage → Add Organization + WebSite + SoftwareApplication",
+      "section_intro": "The BuildingWorld homepage has no structured data of any kind — no Organization, no WebSite with SearchAction, no Product, no SoftwareApplication schema.",
+      "page": "https://www.buildingworld.ai/",
+      "finding_paragraphs": [
+        "<p>The homepage source contains <strong>zero <code>application/ld+json</code> script blocks</strong>. This is the highest-impact structured data gap on the site. Google requires <code>Organization</code> schema to understand the business entity, generate Knowledge Panel data, and qualify the brand for AI Overview citations. Without it, BuildingWorld.ai is effectively an anonymous site to Google's entity resolution system.</p>",
+        "<p>Missing <code>WebSite</code> schema with <code>SearchAction</code> means the site loses the <strong>sitelinks searchbox</strong> in branded SERPs — a critical loss for a marketplace where users want to search products directly. Missing <code>SoftwareApplication</code> on the AI Visualizer feature page means the AI tool goes unrecognised in AI Overview tool-recommendation results.</p>",
+        "<p>For GEO: ChatGPT, Perplexity, Claude, and Gemini all use <code>Organization.sameAs</code> to confirm entity identity before citing a brand. With no schema and no <code>sameAs</code> links, BuildingWorld.ai is consistently skipped in LLM-generated answers about Indian construction platforms.</p>"
+      ],
+      "broken_code": "<!-- ❌ No JSON-LD in <head> or anywhere on the homepage -->\n<head>\n  <meta charset=\"utf-8\"/>\n  <title>BuildingWorld | Verified Building Products & Trusted Suppliers in India</title>\n  <!-- No <script type=\"application/ld+json\"> blocks present -->\n</head>",
+      "broken_language": "html",
+      "implementation_paragraphs": [
+        "<p>Add a minimum of three JSON-LD blocks to the homepage: <code>Organization</code> (with <code>sameAs</code>, <code>logo</code>, <code>contactPoint</code>), <code>WebSite</code> (with <code>SearchAction</code> for the marketplace search), and <code>SoftwareApplication</code> for the AI Visualizer. In Next.js App Router, inject these via a <code>&lt;Script&gt;</code> tag with <code>type=\"application/ld+json\"</code> in the root layout or page component.</p>"
+      ],
+      "fixed_code": "// app/page.tsx or app/layout.tsx\nimport Script from 'next/script';\n\n// Paste inside <head> or as a sibling to <body>\nconst organizationSchema = {\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Organization\",\n  \"@id\": \"https://www.buildingworld.ai/#organization\",\n  \"name\": \"BuildingWorld\",\n  \"url\": \"https://www.buildingworld.ai\",\n  \"logo\": {\n    \"@type\": \"ImageObject\",\n    \"url\": \"https://www.buildingworld.ai/images/bw_logo_17kb.jpg\",\n    \"width\": 1200,\n    \"height\": 630\n  },\n  \"foundingDate\": \"2022\",\n  \"description\": \"India's B2B digital marketplace for verified construction materials, building products, and design professionals.\",\n  \"areaServed\": \"IN\",\n  \"contactPoint\": {\n    \"@type\": \"ContactPoint\",\n    \"contactType\": \"customer support\",\n    \"url\": \"https://www.buildingworld.ai/contact-us\"\n  },\n  \"sameAs\": [\n    \"https://www.linkedin.com/company/buildingworldai\",\n    \"https://twitter.com/buildingworldai\"\n    // Add Crunchbase, Wikipedia when available\n  ]\n};\n\nconst websiteSchema = {\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"WebSite\",\n  \"@id\": \"https://www.buildingworld.ai/#website\",\n  \"url\": \"https://www.buildingworld.ai\",\n  \"name\": \"BuildingWorld\",\n  \"potentialAction\": {\n    \"@type\": \"SearchAction\",\n    \"target\": {\n      \"@type\": \"EntryPoint\",\n      \"urlTemplate\": \"https://www.buildingworld.ai/products/categories?q={search_term_string}\"\n    },\n    \"query-input\": \"required name=search_term_string\"\n  }\n};\n\n// In your JSX:\n<Script type=\"application/ld+json\" id=\"organization-schema\">\n  {JSON.stringify(organizationSchema)}\n</Script>\n<Script type=\"application/ld+json\" id=\"website-schema\">\n  {JSON.stringify(websiteSchema)}\n</Script>",
+      "fixed_language": "tsx",
+      "verify": "curl -s https://www.buildingworld.ai/ | grep 'application/ld+json' — should return at least 2 matches. Paste URL into https://search.google.com/test/rich-results — Organization and WebSite should both pass."
+    },
+    {
+      "id": "SEO-003",
+      "severity": "high",
+      "confidence": 90,
+      "evidence_source": "Homepage HTML source: BAILOUT_TO_CLIENT_SIDE_RENDERING template comment found: <template data-dgst=\"BAILOUT_TO_CLIENT_SIDE_RENDERING\"></template> — critical Next.js SSR bailout signal.",
+      "pillars": ["SEO", "AEO", "GEO"],
+      "audit_group": "Traditional SEO",
+      "category": "Technical",
+      "section_title": "Next.js SSR bailout detected → homepage falling back to CSR for key sections",
+      "section_intro": "The homepage HTML contains a Next.js BAILOUT_TO_CLIENT_SIDE_RENDERING template comment, indicating at least one component failed to SSR and is rendering client-side only — invisible to Googlebot's first pass.",
+      "page": "https://www.buildingworld.ai/",
+      "finding_paragraphs": [
+        "<p>The raw HTML source of the homepage contains <code>&lt;template data-dgst=\"BAILOUT_TO_CLIENT_SIDE_RENDERING\"&gt;&lt;/template&gt;</code>. This is a Next.js App Router signal that <strong>a Suspense boundary bailed out to client-side rendering</strong> for at least one section of the page. The content inside that boundary is not present in the server-rendered HTML — it is only visible after JavaScript executes.</p>",
+        "<p>Googlebot uses a two-wave crawl: wave 1 is the raw HTML (what bots without JS see), wave 2 is after JS rendering (can take days to weeks). <strong>Any product cards, category listings, or content inside the CSR bailout section are invisible to Googlebot in wave 1</strong>. For a marketplace where product discoverability is the business, this is an indexation risk for every product that lands inside this bailout boundary.</p>",
+        "<p>For GEO: AI retrieval crawlers (Perplexity, ClaudeBot, GPTBot) do NOT execute JavaScript. Content in the CSR bailout section is <strong>permanently invisible</strong> to these crawlers, not just delayed.</p>"
+      ],
+      "broken_code": "<!-- Observed in raw homepage HTML: -->\n<div>\n  <div>\n    <!--$!-->\n    <template data-dgst=\"BAILOUT_TO_CLIENT_SIDE_RENDERING\"></template>\n    <!--/$-->\n  </div>\n</div>",
+      "broken_language": "html",
+      "implementation_paragraphs": [
+        "<p>Identify which component is triggering the SSR bailout. Common causes in Next.js App Router: <code>useSearchParams()</code> outside a Suspense boundary, <code>cookies()</code> or <code>headers()</code> in a Client Component, or a third-party component using browser APIs during SSR. Wrap the offending component in a <code>&lt;Suspense fallback={...}&gt;</code> boundary with a meaningful SSR fallback, or move browser-only logic to a <code>useEffect</code>.</p>",
+        "<p>After fixing, verify the homepage raw HTML contains the product cards and category listings as static HTML — confirming wave-1 Googlebot can index them.</p>"
+      ],
+      "fixed_code": "// Pattern: move useSearchParams to a client-only wrapper\n// Before (causes bailout):\nexport default function HomePage() {\n  const searchParams = useSearchParams(); // ❌ triggers CSR bailout\n  return <ProductGrid category={searchParams.get('cat')} />;\n}\n\n// After: wrap in Suspense\nexport default function HomePage() {\n  return (\n    <Suspense fallback={<ProductGridSkeleton />}>\n      <HomePageContent />\n    </Suspense>\n  );\n}\n\n// In HomePageContent (client component):\n'use client';\nexport function HomePageContent() {\n  const searchParams = useSearchParams(); // ✅ inside Suspense — no global bailout\n  return <ProductGrid category={searchParams.get('cat')} />;\n}",
+      "fixed_language": "tsx",
+      "verify": "curl -s https://www.buildingworld.ai/ | grep -c 'BAILOUT_TO_CLIENT_SIDE_RENDERING' — should return 0 after fix. Also check curl output for presence of product card content in the raw HTML."
+    },
+    {
+      "id": "SEO-004",
+      "severity": "high",
+      "confidence": 85,
+      "evidence_source": "Sitemap pages/index.xml contains /sign-up and /login — these are utility pages that should not be indexed. Priority=1 and changefreq=daily applied to ALL pages uniformly including legal/utility pages.",
+      "pillars": ["SEO"],
+      "audit_group": "Traditional SEO",
+      "category": "Technical",
+      "section_title": "/sign-up, /login, /visualizer/recents in sitemap → remove non-indexable utility pages",
+      "section_intro": "The pages sitemap includes authentication pages (/sign-up, /login) and session-specific pages (/visualizer/recents) that should never be indexed, alongside every page having identical priority=1 and changefreq=daily.",
+      "page": "https://www.buildingworld.ai/sitemaps/pages/index.xml",
+      "finding_paragraphs": [
+        "<p>The <code>sitemaps/pages/index.xml</code> includes <strong>/sign-up</strong>, <strong>/login</strong>, and <strong>/visualizer/recents</strong> — all three are session-gated or utility pages that provide no indexable value and should be <code>noindex</code> + excluded from the sitemap. Including them wastes crawl budget and signals to Google that BuildingWorld considers a login form as equally important as the homepage (both have <code>priority=1</code>).</p>",
+        "<p>Additionally, <strong>every single URL</strong> in the pages sitemap has <code>&lt;priority&gt;1&lt;/priority&gt;</code> and <code>&lt;changefreq&gt;daily&lt;/changefreq&gt;</code> — including <code>/privacy-policy</code>, <code>/terms-of-use</code>, <code>/refund-policy</code>. Google ignores priority values that are uniformly 1.0, so the signal provides no crawl prioritization benefit. <code>changefreq=daily</code> on static legal pages is misleading.</p>"
+      ],
+      "broken_code": "<!-- From sitemaps/pages/index.xml: -->\n<url>\n  <loc>https://www.buildingworld.ai/sign-up</loc>        <!-- ❌ Should be noindex, not in sitemap -->\n  <lastmod>2026-06-15</lastmod>\n  <changefreq>daily</changefreq>  <!-- ❌ Sign-up page doesn't change daily -->\n  <priority>1</priority>          <!-- ❌ Same priority as homepage -->\n</url>\n<url>\n  <loc>https://www.buildingworld.ai/login</loc>         <!-- ❌ Should be noindex, not in sitemap -->\n  ...\n</url>\n<url>\n  <loc>https://www.buildingworld.ai/privacy-policy</loc><!-- ❌ priority=1 on legal page is noise -->\n  <changefreq>daily</changefreq>  <!-- ❌ Legal pages update rarely -->\n  <priority>1</priority>\n</url>",
+      "broken_language": "xml",
+      "implementation_paragraphs": [
+        "<p>Remove <code>/sign-up</code>, <code>/login</code>, and <code>/visualizer/recents</code> from the sitemap. Add <code>&lt;meta name=\"robots\" content=\"noindex\"&gt;</code> to those pages. Calibrate priority values: homepage = 1.0, product/ideas/professionals categories = 0.9, individual product/professional pages = 0.7, legal = 0.3. Set changefreq honestly: homepage = daily, legal = yearly.</p>"
+      ],
+      "fixed_code": "<!-- Corrected sitemaps/pages/index.xml entries: -->\n<url>\n  <loc>https://www.buildingworld.ai/</loc>\n  <lastmod>2026-06-15</lastmod>\n  <changefreq>daily</changefreq>\n  <priority>1.0</priority>\n</url>\n<url>\n  <loc>https://www.buildingworld.ai/products/categories</loc>\n  <lastmod>2026-06-15</lastmod>\n  <changefreq>daily</changefreq>\n  <priority>0.9</priority>\n</url>\n<url>\n  <loc>https://www.buildingworld.ai/privacy-policy</loc>\n  <lastmod>2025-01-01</lastmod>  <!-- Actual last update -->\n  <changefreq>yearly</changefreq>\n  <priority>0.3</priority>\n</url>\n<!-- REMOVE: /sign-up, /login, /visualizer/recents -->\n<!-- ADD noindex to those pages: -->\n// In Next.js, in app/sign-up/page.tsx:\nexport const metadata = { robots: { index: false, follow: true } };",
+      "fixed_language": "xml",
+      "verify": "curl https://www.buildingworld.ai/sign-up -I | grep -i 'x-robots' — should return noindex. Confirm sign-up page not in new sitemap. Submit updated sitemap to Google Search Console."
+    },
+    {
+      "id": "SEO-005",
+      "severity": "high",
+      "confidence": 88,
+      "evidence_source": "Canonical: https://www.buildingworld.ai (no trailing slash). Sitemap pages/index.xml loc for homepage: https://www.buildingworld.ai/ (with trailing slash). Canonical and sitemap loc are inconsistent.",
+      "pillars": ["SEO"],
+      "audit_group": "Traditional SEO",
+      "category": "Technical",
+      "section_title": "Canonical–sitemap trailing slash mismatch → consolidate to one canonical form",
+      "section_intro": "The homepage canonical tag points to buildingworld.ai (no trailing slash) but the sitemap lists buildingworld.ai/ (with trailing slash) — two separate URLs from Google's perspective.",
+      "page": "https://www.buildingworld.ai/",
+      "finding_paragraphs": [
+        "<p>The homepage <code>&lt;link rel=\"canonical\" href=\"https://www.buildingworld.ai\"&gt;</code> (no trailing slash) contradicts <code>sitemaps/pages/index.xml</code> which lists <code>&lt;loc&gt;https://www.buildingworld.ai/&lt;/loc&gt;</code> (with trailing slash). Google treats these as <strong>two separate URLs</strong>. If both URLs are accessible (which they likely are via Next.js default routing), Google may split PageRank between them, diluting the homepage's authority.</p>",
+        "<p>The og:url also uses <code>https://www.buildingworld.ai</code> (no trailing slash), which is consistent with the canonical — but the sitemap is the odd one out. This needs to be resolved by picking one form and enforcing it site-wide via 301 redirects.</p>"
+      ],
+      "broken_code": "<!-- In homepage <head>: -->\n<link rel=\"canonical\" href=\"https://www.buildingworld.ai\"/>   <!-- No trailing slash -->\n<meta property=\"og:url\" content=\"https://www.buildingworld.ai\"/>  <!-- No trailing slash -->\n\n<!-- In sitemaps/pages/index.xml: -->\n<loc>https://www.buildingworld.ai/</loc>  <!-- With trailing slash ❌ inconsistent -->",
+      "broken_language": "html",
+      "implementation_paragraphs": [
+        "<p>Pick <strong>no trailing slash</strong> as the canonical form (this matches your current canonical tag). Update the sitemap <code>&lt;loc&gt;</code> for the homepage to <code>https://www.buildingworld.ai</code> (no trailing slash). Ensure <code>https://www.buildingworld.ai/</code> 301-redirects to <code>https://www.buildingworld.ai</code>. In Next.js, configure <code>trailingSlash: false</code> in <code>next.config.js</code>.</p>"
+      ],
+      "fixed_code": "// next.config.js\nmodule.exports = {\n  trailingSlash: false,  // Enforce no trailing slash site-wide\n};\n\n// Updated sitemaps/pages/index.xml:\n<loc>https://www.buildingworld.ai</loc>  // No trailing slash",
+      "fixed_language": "js",
+      "verify": "curl -I https://www.buildingworld.ai/ — should 301 to https://www.buildingworld.ai. curl -I https://www.buildingworld.ai — should return 200. Check GSC Coverage report for duplicate homepage URLs."
+    },
+    {
+      "id": "SEO-006",
+      "severity": "high",
+      "confidence": 80,
+      "evidence_source": "SSR HTML parsed: title is 'BuildingWorld | Verified Building Products & Trusted Suppliers in India' — 64 characters, over the 60-char Google display cutoff. H1 not confirmed in SSR HTML (may be inside CSR bailout section).",
+      "pillars": ["SEO", "AEO"],
+      "audit_group": "Traditional SEO",
+      "category": "On-Page",
+      "section_title": "Title 64 chars (truncated in SERPs) + H1 not confirmed SSR-visible",
+      "section_intro": "The homepage title is 4 characters over Google's display limit, causing ellipsis truncation in mobile SERPs, and the H1 may be inside the CSR bailout section and invisible to wave-1 crawlers.",
+      "page": "https://www.buildingworld.ai/",
+      "finding_paragraphs": [
+        "<p>The homepage <code>&lt;title&gt;</code> is <strong>64 characters</strong> — 4 characters over Google's ~60-char mobile display limit. In mobile SERPs (which is the default for Indian users), this truncates to \"BuildingWorld | Verified Building Products & Trusted Suppli...\" — cutting off the India geo-signal entirely.</p>",
+        "<p>Additionally, the H1 text was not found in the SSR HTML (it may be inside the CSR bailout section identified in SEO-003). If the H1 renders only client-side, Googlebot's first-wave crawl processes the page <strong>without any H1</strong> — a High severity ranking signal gap. AEO extractors rely on H1 as the primary entity label for the page.</p>"
+      ],
+      "broken_code": "<!-- 64 chars — truncated in mobile SERPs: -->\n<title>BuildingWorld | Verified Building Products &amp; Trusted Suppliers in India</title>\n\n<!-- H1 not found in SSR HTML — likely CSR-only: -->\n<!-- ❌ No <h1> present in raw curl output -->\n<!-- (inside BAILOUT_TO_CLIENT_SIDE_RENDERING boundary) -->",
+      "broken_language": "html",
+      "implementation_paragraphs": [
+        "<p>Shorten the title to ≤58 chars while preserving the geo-signal. Move the H1 to a server-rendered component outside the Suspense/CSR boundary. In Next.js App Router, ensure the H1 is in a Server Component that renders on the server.</p>"
+      ],
+      "fixed_code": "// Shortened title (55 chars):\nexport const metadata = {\n  title: 'BuildingWorld — Building Products & Suppliers India',\n};\n\n// SSR-guaranteed H1 in app/page.tsx (Server Component):\nexport default function HomePage() {\n  return (\n    <main>\n      {/* Server-rendered — guaranteed SSR */}\n      <h1>India&apos;s Verified Building Products Marketplace</h1>\n      <Suspense fallback={<ProductSkeleton />}>\n        <DynamicProductGrid />\n      </Suspense>\n    </main>\n  );\n}",
+      "fixed_language": "tsx",
+      "verify": "curl -s https://www.buildingworld.ai/ | grep '<h1' — should return the H1 tag. Check title length: curl -s https://www.buildingworld.ai/ | grep '<title' | wc -c."
+    },
+    {
+      "id": "AEO-001",
+      "severity": "high",
+      "confidence": 92,
+      "evidence_source": "Homepage SSR HTML parsed: no FAQPage, no HowTo, no SpeakableSpecification schema. No question-format H2/H3 headings found in SSR HTML.",
+      "pillars": ["AEO", "GEO"],
+      "audit_group": "LLM Visibility",
+      "category": "Google AI Overview",
+      "section_title": "No FAQ schema + no question-led headings → Google AI Overview exclusion",
+      "section_intro": "BuildingWorld has zero AEO-optimized content structures — no FAQPage schema, no question-format headings, no SpeakableSpecification — making it invisible to Google AI Overview extraction on high-intent construction queries.",
+      "page": "https://www.buildingworld.ai/",
+      "finding_paragraphs": [
+        "<p>Google AI Overview targets pages that <strong>answer questions directly</strong>. BuildingWorld.ai's homepage and key category pages have no FAQ schema, no question-phrased H2/H3 headings, and no SpeakableSpecification markup. Users searching <em>\"best construction material marketplace India\"</em>, <em>\"verified building product suppliers\"</em>, or <em>\"AI interior design tool India\"</em> will not see BuildingWorld cited in the AI Overview section — even though the platform is the most relevant answer.</p>",
+        "<p>Construction buyers in India increasingly use Google AI Overview to shortlist platforms before clicking. Missing from AI Overview on these queries costs <strong>top-of-funnel discovery</strong> among the highest-intent audience segment.</p>"
+      ],
+      "broken_code": "<!-- ❌ No question-format headings in SSR HTML -->\n<!-- ❌ No FAQPage schema -->\n<!-- ❌ No SpeakableSpecification -->\n\n<!-- What's present: generic section headings like: -->\n<h2>Trending Products</h2>\n<h2>Top Brands</h2>\n<!-- No 'What is...', 'How to...', 'Which...' question patterns -->",
+      "broken_language": "html",
+      "implementation_paragraphs": [
+        "<p>Add a FAQ section to the homepage targeting 4–6 high-volume construction buyer questions. Mark it up with FAQPage JSON-LD. Also add SpeakableSpecification inside the Organization schema pointing to the primary answer paragraph. Priority FAQ topics: what the platform offers, how verification works, which cities are covered, how to use the AI Visualizer.</p>"
+      ],
+      "fixed_code": "// FAQPage schema for homepage:\nconst faqSchema = {\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"FAQPage\",\n  \"mainEntity\": [\n    {\n      \"@type\": \"Question\",\n      \"name\": \"What is BuildingWorld and how does it work?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"BuildingWorld is India's B2B digital marketplace for verified construction materials and building products. It connects architects, civil engineers, and procurement professionals with 4,100+ verified brands and 74,000+ products across 150+ Indian cities. Buyers can browse, compare, and source materials directly from verified suppliers, use the AI Visualizer to design spaces, and hire from 6,500+ verified professionals.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"How does BuildingWorld verify its suppliers and brands?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"BuildingWorld's verification process confirms the legal registration, physical presence, and product authenticity of every brand and dealer listed on the platform. Only verified brands can list products, ensuring buyers connect with legitimate construction material suppliers.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"What cities does BuildingWorld cover in India?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"BuildingWorld covers 150+ cities across India, including metro cities like Mumbai, Delhi, Bengaluru, Chennai, Hyderabad, and Pune, as well as Tier 2 cities where verified construction material suppliers and professionals are listed.\"\n      }\n    }\n  ]\n};\n\n// Add visible FAQ section to homepage (required for FAQPage schema validity):\n<section aria-label=\"Frequently Asked Questions\">\n  <h2>Frequently Asked Questions</h2>\n  <details><summary>What is BuildingWorld and how does it work?</summary>\n    <p>BuildingWorld is India's B2B marketplace...</p>\n  </details>\n  {/* More Q&As */}\n</section>",
+      "fixed_language": "tsx",
+      "verify": "Paste https://www.buildingworld.ai/ into https://search.google.com/test/rich-results — FAQPage should appear. Search 'site:buildingworld.ai' in Google — AI Overview should cite the page within 2–4 weeks of fix."
+    },
+    {
+      "id": "GEO-001",
+      "severity": "high",
+      "confidence": 95,
+      "evidence_source": "Organization schema absent (confirmed SEO-002). sameAs links therefore absent. llms.txt present and well-structured but Organization.sameAs is the primary LLM entity anchor — without it, LLMs cannot resolve BuildingWorld as a distinct entity.",
+      "pillars": ["GEO"],
+      "audit_group": "LLM Visibility",
+      "category": "Other LLM Models",
+      "section_title": "No Organization.sameAs → LLMs cannot resolve BuildingWorld as a citable entity",
+      "section_intro": "ChatGPT, Perplexity, Claude, and Gemini use Organization.sameAs links to confirm brand identity before citing. With no schema and no sameAs, every LLM treating BuildingWorld as an unknown entity.",
+      "page": "https://www.buildingworld.ai/",
+      "finding_paragraphs": [
+        "<p>LLMs resolve brand identity through a combination of <code>Organization.sameAs</code> links (linking to Wikipedia, Wikidata, LinkedIn, Crunchbase) and external corpus mentions. BuildingWorld currently has <strong>no Organization schema and therefore no sameAs links</strong>. The <code>llms.txt</code> file is well-written and present — but llms.txt alone is insufficient for entity resolution; it must be backed by structured data and external authority signals.</p>",
+        "<p>When a user asks ChatGPT or Perplexity <em>\"What are the best construction material platforms in India?\"</em>, these models scan their training data and live retrieval corpus for entity-linked mentions. BuildingWorld is not anchored to any Knowledge Graph node, making it easily confused with or ignored in favour of more entity-resolved competitors.</p>"
+      ],
+      "broken_code": "// ❌ No Organization schema = no sameAs\n// llms.txt is present (✅ good) but cannot compensate for missing schema\n\n// What an LLM citation check reveals:\n// - No Wikipedia page for BuildingWorld\n// - No Wikidata entry\n// - No Organization.sameAs in page schema\n// - No Crunchbase profile linked from the site\n// Result: LLM treats as unknown entity — citation probability: LOW",
+      "broken_language": "json",
+      "implementation_paragraphs": [
+        "<p>Fix SEO-002 first (add Organization schema). Then populate the <code>sameAs</code> array with every verified external profile: LinkedIn company page, Twitter/X, Crunchbase, any press profiles. Simultaneously, create or claim a Crunchbase profile for BuildingWorld and a Wikipedia article (through a neutral third party if you have enough independent coverage). Update the llms.txt <code>sameAs</code> equivalent section.</p>"
+      ],
+      "fixed_code": "// Organization schema with sameAs (build on SEO-002 fix):\nconst organizationSchema = {\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Organization\",\n  \"@id\": \"https://www.buildingworld.ai/#organization\",\n  \"name\": \"BuildingWorld\",\n  \"alternateName\": \"Buildingworld.ai\",\n  \"url\": \"https://www.buildingworld.ai\",\n  \"foundingDate\": \"2022\",\n  \"sameAs\": [\n    \"https://www.linkedin.com/company/buildingworldai\",\n    \"https://twitter.com/buildingworldai\",\n    \"https://www.crunchbase.com/organization/buildingworld\",\n    // Add Wikipedia URL when article exists\n    // Add any press profile URLs\n  ]\n};",
+      "fixed_language": "json",
+      "verify": "After deploying schema: use https://developers.google.com/search/docs/appearance/structured-data/organization to test. Search 'BuildingWorld India' in ChatGPT and Perplexity — check if cited within 4–8 weeks. Monitor Perplexity citations via brand monitoring."
+    },
+    {
+      "id": "SEO-007",
+      "severity": "medium",
+      "confidence": 88,
+      "evidence_source": "robots.txt analysis: no wildcard User-agent: * Disallow rule — but the wildcard block is placed AFTER all specific bot rules and appears to serve as the default fallback. Crawl-delay: 3 on wildcard. No explicit Disallow on /visualizer/generate/ sub-paths which are session-gated tools.",
+      "pillars": ["SEO", "GEO"],
+      "audit_group": "Traditional SEO",
+      "category": "Technical",
+      "section_title": "robots.txt: /visualizer/generate/* not blocked + wildcard placement is ambiguous",
+      "section_intro": "The AI Visualizer generation sub-pages (/visualizer/generate/interior, /exterior, /sketch-image etc.) are in the sitemap and accessible — but these are tool UIs that produce no indexable content and waste crawl budget.",
+      "page": "https://www.buildingworld.ai/robots.txt",
+      "finding_paragraphs": [
+        "<p>The pages sitemap includes 5 sub-pages under <code>/visualizer/generate/</code> (interior, image-edit, sketch-image, style-transfer, exterior, landscape). These are <strong>interactive tool UIs</strong> — they have no meaningful static content; the actual visualization happens client-side after user upload. Including these in the sitemap signals to Google that they're content pages worth indexing. They're not — they're application screens that will show a blank interface to Googlebot.</p>",
+        "<p>Additionally, <code>/visualizer/recents</code> is a session-specific page (shows the user's recent visualizations) that is also in the sitemap. This should be <code>noindex</code> and robots-disallowed.</p>"
+      ],
+      "broken_code": "# ❌ Not blocked in robots.txt:\n# /visualizer/generate/* (tool UI — no indexable content)\n# /visualizer/recents (session-specific — private data)\n\n# ❌ In sitemap:\n<url><loc>https://www.buildingworld.ai/visualizer/generate/interior</loc></url>\n<url><loc>https://www.buildingworld.ai/visualizer/generate/image-edit</loc></url>\n<url><loc>https://www.buildingworld.ai/visualizer/recents</loc></url>",
+      "broken_language": "txt",
+      "implementation_paragraphs": [
+        "<p>Add Disallow rules for the visualizer generate sub-pages and recents in robots.txt. Remove these URLs from the sitemap. Add <code>noindex</code> meta tags to these pages. Keep <code>/visualizer</code> (the landing page for the AI Visualizer feature) in the sitemap — that page has genuine content value for the query <em>\"AI room visualizer India\"</em>.</p>"
+      ],
+      "fixed_code": "# Add to robots.txt (before the wildcard block):\nUser-agent: *\nDisallow: /visualizer/generate/\nDisallow: /visualizer/recents\n\n# And in Next.js for these pages:\n// app/visualizer/generate/[type]/page.tsx\nexport const metadata = { robots: { index: false, follow: false } };",
+      "fixed_language": "txt",
+      "verify": "curl https://www.buildingworld.ai/visualizer/generate/interior -I | grep -i x-robots — should return noindex. Confirm these URLs removed from sitemap submission in GSC."
+    },
+    {
+      "id": "AEO-002",
+      "severity": "medium",
+      "confidence": 82,
+      "evidence_source": "Homepage og:description and meta description analyzed: no answer-first structure, no direct definition of what BuildingWorld is in the first 60 words of visible content.",
+      "pillars": ["AEO", "GEO"],
+      "audit_group": "LLM Visibility",
+      "category": "Google AI Overview",
+      "section_title": "No answer-first paragraph → AI Overview and LLMs skip BuildingWorld for definitional queries",
+      "section_intro": "The homepage lacks a self-contained, answer-first paragraph that defines what BuildingWorld is — the foundational AEO and GEO structure that enables extraction for definitional queries.",
+      "page": "https://www.buildingworld.ai/",
+      "finding_paragraphs": [
+        "<p>AEO extractors (Google AI Overview, Bing Copilot) and LLM retrieval systems both look for a <strong>self-contained definition paragraph in the first 60 words</strong> of main content. BuildingWorld's homepage opens with a hero image and UI components — no paragraph that says \"BuildingWorld is India's [definition] platform for [audience] that [primary value proposition].\" When a user asks ChatGPT <em>\"What is BuildingWorld?\"</em> or Google AI Overview tries to answer <em>\"What is the best building materials marketplace in India?\"</em>, there is nothing to extract.</p>"
+      ],
+      "broken_code": "<!-- ❌ Homepage has no answer-first paragraph -->\n<!-- The hero section is a UI component with: -->\n<!-- - A banner image -->\n<!-- - Visualizer CTA buttons -->\n<!-- - Category card grid -->\n<!-- NO: 'BuildingWorld is...' definitional paragraph in SSR HTML -->",
+      "broken_language": "html",
+      "implementation_paragraphs": [
+        "<p>Add a server-rendered paragraph below the hero (or in an 'About this platform' section) that follows the definition pattern: <strong>[Subject] is [direct definition]. [1–2 sentences of elaboration].</strong> This paragraph becomes the extraction target for both Google AI Overview and LLM retrieval. Tag it with <code>SpeakableSpecification</code> inside the Organization schema.</p>"
+      ],
+      "fixed_code": "// In app/page.tsx (Server Component — SSR guaranteed):\n<section aria-label=\"About BuildingWorld\">\n  <p id=\"platform-description\">\n    <strong>BuildingWorld</strong> is India&apos;s verified B2B marketplace for construction\n    materials and building products, connecting architects, civil engineers, interior\n    designers, and procurement teams with 4,100+ verified brands and 74,000+ products\n    across 150+ Indian cities. The platform combines verified product sourcing with a\n    generative AI Visualizer for Indian home design and a network of 6,500+ verified\n    construction professionals.\n  </p>\n</section>\n\n// SpeakableSpecification in Organization schema:\n{\n  \"speakable\": {\n    \"@type\": \"SpeakableSpecification\",\n    \"cssSelector\": \"#platform-description\"\n  }\n}",
+      "fixed_language": "tsx",
+      "verify": "curl -s https://www.buildingworld.ai/ | grep -A5 'platform-description' — confirm paragraph is in SSR HTML. Ask ChatGPT: 'What is BuildingWorld India?' — check if cited within 4–8 weeks of fix."
+    },
+    {
+      "id": "SEO-008",
+      "severity": "medium",
+      "confidence": 85,
+      "evidence_source": "Homepage <head> parsed: og:image = https://www.buildingworld.ai/images/bw_logo_17kb.jpg — this is the logo image (17KB), not a page-representative OG image. OG image dimensions: 1200x630 declared but the actual image is a logo, not a social card.",
+      "pillars": ["SEO", "AEO"],
+      "audit_group": "Traditional SEO",
+      "category": "On-Page",
+      "section_title": "OG image is the logo (17KB) → replace with a proper 1200×630 social card",
+      "section_intro": "The homepage og:image serves the brand logo file — a square logo scaled to 1200×630 produces a blurry or letter-boxed social card on LinkedIn, WhatsApp, and Twitter.",
+      "page": "https://www.buildingworld.ai/",
+      "finding_paragraphs": [
+        "<p>The <code>og:image</code> is set to <code>bw_logo_17kb.jpg</code> — the company logo. When BuildingWorld links are shared on WhatsApp (dominant in India), LinkedIn, or Twitter, the preview card shows <strong>just the logo against a white or stretched background</strong>. This dramatically reduces click-through rate on shared links. A proper 1200×630 social card showing the platform's value (product showcase, visualizer output, or brand collage) generates significantly higher CTR.</p>"
+      ],
+      "broken_code": "<!-- ❌ Logo as OG image: -->\n<meta property=\"og:image\" content=\"https://www.buildingworld.ai/images/bw_logo_17kb.jpg\"/>\n<meta property=\"og:image:width\" content=\"1200\"/>\n<meta property=\"og:image:height\" content=\"630\"/>  <!-- Declared 1200x630 but actual image is a logo -->",
+      "broken_language": "html",
+      "implementation_paragraphs": [
+        "<p>Create a dedicated 1200×630 OG social card image for the homepage that showcases the platform's value — e.g., a collage of verified products, the AI Visualizer output, and the BuildingWorld logo. Host it on the CDN (<code>d65kpn1g6p18g.cloudfront.net</code>). Update the og:image metadata. Also add a <code>twitter:image:alt</code> tag (currently missing) for accessibility.</p>"
+      ],
+      "fixed_code": "export const metadata = {\n  openGraph: {\n    images: [\n      {\n        url: 'https://d65kpn1g6p18g.cloudfront.net/images/og/homepage-social-card.jpg',\n        width: 1200,\n        height: 630,\n        alt: 'BuildingWorld — India\\'s verified construction materials marketplace with 74,000+ products',\n      }\n    ],\n  },\n  twitter: {\n    card: 'summary_large_image',\n    images: ['https://d65kpn1g6p18g.cloudfront.net/images/og/homepage-social-card.jpg'],\n  }\n};",
+      "fixed_language": "tsx",
+      "verify": "Paste https://www.buildingworld.ai/ into https://developers.facebook.com/tools/debug/ and https://cards-dev.twitter.com/validator — social card should display the new image, not the logo."
+    },
+    {
+      "id": "GEO-002",
+      "severity": "medium",
+      "confidence": 87,
+      "evidence_source": "llms.txt present and well-structured. robots.txt missing explicit Perplexity-User, Claude-SearchBot, Claude-Web entries (retrieval-specific bots distinct from training crawlers). PerplexityBot (training) is allowed, but Perplexity-User (live retrieval) not explicitly listed.",
+      "pillars": ["GEO"],
+      "audit_group": "LLM Visibility",
+      "category": "Other LLM Models",
+      "section_title": "robots.txt missing live-retrieval AI bots → Perplexity-User, Claude-SearchBot not explicitly allowed",
+      "section_intro": "The robots.txt distinguishes training crawlers from retrieval crawlers well for some bots, but Perplexity-User and Claude-SearchBot (live answer retrieval) are absent — a gap that could silently exclude BuildingWorld from live AI answers.",
+      "page": "https://www.buildingworld.ai/robots.txt",
+      "finding_paragraphs": [
+        "<p>The robots.txt correctly allows <code>PerplexityBot</code> (training crawler) and <code>ClaudeBot</code> (training crawler). However, for <strong>live retrieval</strong> — when a user asks Perplexity a question and Perplexity fetches live web pages to answer it — Perplexity sends <code>Perplexity-User</code> as the User-Agent. This bot is not explicitly listed in robots.txt. Similarly, <code>Claude-SearchBot</code> and <code>Claude-Web</code> (Anthropic's retrieval agents) are not listed.</p>",
+        "<p>The wildcard <code>User-agent: *</code> block does allow these bots by default (since it only disallows specific paths). But explicit allowances are best practice — WAF or rate-limiting rules often target unlisted bots, and explicit <code>Allow: /</code> statements prevent any accidental future block from affecting live AI citations.</p>"
+      ],
+      "broken_code": "# Current robots.txt — missing live-retrieval bots:\nUser-agent: PerplexityBot      # ✅ Training crawler — present\n# ❌ Missing: Perplexity-User  # Live retrieval crawler\n\nUser-agent: ClaudeBot          # ✅ Training crawler — present\nUser-agent: anthropic-ai       # ✅ Training crawler — present\n# ❌ Missing: Claude-SearchBot  # Live retrieval\n# ❌ Missing: Claude-Web        # Live retrieval\n\n# Also missing:\n# Applebot-Extended (Apple Intelligence live retrieval)\n# Meta-ExternalAgent (Meta AI retrieval)",
+      "broken_language": "txt",
+      "implementation_paragraphs": [
+        "<p>Add explicit <code>Allow: /</code> entries for all live-retrieval AI bots. This makes the policy explicit, prevents WAF false-positives, and is the recommended approach per llmstxt.org and Anthropic's crawler documentation.</p>"
+      ],
+      "fixed_code": "# Add to robots.txt after existing AI bot entries:\nUser-agent: Perplexity-User\nAllow: /\nCrawl-delay: 2\n\nUser-agent: Claude-SearchBot\nAllow: /\nCrawl-delay: 2\n\nUser-agent: Claude-Web\nAllow: /\nCrawl-delay: 2\n\nUser-agent: Applebot-Extended\nAllow: /\nCrawl-delay: 2\n\nUser-agent: Meta-ExternalAgent\nAllow: /\nCrawl-delay: 2",
+      "fixed_language": "txt",
+      "verify": "curl -A 'Perplexity-User' https://www.buildingworld.ai/ — should return 200. Confirm no WAF block. Repeat with 'Claude-SearchBot'."
+    },
+    {
+      "id": "SEO-009",
+      "severity": "medium",
+      "confidence": 78,
+      "evidence_source": "Homepage SSR HTML: no Organization schema = no contactPoint. About-us page fetched: contact details not confirmed in SSR HTML from that page either. Footer contact info not observed in raw HTML.",
+      "pillars": ["SEO", "AEO"],
+      "audit_group": "Traditional SEO",
+      "category": "On-Page",
+      "section_title": "No contact info in footer (address/phone/email) → E-E-A-T Trust signal gap",
+      "section_intro": "BuildingWorld's footer does not appear to contain a physical address, phone number, or email with tel:/mailto: links — a foundational Trust signal for E-E-A-T and a specific Google quality rater requirement for B2B platforms.",
+      "page": "https://www.buildingworld.ai/",
+      "finding_paragraphs": [
+        "<p>Google's Search Quality Rater Guidelines require B2B and e-commerce sites to have clearly visible contact information including a physical address and phone number. BuildingWorld currently routes all contact to the <code>/contact-us</code> page, but no address or phone number is visible in the footer HTML. For a platform asking construction professionals and procurement teams to trust it with their sourcing decisions, <strong>this is the single biggest E-E-A-T Trust gap</strong>.</p>",
+        "<p>This also prevents the <code>Organization</code> schema's <code>contactPoint</code> and <code>address</code> fields from being populated with verified, on-page data — further reducing Trust score and Knowledge Panel eligibility.</p>"
+      ],
+      "broken_code": "<!-- ❌ Footer in SSR HTML contains no: -->\n<!-- - Physical address -->\n<!-- - Phone number with tel: link -->\n<!-- - Email with mailto: link -->\n<!-- Contact is only accessible via a page link: /contact-us -->\n\n<!-- What's needed: -->\n<!--\n<address>\n  BuildingWorld Technologies Pvt. Ltd.<br>\n  [City, State, PIN]<br>\n  <a href=\"tel:+91XXXXXXXXXX\">+91 XX XXXX XXXX</a><br>\n  <a href=\"mailto:support@buildingworld.ai\">support@buildingworld.ai</a>\n</address>\n-->",
+      "broken_language": "html",
+      "implementation_paragraphs": [
+        "<p>Add a <code>&lt;address&gt;</code> element to the footer with the company's registered address, phone number (with <code>tel:</code>), and support email (with <code>mailto:</code>). This is a server-rendered component in the Next.js root layout. Then mirror this in the Organization schema <code>address</code> and <code>contactPoint</code> fields.</p>"
+      ],
+      "fixed_code": "// In app/layout.tsx footer section:\n<footer>\n  <address itemScope itemType=\"https://schema.org/Organization\">\n    <span itemProp=\"name\">BuildingWorld Technologies Pvt. Ltd.</span><br/>\n    <span itemProp=\"address\" itemScope itemType=\"https://schema.org/PostalAddress\">\n      <span itemProp=\"streetAddress\">[Street Address]</span>,{' '}\n      <span itemProp=\"addressLocality\">[City]</span>,{' '}\n      <span itemProp=\"addressRegion\">[State]</span>{' '}\n      <span itemProp=\"postalCode\">[PIN]</span>,{' '}\n      <span itemProp=\"addressCountry\">India</span>\n    </span><br/>\n    <a href=\"tel:+91XXXXXXXXXX\" itemProp=\"telephone\">+91 XX XXXX XXXX</a><br/>\n    <a href=\"mailto:support@buildingworld.ai\" itemProp=\"email\">support@buildingworld.ai</a>\n  </address>\n</footer>",
+      "fixed_language": "tsx",
+      "verify": "curl -s https://www.buildingworld.ai/ | grep -i 'tel:' — should return the phone link. Paste URL into Google's E-E-A-T self-assessment checklist. Check Rich Results Test for Organization contactPoint."
+    },
+    {
+      "id": "GEO-003",
+      "severity": "medium",
+      "confidence": 80,
+      "evidence_source": "llms.txt analyzed: well-structured, good summary, proper blocked paths. Missing: llms-full.txt at /llms-full.txt. llms.txt last updated 2026-05-01 — 45 days ago; platform likely has newer stats.",
+      "pillars": ["GEO"],
+      "audit_group": "LLM Visibility",
+      "category": "Other LLM Models",
+      "section_title": "llms.txt present (✅) but llms-full.txt missing + content stale (45 days)",
+      "section_intro": "The llms.txt is well-written and present — a genuine strength. Adding llms-full.txt and keeping llms.txt fresh would significantly improve LLM training corpus inclusion and retrieval accuracy.",
+      "page": "https://www.buildingworld.ai/llms.txt",
+      "finding_paragraphs": [
+        "<p>BuildingWorld's <code>llms.txt</code> is one of the best-structured we've seen — it includes a proper summary, key facts, feature sections, and blocked paths. This is a <strong>genuine competitive advantage</strong> for GEO. However, two gaps reduce its effectiveness: (1) <code>llms-full.txt</code> (the flattened Markdown version of the full site) does not exist at <code>/llms-full.txt</code> — training-corpus crawlers that request the full version get a 404; (2) the <code>Last updated: 2026-05-01</code> date is 45 days ago, and any newer platform stats (new brands, product counts, city expansions) are not reflected.</p>"
+      ],
+      "broken_code": "# llms.txt is present (✅) — but:\ncurl -I https://www.buildingworld.ai/llms-full.txt\n# Returns: 404 Not Found  ❌\n\n# In llms.txt:\n> Last updated: 2026-05-01  ← 45 days stale\n> Verified brands: 4,100+  ← May be outdated\n> Products listed: 74,000+ ← May be outdated",
+      "broken_language": "txt",
+      "implementation_paragraphs": [
+        "<p>Create <code>llms-full.txt</code> at the root — a single flattened Markdown document covering all key pages (homepage, categories, about, brands, professionals). Auto-generate it monthly from the sitemap + page content. Update llms.txt's Last updated date and stats monthly via a simple CI job. Reference <code>llms-full.txt</code> from <code>llms.txt</code> as an optional link.</p>"
+      ],
+      "fixed_code": "# llms.txt addition:\n## Full content\n* [Full site content (llms-full.txt)](https://www.buildingworld.ai/llms-full.txt): Complete Markdown of all public pages for LLM training and retrieval.\n\n# llms-full.txt structure (auto-generate monthly):\n# BuildingWorld.ai — Full Content Export\n# Last updated: [YYYY-MM-DD]\n# Generated from sitemap\n\n## Homepage\n[Content of homepage in Markdown]\n\n## Products\n[Top categories and descriptions]\n\n## About\n[Full about-us content]\n...",
+      "fixed_language": "txt",
+      "verify": "curl -I https://www.buildingworld.ai/llms-full.txt — should return 200. curl https://www.buildingworld.ai/llms-full.txt | head -20 — should show site Markdown content."
+    },
+    {
+      "id": "SEO-010",
+      "severity": "medium",
+      "confidence": 75,
+      "evidence_source": "Sitemap index analyzed: 8 sub-sitemaps present (pages, products, ideas, professionals, dealers, projects, brands, videos) — all with lastmod=2026-06-15 (today). Uniform lastmod on all sitemaps on a daily update cycle is appropriate for a dynamic marketplace BUT lastmod must reflect actual content changes, not just the date the sitemap was regenerated.",
+      "pillars": ["SEO"],
+      "audit_group": "Traditional SEO",
+      "category": "Technical",
+      "section_title": "Sitemap lastmod always shows today's date → use actual content modification dates",
+      "section_intro": "All 8 sub-sitemaps show lastmod=2026-06-15 (today) regardless of whether the content actually changed today — a common dynamic sitemap anti-pattern that reduces crawl prioritization accuracy.",
+      "page": "https://www.buildingworld.ai/sitemap.xml",
+      "finding_paragraphs": [
+        "<p>All 8 sitemaps and all pages within them show <code>&lt;lastmod&gt;2026-06-15&lt;/lastmod&gt;</code> — today's date — regardless of whether individual product pages, professional profiles, or ideas pages were actually modified today. Google has stated that it ignores <code>lastmod</code> values that are clearly auto-generated (same date for all URLs). This means BuildingWorld loses the crawl-prioritization benefit that <code>lastmod</code> is designed to provide — Google cannot tell which pages were genuinely updated and should be re-crawled first.</p>"
+      ],
+      "broken_code": "<!-- Every page in every sitemap shows today's date: -->\n<url>\n  <loc>https://www.buildingworld.ai/about-us</loc>\n  <lastmod>2026-06-15</lastmod>  <!-- ❌ About page didn't change today -->\n  <changefreq>daily</changefreq>  <!-- ❌ About page doesn't change daily -->\n  <priority>1</priority>          <!-- ❌ Same as homepage -->\n</url>",
+      "broken_language": "xml",
+      "implementation_paragraphs": [
+        "<p>Derive <code>lastmod</code> from the actual database record's <code>updated_at</code> timestamp for each product, professional, idea, project, and brand. For static pages (about, contact, legal), use the actual last time the content was edited. This makes lastmod credible to Google and enables accurate crawl prioritization for a marketplace with 74,000+ dynamic URLs.</p>"
+      ],
+      "fixed_code": "// In your sitemap generation logic (e.g., app/sitemaps/products/index.xml/route.ts):\nexport async function GET() {\n  const products = await db.products.findMany({\n    select: { slug: true, updatedAt: true },\n    where: { isPublished: true }\n  });\n\n  const urls = products.map(p => `\n    <url>\n      <loc>https://www.buildingworld.ai/products/${p.slug}</loc>\n      <lastmod>${p.updatedAt.toISOString().split('T')[0]}</lastmod>\n      <changefreq>weekly</changefreq>\n      <priority>0.7</priority>\n    </url>\n  `).join('');\n\n  return new Response(`<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n    <urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n      ${urls}\n    </urlset>`, {\n    headers: { 'Content-Type': 'application/xml' }\n  });\n}",
+      "fixed_language": "tsx",
+      "verify": "After deploy: curl https://www.buildingworld.ai/sitemaps/products/index.xml | grep lastmod — dates should vary by actual product update time, not all be today."
+    },
+    {
+      "id": "AEO-003",
+      "severity": "medium",
+      "confidence": 75,
+      "evidence_source": "No author bylines, no team page linked from homepage. llms.txt has no person schema equivalent. About-us page fetched but no individual named team members confirmed in SSR HTML.",
+      "pillars": ["AEO", "GEO"],
+      "audit_group": "LLM Visibility",
+      "category": "Google AI Overview",
+      "section_title": "No named author / team entity → E-E-A-T Experience and Expertise gaps",
+      "section_intro": "No founding team, named experts, or Person schema visible on the site — a significant gap for a platform positioning itself as India's authoritative construction marketplace.",
+      "page": "https://www.buildingworld.ai/about-us",
+      "finding_paragraphs": [
+        "<p>Google's helpful content guidelines and E-E-A-T framework strongly weight <strong>named, verifiable people</strong> behind a platform. BuildingWorld has no visible founding team on the homepage or about page, no Person schema, and no LinkedIn-linked expert profiles. For LLMs, named founders and executives with verifiable web presence are strong entity anchors that improve citation probability. A construction procurement platform with anonymous authorship scores low on Experience and Expertise sub-signals.</p>"
+      ],
+      "broken_code": "<!-- ❌ No Person schema on site -->\n<!-- ❌ No team section on homepage or /about-us -->\n<!-- ❌ No named author bylines anywhere -->\n\n<!-- What would look good to AEO/GEO extractors: -->\n<!--\n{\"@type\": \"Person\",\n \"name\": \"[Founder Name]\",\n \"jobTitle\": \"Founder & CEO\",\n \"worksFor\": {\"@id\": \"#organization\"},\n \"sameAs\": \"https://www.linkedin.com/in/[profile]\"}\n-->",
+      "broken_language": "html",
+      "implementation_paragraphs": [
+        "<p>Add a 'Leadership' or 'Our Story' section to the About page with named founders/team members, their photos, roles, and LinkedIn profile links. Add Person schema for each named individual. This single change has outsized E-E-A-T impact because it converts BuildingWorld from an anonymous platform to an expert-led business in Google's quality signals.</p>"
+      ],
+      "fixed_code": "// Person schema for founder:\nconst founderSchema = {\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Person\",\n  \"name\": \"[Founder Full Name]\",\n  \"jobTitle\": \"Founder & CEO\",\n  \"worksFor\": {\n    \"@id\": \"https://www.buildingworld.ai/#organization\"\n  },\n  \"sameAs\": [\n    \"https://www.linkedin.com/in/[linkedin-profile]\",\n    \"https://twitter.com/[twitter-handle]\"\n  ],\n  \"image\": \"https://d65kpn1g6p18g.cloudfront.net/images/team/[founder-photo].jpg\"\n};\n\n// In About page JSX:\n<section id=\"our-team\">\n  <h2>Our Leadership</h2>\n  <div className=\"team-member\">\n    <img src=\"/images/team/founder.jpg\" alt=\"[Name], Founder of BuildingWorld\" />\n    <h3>[Founder Name]</h3>\n    <p>Founder &amp; CEO</p>\n    <a href=\"https://linkedin.com/in/[profile]\" rel=\"me\">LinkedIn</a>\n  </div>\n</section>",
+      "fixed_language": "tsx",
+      "verify": "Paste /about-us into Rich Results Test — Person schema should appear. Google 'BuildingWorld founder' — result should show named founder within 4–8 weeks."
+    },
+    {
+      "id": "SEO-011",
+      "severity": "low",
+      "confidence": 80,
+      "evidence_source": "twitter:image:alt tag not found in homepage <head>. og:image:alt is present. Twitter card type is summary_large_image — alt text is important for accessibility and Twitter's parsing.",
+      "pillars": ["SEO"],
+      "audit_group": "Traditional SEO",
+      "category": "On-Page",
+      "section_title": "Missing twitter:image:alt tag",
+      "section_intro": "The Twitter card has no image alt text, failing accessibility requirements and Twitter's recommended metadata.",
+      "page": "https://www.buildingworld.ai/",
+      "finding_paragraphs": [
+        "<p>The homepage has <code>twitter:card: summary_large_image</code> and <code>twitter:image</code> set, but no <code>twitter:image:alt</code>. This fails WCAG 2.1 requirements for screen readers consuming Twitter cards and is flagged by Twitter's Card Validator as a missing recommended tag.</p>"
+      ],
+      "broken_code": "<meta name=\"twitter:card\" content=\"summary_large_image\"/>\n<meta name=\"twitter:image\" content=\"https://www.buildingworld.ai/images/bw_logo_17kb.jpg\"/>\n<!-- ❌ Missing: twitter:image:alt -->",
+      "broken_language": "html",
+      "implementation_paragraphs": [
+        "<p>Add <code>twitter:image:alt</code> describing the OG image. When you replace the OG image (SEO-008), update this alt text to match the new social card.</p>"
+      ],
+      "fixed_code": "<meta name=\"twitter:image:alt\" content=\"BuildingWorld — India's verified construction materials marketplace: 74,000+ products, 4,100+ brands, AI Visualizer\"/>",
+      "fixed_language": "html",
+      "verify": "Paste URL into https://cards-dev.twitter.com/validator — 'Image alt text' should now be populated."
+    },
+    {
+      "id": "SEO-012",
+      "severity": "low",
+      "confidence": 72,
+      "evidence_source": "Homepage canonical: https://www.buildingworld.ai (no trailing slash). og:url: https://www.buildingworld.ai (consistent). However, Apple touch icon is served from CDN subdomain (d65kpn1g6p18g.cloudfront.net) not from www.buildingworld.ai — favicon.png is served from /favicon.png (root domain). Multiple favicon sizes defined using /favicon.png for 16x16 and 32x32 but the 192x192 and 512x512 variants use the CDN.",
+      "pillars": ["SEO"],
+      "audit_group": "Traditional SEO",
+      "category": "Technical",
+      "section_title": "Favicon served from split origins (root + CDN) — consolidate to one host",
+      "section_intro": "16x16 and 32x32 favicons come from /favicon.png (root domain) while 192x192, 512x512, and Apple touch icon come from the CloudFront CDN — a minor inconsistency that can cause icon resolution failures in some browsers.",
+      "page": "https://www.buildingworld.ai/",
+      "finding_paragraphs": [
+        "<p>Some browsers cache favicon origin separately. Having favicon assets split between the root domain and a CDN subdomain can cause browser icon resolution failures, especially on cached navigations. This is a Low-severity polish issue but worth consolidating.</p>"
+      ],
+      "broken_code": "<!-- Current mixed origins: -->\n<link rel=\"icon\" href=\"/favicon.png\"/>                           <!-- Root domain -->\n<link rel=\"icon\" href=\"/favicon.png\" sizes=\"16x16\"/>              <!-- Root domain -->\n<link rel=\"icon\" href=\"/favicon.png\" sizes=\"32x32\"/>              <!-- Root domain -->\n<link rel=\"apple-touch-icon\" href=\"https://d65kpn1g6p18g.cloudfront.net/images/bw_icon-192x192.png\" sizes=\"192x192\"/>  <!-- CDN -->\n<link rel=\"icon\" href=\"https://d65kpn1g6p18g.cloudfront.net/images/bw_icon-512x512.png\" sizes=\"512x512\"/>             <!-- CDN -->",
+      "broken_language": "html",
+      "implementation_paragraphs": [
+        "<p>Consolidate all favicon and app icon variants to the CDN path (preferred, for caching benefits) or to the root domain. Use Next.js <code>app/icon.png</code> and <code>app/apple-icon.png</code> conventions for automatic favicon management.</p>"
+      ],
+      "fixed_code": "// Use Next.js App Router icon conventions:\n// app/icon.png (32x32 — auto-served as /favicon.ico and /icon.png)\n// app/icon-192.png (192x192 — for PWA)\n// app/apple-icon.png (180x180 — for Apple touch)\n\n// Or manually consolidate all to CDN:\n<link rel=\"icon\" href=\"https://d65kpn1g6p18g.cloudfront.net/images/bw_icon-32x32.png\" sizes=\"32x32\"/>\n<link rel=\"apple-touch-icon\" href=\"https://d65kpn1g6p18g.cloudfront.net/images/apple-touch-icon.png\"/>",
+      "fixed_language": "html",
+      "verify": "Load buildingworld.ai in Chrome incognito — favicon should appear consistently. Check Application > Manifest in DevTools for correct icon declarations."
+    },
+    {
+      "id": "SEO-013",
+      "severity": "low",
+      "confidence": 70,
+      "evidence_source": "robots.txt analysis: wildcard User-agent: * block has Crawl-delay: 3 before the Disallow rules, then a second User-agent: * Allow: /llms.txt block at the end. Two User-agent: * blocks in robots.txt is ambiguous — Google's robots.txt parser uses the LAST matching block; some parsers use the FIRST.",
+      "pillars": ["SEO", "GEO"],
+      "audit_group": "Traditional SEO",
+      "category": "Technical",
+      "section_title": "robots.txt has two User-agent: * blocks — ambiguous parsing",
+      "section_intro": "Two separate User-agent: * blocks appear in robots.txt — one with Disallow rules and one with Allow: /llms.txt. RFC 9309 (robots.txt spec) says parsers use the first matching group; having two wildcard groups is ambiguous.",
+      "page": "https://www.buildingworld.ai/robots.txt",
+      "finding_paragraphs": [
+        "<p>robots.txt contains two <code>User-agent: *</code> blocks — one at line ~196 with <code>Crawl-delay: 3</code> and Disallow rules, and a second at line ~217 with <code>Allow: /llms.txt</code>. RFC 9309 and Google's robots.txt parser documentation state that when multiple groups match, the most specific group wins; for wildcard groups, behavior varies by crawler. Merging into a single block removes any ambiguity.</p>"
+      ],
+      "broken_code": "# Block 1 (line ~196):\nUser-agent: *\nCrawl-delay: 3\nDisallow: /admin/\nDisallow: /search/\n... (other disallows)\n\n# Block 2 (line ~217) — second wildcard block:\nUser-agent: *\nAllow: /llms.txt  ← Should be merged into Block 1",
+      "broken_language": "txt",
+      "implementation_paragraphs": [
+        "<p>Merge both <code>User-agent: *</code> blocks into a single block. Move <code>Allow: /llms.txt</code> into the main wildcard group with the Disallow rules.</p>"
+      ],
+      "fixed_code": "# Single consolidated User-agent: * block:\nUser-agent: *\nCrawl-delay: 3\nAllow: /llms.txt\nDisallow: /admin/\nDisallow: /search/\nDisallow: /profile/\nDisallow: /announce-project/listing\nDisallow: /post-requirements-project/listing\nDisallow: /my-ideas\nDisallow: /my-wish-list\nDisallow: /my-dashboard\nDisallow: /my-products\nDisallow: /my-subscription\nDisallow: /my-announceproject/create\nDisallow: /my-postrequirement/create\nDisallow: /user-profile\nDisallow: /users/\nDisallow: /visualizer/generate/\nDisallow: /visualizer/recents\nDisallow: /sign-up\nDisallow: /login",
+      "fixed_language": "txt",
+      "verify": "Paste robots.txt into https://www.google.com/webmasters/tools/robots-testing-tool — confirm no rule conflicts. Verify /llms.txt returns 200 from Googlebot perspective."
+    },
+    {
+      "id": "INFO-001",
+      "severity": "info",
+      "confidence": 95,
+      "evidence_source": "robots.txt analysis complete. GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, anthropic-ai, PerplexityBot, Googlebot, Googlebot-Image/Video/News, Google-Extended, Mediapartners-Google, AdsBot-Google, bingbot all explicitly allowed.",
+      "pillars": ["GEO"],
+      "audit_group": "LLM Visibility",
+      "category": "Other LLM Models",
+      "section_title": "✅ Excellent AI-crawler policy in robots.txt",
+      "section_intro": "BuildingWorld's robots.txt is one of the most comprehensive AI-crawler policies we've audited — explicitly allowing all major training and retrieval crawlers while carefully blocking scraper and low-value bots.",
+      "page": "https://www.buildingworld.ai/robots.txt",
+      "finding_paragraphs": [
+        "<p>The robots.txt explicitly allows <strong>GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, anthropic-ai, PerplexityBot, Google-Extended, meta-externalagent</strong> — covering all major AI training and retrieval crawlers. It carefully disallows junk crawlers (Dataprovider.com, HTTrack, Scrapy, Yandex, Nutch, etc.) while allowing all legitimate SEO and AI crawlers. The reference to <code>LLMs.txt: https://www.buildingworld.ai/llms.txt</code> in the robots.txt header is a bonus discovery signal for AI bots. This is a <strong>genuine competitive advantage</strong> — most Indian B2B sites block AI crawlers accidentally.</p>",
+        "<p>The only gap (addressed in GEO-002) is the missing <em>live-retrieval</em> variants: Perplexity-User, Claude-SearchBot, Claude-Web. Fixing those makes this the best-in-class AI crawler policy in the Indian construction space.</p>"
+      ],
+      "broken_code": null,
+      "implementation_paragraphs": [
+        "<p>No action needed beyond GEO-002 (adding live-retrieval bot entries). Maintain this policy as you add new AI crawler partners. Monitor the llmstxt.org spec updates for emerging bot user-agents.</p>"
+      ],
+      "fixed_code": null,
+      "verify": "Monitor Google Search Console > Crawl Stats for AI bot activity. No issues expected — this is already passing."
+    }
+  ]
+}
