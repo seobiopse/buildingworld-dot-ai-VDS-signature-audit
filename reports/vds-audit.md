@@ -71,7 +71,8 @@ For BuildingWorld.ai, technical issues are not isolated glitches; they represent
   1. **Query-Parameter Taxonomy:** Level 1 and Level 2 listing views share the exact same path slug, separated only by dynamic query string variables (e.g. `?l2_category_ids=2996`). 
   2. **Dynamic Next.js Execution:** Forcing Next.js to read dynamic query parameters disables static pre-rendering (SSG/ISR), requiring database queries on every page request and causing slow page load times.
   3. **Redirectional Loops:** Expired login auth gates and circular redirects during the `.com` to `.ai` migration collapsed the Domain Rating (DR) to **10**.
-* **The Connection:** An uncacheable, query-parameter-based folder structure cannot scale for programmatic SEO (pSEO). Re-building and pre-rendering 100,000+ landing pages for local construction listings is impossible when every request triggers dynamic database lookups.
+  4. **Backlink Profile Starvation:** Re-routing loops broke incoming links. Furthermore, there is no organic backlink/authority building loop (e.g., embeddable pricing calculators or supplier verification directories) to passively acquire links from building trade blogs.
+* **The Connection:** An uncacheable, query-parameter-based folder structure cannot scale for programmatic SEO (pSEO). Re-building and pre-rendering 100,000+ landing pages is impossible when every request triggers dynamic database lookups. Without recovering backlink authority, these scaled pSEO landing pages will fail to rank in competitive search markets.
 
 ---
 
@@ -83,7 +84,7 @@ To recover its organic ranking and prepare the platform for global scalability, 
 |:---|:---|:---|
 | **Category 1: Visibility** | JS-dependent product grids, "undefined" H1 headers, Next.js hydration crashes. | **1.** Shift listing grids to Next.js Server Components. Render 24 product cards in raw HTML.<br>**2.** Clean up React server states to prevent raw "undefined" heading rendering.<br>**3.** Strip CDN scripts for crawler user-agents. |
 | **Category 2: Demand** | Price as H1, missing return/delivery product schemas, non-declarative forms. | **1.** Wrap product titles in a single `<h1>` on detail pages.<br>**2.** Add dynamic product ratings, shipping details, and refund policies in JSON-LD.<br>**3.** Bind forms to W3C WebMCP declarative schemas for NLP bot checkouts. |
-| **Category 3: Scalability** | Query param routing, uncacheable pages, domain migration loops. | **1.** Re-architect category URLs to nested path subfolders (`/categories/[l1]/[l2]`) to enable Next.js pre-rendering.<br>**2.** Deploy CloudFront edge middleware with 1-to-1 redirect logs to capture backlinks. |
+| **Category 3: Scalability** | Query param routing, uncacheable pages, domain migration loops, and backlink starvation. | **1.** Re-architect category URLs to nested path subfolders (`/categories/[l1]/[l2]`) to enable Next.js pre-rendering.<br>**2.** Deploy CloudFront edge middleware with 1-to-1 redirect logs to reclaim backlink authority.<br>**3. Programmatic Authority Assets:** Launch trade-oriented tools (e.g. interactive construction estimators, supplier verification widgets) to act as link-magnets that naturally build backlink authority. |
 
 ---
 
@@ -116,7 +117,7 @@ Recovering from a collapsed domain profile and moving from a "Tactical Chaser" t
 * **Success Metric:** Generate 50,000+ cached, high-speed regional landing pages without increasing server load.
 
 ### 📅 Year 4: Authority Link Flows & Inter-linking Governance
-* **Month 37-48:** Build internal linking scripts that distribute link equity from regional landings back to core product categories.
+* **Month 37-48:** Deploy programmatic B2B calculators and supplier directory indexes to naturally attract and build backlink authority from trade websites. Establish link equity scripts that distribute link authority from regional landings back to core product categories.
 * **Success Metric:** Improve crawler budget efficiency by 60%; organic indexation scales across all templates.
 
 ### 📅 Year 5: The Compounding Revenue Engine
