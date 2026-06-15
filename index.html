@@ -310,6 +310,165 @@ code{font-family:var(--mono);font-size:.82em;background:rgba(255,255,255,.06);pa
     border-bottom: 1px solid var(--border);
   }
 }
+
+/* ── VDS MATRIX ── */
+.vds-matrix-grid-wrap {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 3rem;
+  overflow: hidden;
+  margin: 1.5rem 0;
+}
+.vds-matrix-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  position: relative;
+  aspect-ratio: 1.8 / 1;
+  background: rgba(11, 15, 26, 0.4);
+  border: 1px solid var(--border2);
+}
+.vds-quadrant {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  transition: background 0.3s;
+}
+.vds-quadrant:hover {
+  background: rgba(255, 255, 255, 0.01);
+}
+.vds-quadrant-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+.vds-quadrant-desc {
+  font-size: 0.78rem;
+  color: var(--text2);
+  line-height: 1.4;
+}
+.vds-axis-label-y {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text3);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transform: translateY(-50%) rotate(-90deg);
+  transform-origin: left center;
+  white-space: nowrap;
+}
+.vds-axis-label-x {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text3);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+.vds-point {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 12px currentColor;
+}
+.vds-point::after {
+  content: '';
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid currentColor;
+  animation: ping 1.5s infinite ease-in-out;
+  opacity: 0.5;
+}
+@keyframes ping {
+  0% { transform: scale(0.5); opacity: 1; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+.vds-point-label {
+  position: absolute;
+  white-space: nowrap;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  background: var(--surface2);
+  border: 1px solid var(--border2);
+  color: var(--text);
+  pointer-events: none;
+}
+.vds-point-now {
+  left: 25%;
+  top: 75%;
+  color: var(--critical);
+}
+.vds-point-now .vds-point-label {
+  left: 20px;
+  top: -6px;
+  border-color: rgba(239, 68, 68, 0.4);
+}
+.vds-point-target {
+  left: 75%;
+  top: 25%;
+  color: var(--green);
+}
+.vds-point-target .vds-point-label {
+  right: 20px;
+  top: -6px;
+  border-color: rgba(34, 197, 94, 0.4);
+}
+.vds-vector-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 5;
+}
+
+@media(max-width:700px){
+  .vds-matrix-grid-wrap {
+    padding: 1.5rem;
+  }
+  .vds-matrix-grid {
+    aspect-ratio: 1.2 / 1;
+  }
+  .vds-quadrant {
+    padding: 0.75rem;
+  }
+  .vds-quadrant-title {
+    font-size: 0.8rem;
+  }
+  .vds-quadrant-desc {
+    font-size: 0.65rem;
+  }
+  .vds-point-label {
+    font-size: 0.65rem;
+  }
+  .vds-axis-label-y, .vds-axis-label-x {
+    font-size: 0.55rem;
+  }
+}
 </style>
 </head>
 <body>
@@ -1866,8 +2025,135 @@ Allow: /</pre></div>
   </div>
 </div>
 
+<hr class="section-divider"/>
+
+<!-- VISIBILITY TO DEMAND SYSTEM (VDS) AUDIT SECTION -->
+<div class="section-label">Proprietary Framework</div>
+<div class="section-title">Visibility-to-Demand System (VDS) Blueprint</div>
+<div class="section-sub">Diagnostic overview mapping organic presence directly to sustainable business demand.</div>
+
+<div class="comp-card" style="border-left: 4px solid var(--accent); background: rgba(59, 130, 246, 0.01);">
+  <div class="comp-header" style="background: linear-gradient(90deg, rgba(59, 130, 246, 0.1), rgba(99, 102, 241, 0.05));">
+    <div class="comp-title">🌐 SEOBiopse VDS Methodology</div>
+    <span class="badge badge-seo" style="background: var(--accent2); color: #fff; border: none;">seobiopse.com</span>
+  </div>
+  <div class="comp-column" style="padding: 1.8rem; line-height: 1.7;">
+    <p style="margin-bottom: 1.5rem; color: var(--text);">
+      The <strong>Visibility-to-Demand System (VDS)</strong>, developed by Girish Kumar G, focuses on moving beyond baseline rankings to build compounding, search-update-resistant digital assets. VDS maps crawling signals directly to high-intent transactional paths.
+    </p>
+
+    <!-- VDS 4 PILLARS -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; margin-bottom: 2rem;">
+      <div style="background: var(--surface2); border: 1px solid var(--border2); padding: 1.2rem; border-radius: 10px;">
+        <h4 style="color: var(--accent); font-size: 0.9rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.4rem;">
+          <span style="font-size: 1.1rem;">📡</span> 1. Signal Mapping
+        </h4>
+        <p style="color: var(--text2); font-size: 0.82rem;">Tracks real search demand along the entire buyer's journey. Targets structured intent triggers rather than generic keyword volumes.</p>
+      </div>
+      <div style="background: var(--surface2); border: 1px solid var(--border2); padding: 1.2rem; border-radius: 10px;">
+        <h4 style="color: var(--accent); font-size: 0.9rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.4rem;">
+          <span style="font-size: 1.1rem;">🗺️</span> 2. Architecture Design
+        </h4>
+        <p style="color: var(--text2); font-size: 0.82rem;">Structures semantic topical clusters where every subcategory has a specific conversion job. Replaces parameter chains with clean URLs.</p>
+      </div>
+      <div style="background: var(--surface2); border: 1px solid var(--border2); padding: 1.2rem; border-radius: 10px;">
+        <h4 style="color: var(--accent); font-size: 0.9rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.4rem;">
+          <span style="font-size: 1.1rem;">🚀</span> 3. Content Delivery
+        </h4>
+        <p style="color: var(--text2); font-size: 0.82rem;">Deploys highly structured layouts satisfying both traditional search crawlers and AI Overview retrieval agents (AEO/GEO) in parallel.</p>
+      </div>
+      <div style="background: var(--surface2); border: 1px solid var(--border2); padding: 1.2rem; border-radius: 10px;">
+        <h4 style="color: var(--accent); font-size: 0.9rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.4rem;">
+          <span style="font-size: 1.1rem;">💎</span> 4. Compounding Layer
+        </h4>
+        <p style="color: var(--text2); font-size: 0.82rem;">Consolidates brand entities and markup graphs, driving internal link flow and preventing performance degradation over core updates.</p>
+      </div>
+    </div>
+
+    <!-- FOUR-SEGMENT MATRIX VISUALIZATION -->
+    <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text); margin-bottom: 1rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem;">
+      📊 VDS Matrix: 5-Year Strategy & Current Position
+    </h3>
+    <p style="color: var(--text2); font-size: 0.85rem; margin-bottom: 1.5rem;">
+      The matrix below illustrates where BuildingWorld.ai currently sits (Year 0) compared to its destination (Year 5) using the VDS framework.
+    </p>
+
+    <div class="vds-matrix-grid-wrap">
+      <!-- Axis Labels -->
+      <div class="vds-axis-label-y">▲ Demand Integration (Revenue Mapping)</div>
+      <div class="vds-axis-label-x">▲ Crawl & AI Retrieval Visibility</div>
+
+      <div class="vds-matrix-grid">
+        <!-- SVG Connecting line -->
+        <svg class="vds-vector-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <defs>
+            <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#22c55e"/>
+            </marker>
+          </defs>
+          <path d="M 25 75 Q 50 40 75 25" fill="none" stroke="#22c55e" stroke-width="1.5" stroke-dasharray="2,2" marker-end="url(#arrow)"/>
+        </svg>
+
+        <!-- Quadrant Top-Left -->
+        <div class="vds-quadrant" style="border-right: 1px dashed var(--border2); border-bottom: 1px dashed var(--border2);">
+          <div class="vds-quadrant-title" style="color: var(--amber);">Hidden Value</div>
+          <div class="vds-quadrant-desc">Strong conversion mapping but low search/AI crawl visibility. Pages are isolated and lack index coverage.</div>
+        </div>
+
+        <!-- Quadrant Top-Right -->
+        <div class="vds-quadrant" style="border-bottom: 1px dashed var(--border2);">
+          <div class="vds-quadrant-title" style="color: var(--green);">VDS Compounder (Authority Asset)</div>
+          <div class="vds-quadrant-desc">100% server-rendered, path-based routing, rich breadcrumb graphs. Fully cached and cited inside AI Overviews.</div>
+        </div>
+
+        <!-- Quadrant Bottom-Left -->
+        <div class="vds-quadrant" style="border-right: 1px dashed var(--border2);">
+          <div class="vds-quadrant-title" style="color: var(--red);">Tactical Chaser</div>
+          <div class="vds-quadrant-desc">Chasing ranking keywords page-by-page. Bloated JS renders, query param chains, and loop-prone structures.</div>
+        </div>
+
+        <!-- Quadrant Bottom-Right -->
+        <div class="vds-quadrant">
+          <div class="vds-quadrant-title" style="color: var(--info);">Traffic Collector</div>
+          <div class="vds-quadrant-desc">High raw clicks but low intent alignment. Traffic fails to map to revenue endpoints or compounding loops.</div>
+        </div>
+
+        <!-- Points plotted -->
+        <div class="vds-point vds-point-now">
+          <div class="vds-point-label">buildingworld.ai (Year 0 - Now)</div>
+        </div>
+        <div class="vds-point vds-point-target">
+          <div class="vds-point-label">buildingworld.ai (Year 5 - Target)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5-YEAR STRATEGIC OUTLOOK -->
+    <div style="margin-top: 1.5rem;">
+      <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text); margin-bottom: 0.75rem;">
+        📅 5-Year Strategic Outlook
+      </h4>
+      <div style="display: flex; flex-direction: column; gap: 0.8rem; font-size: 0.85rem; color: var(--text2);">
+        <p>
+          <strong>Year 0 to 1 (The Core Fix):</strong> Resolve template anomalies. Ensure 100% of listing grids and product cards are rendered Server-Side in raw HTML source. Remove redirect loops by mapping permanent 301 redirects, and replace single-path query parameter listing views with structured path parameters.
+        </p>
+        <p>
+          <strong>Year 2 to 3 (Authority Pillar Growth):</strong> Build hierarchical topic networks linking product templates to category and parent hubs. Establish clear entity references via breadcrumbs and product schemas, qualifying BuildingWorld for first-class ranking in Generative Engine Optimizations (GEO) and AI Overview citations.
+        </p>
+        <p>
+          <strong>Year 4 to 5 (Compounding Asset Loop):</strong> Cultivate a fully self-reinforcing organic engine. Internal link authority distributes fluidly across listing and detail nodes, reducing indexation overhead and rendering the catalog update-resistant against search engine algorithmic shifts.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 <div style="text-align: center; margin-top: 3rem; color: var(--text3); font-size: 0.85rem; padding: 1.5rem 1.5rem 4rem; border-top: 1px solid var(--border);">
   Report Signature: <strong>Giriish | Organic Gorwth Architec | Founders of VDS | Father of SEO</strong>
+  <span style="font-size: 0.78rem; color: var(--text3); margin-top: 0.5rem; display: block;">
+    Audited & Certified via the Visibility-to-Demand System (VDS) Framework · <a href="https://seobiopse.com" target="_blank" style="color: var(--accent); text-decoration: none; font-weight: 600;">seobiopse.com</a>
+  </span>
 </div>
 </div><!-- /container -->
 

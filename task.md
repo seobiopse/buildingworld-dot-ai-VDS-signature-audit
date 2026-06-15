@@ -16,3 +16,19 @@
 - [x] Clean up temporary workspace scripts.
 - [x] Upgrade Agentic Browsing checklist to 8 premium interactive findings cards (AXO-1-1 through AXO-1-8) with expand/collapse states and progress tracking.
 - [x] Write `walkthrough.md` summarizing completed actions.
+- [x] Organize files and configure GitHub Actions deployment:
+  - [x] Move `index.html` and `screenshots/` to root directory.
+  - [x] Create `reports/` folder and move all markdown deliverables (`FULL-AUDIT-REPORT-2026-06-15.md`, `RAW-vs-RENDERED-AUDIT-2026-06-15.md`, `amazon_vs_buildingworld_comparison.md`) into it.
+  - [x] Update `.github/workflows/deploy-report.yml` to trigger on root paths and publish from `./`.
+  - [x] Remove the obsolete `audit-report/` directory.
+  - [x] Ignore internal files (`implementation_plan.md`, `task.md`, `walkthrough.md`) in `.gitignore`.
+  - [x] Update `README.md` file tree and share instructions.
+  - [x] Stage and commit all modifications to Git (clean working tree).
+- [x] Integrate VDS (Visibility-to-Demand System) Framework:
+  - [x] Add VDS Blueprint section and style rules inside `index.html`.
+  - [x] Create a premium interactive 2x2 matrix grid with SVG path connection, animating Year 0 and Year 5 positions.
+  - [x] Author the VDS Brief Diagnostic Report (`reports/vds_visibility_to_demand_report.md`).
+  - [x] Update signatures across all documents to reference seobiopse.com certification.
+  - [x] Update file outline map and links in `README.md`.
+  - [x] Update `walkthrough.md` to reflect VDS implementation.
+  - [x] Stage and commit all new modifications to Git.
