@@ -298,17 +298,53 @@ code{font-family:var(--mono);font-size:.82em;background:rgba(255,255,255,.06);pa
   flex-shrink: 0;
 }
 
-/* ── RESPONSIVE ── */
-@media(max-width:700px){
-  .topbar{padding:0 1rem}.hero{padding:3rem 1rem 2rem}.container{padding:0 1rem 3rem}
-  .ba-grid{grid-template-columns:1fr}.scorecard-grid{grid-template-columns:1fr 1fr}
-  .comp-grid {
-    grid-template-columns: 1fr;
-  }
-  .comp-column.left {
-    border-right: none;
-    border-bottom: 1px solid var(--border);
-  }
+/* ── RESPONSIVE & TABLET/MOBILE OPTIMIZATION ── */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1.5rem 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+}
+.table-responsive .diff-table,
+.table-responsive .info-table {
+  margin: 0;
+  min-width: 650px;
+}
+
+@media(max-width:768px){
+  .topbar{padding:0 1rem}
+  .hero{padding:3rem 1rem 2rem}
+  .container{padding:0 1rem 3rem}
+  .ba-grid{grid-template-columns:1fr}
+  .scorecard-grid{grid-template-columns:1fr 1fr}
+  .comp-grid{grid-template-columns:1fr}
+  .comp-column.left{border-right:none;border-bottom:1px solid var(--border)}
+  .vds-maze-wrapper{padding:1.5rem}
+  .score-ring-wrap{padding:1.25rem;gap:1.5rem}
+}
+
+@media(max-width:480px){
+  .topbar{height:auto;padding:0.75rem 1rem;flex-direction:column;align-items:flex-start;gap:0.5rem}
+  .topbar-brand{font-size:0.85rem}
+  .topbar > div:last-child{align-items:flex-start !important;width:100%}
+  .progress-bar-wrap{width:100% !important}
+  .hero h1{font-size:1.8rem}
+  .hero-meta{gap:0.5rem}
+  .meta-chip{padding:0.3rem 0.6rem;font-size:0.75rem;width:100%;text-align:center}
+  .scorecard-grid{grid-template-columns:1fr}
+  .score-bar-label{width:110px}
+  .finding-header{padding:1rem;flex-direction:column;align-items:flex-start;gap:0.5rem}
+  .finding-check{width:100%;margin-top:0.5rem}
+  .finding-body{padding:0 1rem 1rem}
+  .vds-maze-wrapper{padding:1rem;border-radius:12px}
+  .maze-board{padding:0.75rem}
+  .maze-info-panel{padding:1rem}
+  .maze-info-metrics{flex-wrap:wrap}
+  .sticky-footer{padding:0.75rem 1rem;flex-direction:column;align-items:flex-start;gap:0.5rem}
+  .sticky-footer-bar{width:100%}
 }
 
 /* ── VDS INTERACTIVE MAZE PUZZLE ── */
@@ -727,6 +763,7 @@ code{font-family:var(--mono);font-size:.82em;background:rgba(255,255,255,.06);pa
 <div class="section-title">Raw HTML vs Rendered — What Bots Actually See</div>
 <div class="section-sub">Ctrl+U = Raw source (Googlebot wave-1 + ALL AI crawlers). F12 = Rendered after JS (users only).</div>
 
+<div class="table-responsive">
 <table class="diff-table">
   <thead><tr><th>Page</th><th>Raw KB</th><th>Rendered KB</th><th>H1 in Raw</th><th>Images Raw/Rendered</th><th>Schemas Raw/Rendered</th><th>Products Visible in Raw</th></tr></thead>
   <tbody>
@@ -764,6 +801,7 @@ code{font-family:var(--mono);font-size:.82em;background:rgba(255,255,255,.06);pa
     </tr>
   </tbody>
 </table>
+</div>
 
 <!-- DOMAIN MIGRATION AND REDIRECT LOOPS SECTION -->
 <div class="section-label">Domain Migration Audit</div>
@@ -1305,7 +1343,8 @@ export default async function CategoryPage({ params }) {
   </div>
   <div class="finding-body collapsed" id="body-HIGH-001">
     <div class="finding-intro">The Product JSON-LD schema is present but incomplete. Missing fields block Google Shopping-style rich results, star ratings, and "Free shipping" / "Free returns" SERP badges.</div>
-    <table class="info-table" style="margin:1rem 0">
+    <div class="table-responsive">
+    <table class="info-table" style="margin:0">
       <thead><tr><th>Missing Field</th><th>SERP Impact</th><th>Status</th></tr></thead>
       <tbody>
         <tr><td><code>aggregateRating</code></td><td>No star ratings in SERPs</td><td><span class="badge badge-critical">Missing</span></td></tr>
@@ -1316,6 +1355,7 @@ export default async function CategoryPage({ params }) {
         <tr><td><code>image</code> (array)</td><td>Only first image passed</td><td><span class="badge badge-medium">Partial</span></td></tr>
       </tbody>
     </table>
+    </div>
     <div class="ba-grid">
       <div class="ba-panel ba-before">
         <div class="ba-panel-header">🔴 Current Product Schema</div>
@@ -2143,7 +2183,7 @@ Allow: /</pre></div>
 <div class="comp-card" style="border-left: 4px solid var(--accent); background: rgba(59, 130, 246, 0.01);">
   <div class="comp-header" style="background: linear-gradient(90deg, rgba(59, 130, 246, 0.1), rgba(99, 102, 241, 0.05));">
     <div class="comp-title">🌐 VDS Signature & Strategic Forecast</div>
-    <span class="badge badge-seo" style="background: var(--accent2); color: #fff; border: none;">seobiopse.com</span>
+    <a href="https://github.com/seobiopse/buildingworld-dot-ai-VDS-signature-audit.git" target="_blank" class="badge badge-seo" style="background: var(--accent2); color: #fff; border: none; text-decoration: none;">Git Repo</a>
   </div>
   <div class="comp-column" style="padding: 1.8rem; line-height: 1.7;">
 
