@@ -6,3 +6,6 @@ Thumbs.db
 .gemini/
 *~
 *.tmp
+implementation_plan.md
+task.md
+walkthrough.md

@@ -5,7 +5,8 @@ on:
     branches:
       - main
     paths:
-      - 'audit-report/**'
+      - 'index.html'
+      - 'screenshots/**'
 
 permissions:
   contents: write
@@ -21,4 +22,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./audit-report
+          publish_dir: ./
