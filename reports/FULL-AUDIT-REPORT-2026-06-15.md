@@ -393,10 +393,10 @@ The audit results have been compiled against the **Visibility-to-Demand System (
    * *Technical Layer:* Schema.org merchant objects (shipping details, return policy) and declarative checkout form attributes mapped to the W3C WebMCP protocol.
    * *On-Page Layer:* Optimized H1 naming layouts and **Prompt Sentiment to Keyword Mapping** (aligning high-intent purchase searches with in-page trust signals and badges).
    * *Off-Page Layer:* Automated ingestion of external reviews and ratings to feed trust schemas.
-3. **Scalability [pSEO Ready & Authority Scaled]:** Structured dynamic path routing subfolders (`/categories/[l1]/[l2]`) to enable Next.js pre-rendering caching (SSG/ISR) and pSEO scaling.
+3. **Scalability [pSEO Ready & Authority Scaled]:** Structured dynamic path routing subfolders (`/categories/[l1]/[l2]`) to enable Next.js pre-rendering caching (SSG/ISR), and scaled brand authority networks.
    * *Technical Layer:* Nested path routing paths to enable pre-rendering cache storage, and Edge redirect middleware.
-   * *On-Page Layer:* A programmatic **NLP semantic variation engine** designed to generate unique descriptive content variations across scaled B2B category landing pages.
-   * *Off-Page Layer:* Programmatic B2B link-magnets (calculators) and **Social Signals & Brand Mentions velocity** (organic co-occurrence footprints across LinkedIn, Reddit, YouTube, and X).
+   * *On-Page Layer:* A programmatic **NLP semantic variation engine** designed to generate unique descriptive content variations, and a B2T dynamic content engine spanning Top-of-Funnel (TOFU material calculators/estimators), Middle-of-Funnel (MOFU problem-solving case studies), and Bottom-of-Funnel (BOFU UGC reviews/RFQs).
+   * *Off-Page Layer:* Programmatic B2B link-magnets (calculators), high-trust **Partnership Link Exchanges** (partner badge citation circles), earned media PR backlinks, and omnichannel **Social Signals & Brand Mentions velocity** (organic co-occurrence footprints across LinkedIn, Reddit, YouTube, X, Threads, Quora, Medium, and Tumblr).
 
 ---
 
@@ -475,7 +475,8 @@ The VDS Signature acts as the proprietary predictive growth model of the seobiop
 18. **Reverse RAG Formatting:** Format catalog content blocks into semantic chunks and citation anchors optimized for AEO/GEO engine retrieval.
 19. **Permit live AI search bots:** Add `Perplexity-User` and `Claude-SearchBot` to robots.txt allowed list.
 
-### Sprint 4 — Programmatic Authority Scale & NLP Phrasing
+### Sprint 4 — Programmatic Authority Scale & Dynamic Funnels
 20. **NLP Dynamic Phrasing Engine:** Build semantic phrasing variation templates for localized category pages to avoid search duplication filters.
-21. **Launch programmatic calculators:** Deploy B2B estimators (cement/steel estimators) to act as natural link magnets, boosting DR to 45+.
-22. **Establish brand co-occurrence loop:** Cultivate LinkedIn, Reddit, and X citation velocity logs to build digital presence authority.
+21. **Launch programmatic calculators & dynamic content:** Deploy B2B estimators (cement/steel estimators) to act as natural link magnets, and deploy TOFU/MOFU/BOFU content directories (case studies, supplier reviews, guides).
+22. **Establish partner link exchanges & PR backlinks:** Launch dealer/supplier partner directories with cross-linking verification badges. Pitch industry portals for news releases and editorial backlinks.
+23. **Establish brand co-occurrence loop:** Cultivate LinkedIn, Reddit, YouTube, X, Threads, Quora, and Medium citation velocity loops to build digital presence authority and brand search loops.

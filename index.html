@@ -654,6 +654,138 @@ code{font-family:var(--mono);font-size:.82em;background:rgba(255,255,255,.06);pa
   font-size: 0.68rem;
   color: var(--text3);
 }
+
+/* ── TABS NAVIGATION ── */
+.tabs-nav-container {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 0.5rem auto 2.5rem;
+  background: rgba(17, 24, 39, 0.6);
+  border: 1px solid var(--border);
+  padding: 0.4rem;
+  border-radius: 99px;
+  max-width: 600px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+.tab-btn {
+  background: transparent;
+  border: none;
+  color: var(--text2);
+  padding: 0.6rem 1.2rem;
+  font-family: var(--font);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 99px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.tab-btn:hover {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.04);
+}
+.tab-btn.active {
+  color: #fff;
+  background: var(--gradient);
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
+}
+.tab-icon {
+  font-size: 1rem;
+}
+.tab-panel {
+  display: none;
+  animation: tabFadeIn 0.4s ease forwards;
+}
+.tab-panel.active {
+  display: block;
+}
+@keyframes tabFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── BRANDING TAB STYLES ── */
+.branding-intro-card {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(20, 184, 166, 0.04));
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+.branding-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+.brand-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.8rem;
+  transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.brand-card:hover {
+  border-color: var(--accent2);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -8px rgba(99, 102, 241, 0.2);
+}
+.brand-card-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+.brand-card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.75rem;
+}
+.brand-card-desc {
+  font-size: 0.88rem;
+  color: var(--text2);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+.brand-sub-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+.brand-sub-item {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 0.85rem;
+  color: var(--text2);
+}
+.brand-sub-item strong {
+  color: var(--text);
+  display: block;
+  font-size: 0.88rem;
+  margin-bottom: 0.2rem;
+}
+.brand-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.tag-funnel { background: rgba(99, 102, 241, 0.15); color: #c7d2fe; border: 1px solid rgba(99, 102, 241, 0.3); }
+.tag-backlinks { background: rgba(20, 184, 166, 0.15); color: #99f6e4; border: 1px solid rgba(20, 184, 166, 0.3); }
+.tag-omnichannel { background: rgba(236, 72, 153, 0.15); color: #fbcfe8; border: 1px solid rgba(236, 72, 153, 0.3); }
 </style>
 </head>
 <body>
@@ -686,6 +818,25 @@ code{font-family:var(--mono);font-size:.82em;background:rgba(255,255,255,.06);pa
 
 <!-- ALERT BAND -->
 <div class="container">
+
+<!-- TAB NAVIGATION -->
+<div class="tabs-nav-container">
+  <button class="tab-btn active" onclick="switchTab('general')">
+    <span class="tab-icon">🔍</span>
+    <span class="tab-label">General Audit</span>
+  </button>
+  <button class="tab-btn" onclick="switchTab('vds')">
+    <span class="tab-icon">🌐</span>
+    <span class="tab-label">VDS Blueprint</span>
+  </button>
+  <button class="tab-btn" onclick="switchTab('branding')">
+    <span class="tab-icon">⚡</span>
+    <span class="tab-label">Branding Strategy</span>
+  </button>
+</div>
+
+<!-- PANEL 1: GENERAL AUDIT -->
+<div id="panel-general" class="tab-panel active">
 <div class="alert-band">
   <div class="alert-band-icon">⚠️</div>
   <div>
@@ -2175,6 +2326,10 @@ Allow: /</pre></div>
   </div>
 </div>
 
+</div><!-- /panel-general -->
+
+<!-- PANEL 2: VDS AUDIT -->
+<div id="panel-vds" class="tab-panel">
 <!-- VISIBILITY TO DEMAND SYSTEM (VDS) AUDIT SECTION -->
 <div class="section-label">Proprietary Framework</div>
 <div class="section-title">Visibility-to-Demand System (VDS) Blueprint</div>
@@ -2503,6 +2658,102 @@ Allow: /</pre></div>
         </div>
       </div>
 
+</div><!-- /panel-vds -->
+
+<!-- PANEL 3: BRANDING STRATEGY -->
+<div id="panel-branding" class="tab-panel">
+  <div class="section-label">Brand & Authority scaling</div>
+  <div class="section-title">Omnichannel B2T Branding Roadmap</div>
+  <div class="section-sub">Actionable system configurations to establish buildingworld.ai as a high-authority building industry brand.</div>
+
+  <!-- Intro Card -->
+  <div class="branding-intro-card">
+    <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text); margin-bottom: 0.75rem;">
+      📈 Brand Position & Domain Equity target
+    </h3>
+    <p style="color: var(--text2); font-size: 0.88rem; line-height: 1.7; margin-bottom: 1.25rem;">
+      To scale organic lead volume to <strong>10x</strong> and organic transactions to <strong>6x</strong>, buildingworld.ai must transition from a simple catalog index to a highly trusted Business-to-Trade (B2T) authoritative resource. This roadmap maps out the content engine funnel, partner link hubs, and omnichannel social signals designed to grow our domain trust from <strong>DR 10 to DR 45+</strong>.
+    </p>
+    <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1rem;">
+      <span class="badge badge-aeo" style="background: rgba(99, 102, 241, 0.12); color: #93c5fd; border: 1px solid rgba(59, 130, 246, 0.25);">Content Funnel</span>
+      <span class="badge badge-seo" style="background: rgba(20, 184, 166, 0.12); color: #5eead4; border: 1px solid rgba(20, 184, 166, 0.25);">Co-Citation Hubs</span>
+      <span class="badge badge-geo" style="background: rgba(236, 72, 153, 0.12); color: #fbcfe8; border: 1px solid rgba(236, 72, 153, 0.25);">Omnichannel Authority</span>
+    </div>
+  </div>
+
+  <!-- Branding Grid -->
+  <div class="branding-grid">
+    <!-- Card 1: Content Funnel -->
+    <div class="brand-card">
+      <div class="brand-tag tag-funnel">Content Engine</div>
+      <div class="brand-card-icon">📝</div>
+      <h4 class="brand-card-title">B2T Content Engine (TOFU/MOFU/BOFU)</h4>
+      <p class="brand-card-desc">Implement a dynamic content delivery system mapping to our trade audience's commercial query intent cycles.</p>
+      
+      <div class="brand-sub-list">
+        <div class="brand-sub-item">
+          <strong>TOFU: Informational Traffic Generators</strong>
+          Deploy cement, steel, and brick calculators alongside technical construction guides to capture top-of-funnel trade professional searches.
+        </div>
+        <div class="brand-sub-item">
+          <strong>MOFU: In-Depth Problem Solving</strong>
+          Publish customer success case studies showing how buildingworld.ai solved XYZ supply bottlenecks for builders. Provide regional supplier evaluation indices.
+        </div>
+        <div class="brand-sub-item">
+          <strong>BOFU: User-Generated Content & RFQs</strong>
+          Leverage supplier reviews, client testimonials, video delivery validations, and highly optimized RFQ (Request for Quote) landing structures to convert trust to transactions.
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2: Link Ecosystem -->
+    <div class="brand-card">
+      <div class="brand-tag tag-backlinks">Link Authority</div>
+      <div class="brand-card-icon">🔗</div>
+      <h4 class="brand-card-title">High-Trust Backlink Partnerships & PR</h4>
+      <p class="brand-card-desc">Generate high-value natural backlinks using our dealer networks and media placements instead of buying link lists.</p>
+      
+      <div class="brand-sub-list">
+        <div class="brand-sub-item">
+          <strong>Partnership Link Exchange</strong>
+          Leverage our existing manufacturer and supplier network to create co-citation rings and trusted partner directories, building natural cross-linking equity.
+        </div>
+        <div class="brand-sub-item">
+          <strong>Earned Media PR Campaigns</strong>
+          Distribute press releases highlighting B2B trade data, construction technology integrations, and supplier verifications to build editor-injected news links.
+        </div>
+        <div class="brand-sub-item">
+          <strong>Co-Citation Registries</strong>
+          Establish Name-Address-Phone (NAP) consistency across verified regional indices, linking back to localized supplier subpages.
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3: Social & Community -->
+    <div class="brand-card">
+      <div class="brand-tag tag-omnichannel">Omnichannel Presence</div>
+      <div class="brand-card-icon">📢</div>
+      <h4 class="brand-card-title">Omnichannel Brand Velocity & Community</h4>
+      <p class="brand-card-desc">Build co-occurrence signals to feed AI search algorithms, demonstrating brand prominence in real-world discussions.</p>
+      
+      <div class="brand-sub-list">
+        <div class="brand-sub-item">
+          <strong>Social Media Promotion Loops</strong>
+          Use YouTube for supplier factory walkthroughs, and Instagram & Threads for localized material aesthetic highlights and quick quote guides.
+        </div>
+        <div class="brand-sub-item">
+          <strong>Community Authority Hubs</strong>
+          Monitor and answer construction sourcing questions on Reddit (r/construction, r/civilengineering), Quora, Medium, and Tumblr to drive brand discussions.
+        </div>
+        <div class="brand-sub-item">
+          <strong>Branded Search Generation</strong>
+          Foster direct navigation search loops (e.g. users searching for 'buildingworld.ai steel prices'), signaling supreme brand authority to search engines.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <hr class="section-divider"/>
 
 <!-- ═══════════════════════════════════════════
@@ -2544,10 +2795,11 @@ Allow: /</pre></div>
 </div>
 
 <div class="sprint-section">
-  <div class="sprint-header"><div class="sprint-badge" style="color:var(--low);border-color:rgba(34,197,94,.25)">🟢 Sprint 4 — Programmatic Authority Scale</div><span style="color:var(--text3);font-size:.82rem">Compounding link equity and content variety</span></div>
+  <div class="sprint-header"><div class="sprint-badge" style="color:var(--low);border-color:rgba(34,197,94,.25)">🟢 Sprint 4 — Programmatic Authority Scale & Dynamic Funnels</div><span style="color:var(--text3);font-size:.82rem">Compounding link equity and content variety</span></div>
   <div class="sprint-item"><span class="sprint-item-num">20</span><div class="sprint-item-text">NLP Dynamic Phrasing Engine — implement dynamic variations to avoid duplicate content penalties</div><span class="sprint-item-tag badge badge-low">Low</span></div>
-  <div class="sprint-item"><span class="sprint-item-num">21</span><div class="sprint-item-text">Deploy B2B estimation calculators (steel/cement) as passive authority link magnets</div><span class="sprint-item-tag badge badge-low">Low</span></div>
-  <div class="sprint-item"><span class="sprint-item-num">22</span><div class="sprint-item-text">Establish brand co-occurrence and citation velocity loop on LinkedIn/Reddit/X</div><span class="sprint-item-tag badge badge-low">Low</span></div>
+  <div class="sprint-item"><span class="sprint-item-num">21</span><div class="sprint-item-text">Deploy B2B steel/cement calculators and launch TOFU/MOFU/BOFU content engines</div><span class="sprint-item-tag badge badge-low">Low</span></div>
+  <div class="sprint-item"><span class="sprint-item-num">22</span><div class="sprint-item-text">Establish partner link exchanges & press release earned media PR backlinks</div><span class="sprint-item-tag badge badge-low">Low</span></div>
+  <div class="sprint-item"><span class="sprint-item-num">23</span><div class="sprint-item-text">Cultivate brand mentions loop on LinkedIn/Reddit/X/Threads/YouTube/Quora/Medium</div><span class="sprint-item-tag badge badge-low">Low</span></div>
 </div>
 
 <hr class="section-divider"/>
@@ -2708,6 +2960,28 @@ function updateProgress(checkbox, id) {
   renderProgress();
 }
 
+function switchTab(tabId) {
+  // Update button active state
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.classList.remove('active');
+  });
+  const activeBtn = document.querySelector(`.tab-btn[onclick="switchTab('${tabId}')"]`);
+  if (activeBtn) activeBtn.classList.add('active');
+
+  // Update panel display
+  document.querySelectorAll('.tab-panel').forEach(panel => {
+    panel.classList.remove('active');
+  });
+  const activePanel = document.getElementById(`panel-${tabId}`);
+  if (activePanel) activePanel.classList.add('active');
+  
+  // Scroll to tabs container smoothly
+  const nav = document.querySelector('.tabs-nav-container');
+  if (nav) {
+    nav.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
 function renderProgress() {
   const n = addressed.size;
   const pct = Math.round((n / TOTAL) * 100);
@@ -2726,6 +3000,9 @@ function toggleFinding(id) {
 }
 
 function scrollToFinding(id) {
+  // Auto-switch to general tab since findings are inside it
+  switchTab('general');
+  
   const el = document.getElementById(id);
   if (el) {
     el.scrollIntoView({ behavior: 'smooth', block: 'center' });
