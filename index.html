@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
@@ -683,6 +683,7 @@ code{font-family:var(--mono);font-size:.82em;background:rgba(255,255,255,.06);pa
   display: flex;
   align-items: center;
   gap: 0.4rem;
+  position: relative;
 }
 .tab-btn:hover {
   color: var(--text);
@@ -692,6 +693,20 @@ code{font-family:var(--mono);font-size:.82em;background:rgba(255,255,255,.06);pa
   color: #fff;
   background: var(--gradient);
   box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
+}
+.tab-btn:not(.active) {
+  animation: clickPulse 2.5s infinite ease-in-out;
+}
+@keyframes clickPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.3);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(99, 102, 241, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(99, 102, 241, 0);
+  }
 }
 .tab-icon {
   font-size: 1rem;
@@ -2657,159 +2672,278 @@ Allow: /</pre></div>
           </div>
         </div>
       </div>
-
+    </div>
 </div><!-- /panel-vds -->
 
 <!-- PANEL 3: BRANDING STRATEGY -->
 <div id="panel-branding" class="tab-panel">
-  <div class="section-label">Brand & Authority scaling</div>
-  <div class="section-title">Omnichannel B2T Branding Roadmap</div>
-  <div class="section-sub">Actionable system configurations to establish buildingworld.ai as a high-authority building industry brand.</div>
 
-  <!-- Intro Card -->
+  <!-- ── EMOTION-FIRST BRAND POSITIONING ── -->
+  <div class="section-label">Emotion-First Brand Strategy</div>
+  <div class="section-title">Make Them Feel It First. Then Sell.</div>
+  <div style="background:linear-gradient(135deg,rgba(249,115,22,0.08),rgba(234,179,8,0.04));border:1px solid rgba(249,115,22,0.3);border-radius:14px;padding:1.5rem 1.75rem;margin:0 0 2rem;"><div style="display:flex;align-items:flex-start;gap:1rem;flex-wrap:wrap;"><div style="font-size:1.8rem;flex-shrink:0;">📱</div><div style="flex:1;min-width:240px;"><div style="font-size:0.72rem;font-weight:700;color:#fed7aa;text-transform:uppercase;letter-spacing:.1em;margin-bottom:0.4rem;">Critical Strategic Context</div><div style="font-size:1rem;font-weight:700;color:var(--text);margin-bottom:0.6rem;">The Emotional Journey Happens on a Phone. At 11pm. In Bed.</div><p style="font-size:0.85rem;color:var(--text2);line-height:1.7;margin-bottom:1rem;">The emotionally-triggered audience is on a <strong>smartphone or tablet</strong> — not a desktop. Scrolling Instagram at 11pm, showing their partner a render on their tablet, sending a WhatsApp quote request with one tap. BuildingWorld.ai must be <strong>thumb-first, scroll-optimized, and load-fast on 4G</strong>. A desktop-centric experience is an invisible wall between emotion and conversion.</p><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0.75rem;"><div style="background:rgba(0,0,0,0.2);border:1px solid rgba(249,115,22,0.2);border-radius:8px;padding:0.75rem;"><div style="font-size:0.75rem;font-weight:700;color:#fed7aa;margin-bottom:0.3rem;">Target Screens</div><div style="font-size:0.82rem;color:var(--text2);">Smartphone 360–430px and Tablet 768–1024px. The Visualizer must render fully on both without horizontal scroll or zoom.</div></div><div style="background:rgba(0,0,0,0.2);border:1px solid rgba(249,115,22,0.2);border-radius:8px;padding:0.75rem;"><div style="font-size:0.75rem;font-weight:700;color:#fed7aa;margin-bottom:0.3rem;">Performance Gate</div><div style="font-size:0.82rem;color:var(--text2);">LCP under 2.5s on 4G. CLS under 0.1. No layout shift when AI renders load. Every second of delay kills the emotional momentum.</div></div><div style="background:rgba(0,0,0,0.2);border:1px solid rgba(249,115,22,0.2);border-radius:8px;padding:0.75rem;"><div style="font-size:0.75rem;font-weight:700;color:#fed7aa;margin-bottom:0.3rem;">Thumb-First UX Rules</div><div style="font-size:0.82rem;color:var(--text2);">Share and CTA buttons in bottom thumb zone. Swipeable before/after renders. One-tap supplier contact. WhatsApp quote request above the fold on mobile.</div></div><div style="background:rgba(0,0,0,0.2);border:1px solid rgba(249,115,22,0.2);border-radius:8px;padding:0.75rem;"><div style="font-size:0.75rem;font-weight:700;color:#fed7aa;margin-bottom:0.3rem;">Mobile SEO Impact</div><div style="font-size:0.82rem;color:var(--text2);">Google indexes mobile-first. Visualizer pages failing Core Web Vitals on mobile are invisible to 80%+ of the emotional-trigger audience regardless of content quality.</div></div></div></div></div></div>
+
+  <div class="section-sub">No one buys cement. No one buys tiles. They buy the feeling of walking into a room that finally feels like <em>them</em>. BuildingWorld.ai's entire brand must lead with that emotion — and the AI Visualizer is the only tool that makes that feeling tangible before a single rupee is spent.</div>
+
+  <!-- The Emotional Journey Card -->
   <div class="branding-intro-card">
-    <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text); margin-bottom: 0.75rem;">
-      📈 Brand Position & Domain Equity target
+    <h3 style="font-size:1.15rem;font-weight:700;color:var(--text);margin-bottom:0.75rem;">
+      🧲 The Full Emotional Moat
     </h3>
-    <p style="color: var(--text2); font-size: 0.88rem; line-height: 1.7; margin-bottom: 1.25rem;">
-      To scale organic lead volume to <strong>10x</strong> and organic transactions to <strong>6x</strong>, buildingworld.ai must transition from a simple catalog index to a highly trusted Business-to-Trade (B2T) authoritative resource. This roadmap maps out the content engine funnel, partner link hubs, and omnichannel social signals designed to grow our domain trust from <strong>DR 10 to DR 45+</strong>.
+    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:0.5rem;margin-bottom:1.25rem;font-size:0.9rem;font-weight:600;line-height:2;">
+      <span style="color:var(--text3);font-style:italic;">"Tired of the same four walls"</span>
+      <span style="color:var(--text3);">→</span>
+      <span style="color:var(--text2);">Craving an inspirable change</span>
+      <span style="color:var(--text3);">→</span>
+      <span style="color:var(--text2);">Start with your room</span>
+      <span style="color:var(--text3);">→</span>
+      <span style="color:#a5b4fc;">AI Visualizer</span>
+      <span style="color:var(--text3);">→</span>
+      <span style="color:#5eead4;">Design it</span>
+      <span style="color:var(--text3);">→</span>
+      <span style="color:#86efac;">Discover the materials</span>
+      <span style="color:var(--text3);">→</span>
+      <span style="color:#fed7aa;">Source locally</span>
+      <span style="color:var(--text3);">→</span>
+      <span style="color:var(--green);font-weight:700;">Buy with confidence</span>
+    </div>
+    <p style="color:var(--text2);font-size:0.88rem;line-height:1.75;margin-bottom:1.25rem;">
+      The customer journey begins long before they open any app. They are <strong>staring at the same dull walls every morning</strong>, scrolling through Pinterest at 11pm wanting something different, telling their partner "we really need to do something about this room." That <strong>emotional tension is the entry point</strong>. BuildingWorld.ai's brand must own that moment of desire — not the checkout moment. The Visualizer is what converts that emotion into action: <em>"Let me just see what it could look like."</em> That one click is the entire acquisition funnel. No competitor can replicate this arc from <strong>emotional dissatisfaction → visual aspiration → material sourcing → verified purchase</strong> in a single platform. Target: <strong>DR 10 → DR 45+</strong>, organic leads <strong>10×</strong>, transactions <strong>6×</strong> by Q4 2026.
     </p>
-    <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1rem;">
-      <span class="badge badge-aeo" style="background: rgba(99, 102, 241, 0.12); color: #93c5fd; border: 1px solid rgba(59, 130, 246, 0.25);">Content Funnel</span>
-      <span class="badge badge-seo" style="background: rgba(20, 184, 166, 0.12); color: #5eead4; border: 1px solid rgba(20, 184, 166, 0.25);">Co-Citation Hubs</span>
-      <span class="badge badge-geo" style="background: rgba(236, 72, 153, 0.12); color: #fbcfe8; border: 1px solid rgba(236, 72, 153, 0.25);">Omnichannel Authority</span>
+    <div style="background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:10px;padding:1rem 1.25rem;margin-bottom:1.25rem;">
+      <div style="font-size:0.75rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;margin-bottom:0.6rem;">Emotion-First Brand Voice Rules</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.6rem;font-size:0.82rem;">
+        <div style="color:var(--red);">✗ "Browse 50,000 construction materials"</div>
+        <div style="color:var(--green);">✓ "Your dream room is 3 clicks away"</div>
+        <div style="color:var(--red);">✗ "AI interior design generator tool"</div>
+        <div style="color:var(--green);">✓ "See it before you build it"</div>
+        <div style="color:var(--red);">✗ "Verified supplier network India"</div>
+        <div style="color:var(--green);">✓ "Materials that arrive. Exactly as you imagined."</div>
+        <div style="color:var(--red);">✗ "B2B marketplace platform"</div>
+        <div style="color:var(--green);">✓ "Build it right. For the people who matter most."</div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:0.75rem;margin-bottom:1rem;">
+      <div style="background:rgba(99,102,241,0.08);border:1px solid rgba(99,102,241,0.25);border-radius:8px;padding:0.75rem;text-align:center;">
+        <div style="font-size:1.4rem;font-weight:700;color:#a5b4fc;">DR 10</div>
+        <div style="font-size:0.72rem;color:var(--text3);">Current Domain Rating</div>
+      </div>
+      <div style="background:rgba(20,184,166,0.08);border:1px solid rgba(20,184,166,0.25);border-radius:8px;padding:0.75rem;text-align:center;">
+        <div style="font-size:1.4rem;font-weight:700;color:#5eead4;">DR 45+</div>
+        <div style="font-size:0.72rem;color:var(--text3);">Q4 2026 Target</div>
+      </div>
+      <div style="background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.25);border-radius:8px;padding:0.75rem;text-align:center;">
+        <div style="font-size:1.4rem;font-weight:700;color:#86efac;">10×</div>
+        <div style="font-size:0.72rem;color:var(--text3);">Organic Lead Growth</div>
+      </div>
+      <div style="background:rgba(249,115,22,0.08);border:1px solid rgba(249,115,22,0.25);border-radius:8px;padding:0.75rem;text-align:center;">
+        <div style="font-size:1.4rem;font-weight:700;color:#fed7aa;">6×</div>
+        <div style="font-size:0.72rem;color:var(--text3);">Organic Transactions</div>
+      </div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:0.6rem;">
+      <span class="badge badge-aeo">Emotion-First Funnel</span>
+      <span class="badge badge-seo">AI Visualizer Moat</span>
+      <span class="badge badge-geo">Partner Trust Network</span>
+      <span class="badge badge-info">FORUMONWORLD.AI Hub</span>
     </div>
   </div>
 
-  <!-- Branding Grid -->
-  <div class="branding-grid">
-    <!-- Card 1: Content Funnel -->
+  <!-- ── 5-PILLAR STRATEGY GRID ── -->
+  <div class="branding-grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));">
+
+    <!-- PILLAR 1: EMOTION-FIRST CONTENT ENGINE -->
     <div class="brand-card">
       <div class="brand-tag tag-funnel">Content Engine</div>
-      <div class="brand-card-icon">📝</div>
-      <h4 class="brand-card-title">B2T Content Engine (TOFU/MOFU/BOFU)</h4>
-      <p class="brand-card-desc">Implement a dynamic content delivery system mapping to our trade audience's commercial query intent cycles.</p>
-      
+      <div class="brand-card-icon">💭</div>
+      <h4 class="brand-card-title">Lead with the Feeling. Content That Converts Emotion into Action.</h4>
+      <p class="brand-card-desc">Every piece of content must answer: "Does this make someone feel seen?" Before any SEO keyword, before any call-to-action — the content must resonate with the emotional state the customer is already in.</p>
       <div class="brand-sub-list">
         <div class="brand-sub-item">
-          <strong>TOFU: Informational Traffic Generators</strong>
-          Deploy cement, steel, and brick calculators alongside technical construction guides to capture top-of-funnel trade professional searches.
+          <strong>TOFU: Capture the Daydream Stage</strong>
+          Target people in the <em>desire phase</em> — not yet ready to buy, just imagining. Headlines: "What Would Your Living Room Look Like With Marble Flooring?", "Before &amp; After: 3 Rooms Transformed Using Only Indian Materials Under ₹2L". These are Pinterest-style aspirational hooks that bring traffic with zero purchase pressure.
         </div>
         <div class="brand-sub-item">
-          <strong>MOFU: In-Depth Problem Solving</strong>
-          Publish customer success case studies showing how buildingworld.ai solved XYZ supply bottlenecks for builders. Provide regional supplier evaluation indices.
+          <strong>MOFU: Validate the Feeling With Social Proof</strong>
+          Customer transformation stories — real before/after projects with the Visualizer render shown alongside the actual built room. Format: "Priya from Bengaluru was tired of her 10-year-old kitchen. Here's how she redesigned it in 20 minutes and sourced everything from BuildingWorld.ai." Emotion + data + outcome.
         </div>
         <div class="brand-sub-item">
-          <strong>BOFU: User-Generated Content & RFQs</strong>
-          Leverage supplier reviews, client testimonials, video delivery validations, and highly optimized RFQ (Request for Quote) landing structures to convert trust to transactions.
+          <strong>BOFU: Remove the Last Fear, Not Just Show the Product</strong>
+          The conversion blocker is not "which product" — it is "what if it doesn't turn out like the design?" Remove that fear: verified supplier quality badges, delivery guarantees, real project photos. The CTA is not "Buy Now" — it is "See It In Your Room First."
         </div>
       </div>
     </div>
 
-    <!-- Card 2: Link Ecosystem -->
+    <!-- PILLAR 2: AI VISUALIZER AS EMOTIONAL TRIGGER -->
     <div class="brand-card">
-      <div class="brand-tag tag-backlinks">Link Authority</div>
-      <div class="brand-card-icon">🔗</div>
-      <h4 class="brand-card-title">High-Trust Backlink Partnerships & PR</h4>
-      <p class="brand-card-desc">Generate high-value natural backlinks using our dealer networks and media placements instead of buying link lists.</p>
-      
+      <div class="brand-tag tag-funnel" style="background:rgba(168,85,247,0.15);color:#d8b4fe;border:1px solid rgba(168,85,247,0.3);">The Moat</div>
+      <div class="brand-card-icon">🎨</div>
+      <h4 class="brand-card-title">The Visualizer Is Not a Tool. It Is the Moment of Hope.</h4>
+      <p class="brand-card-desc">The second a customer sees their own room rendered beautifully by AI, the emotional contract is made. That render is the promise. Everything after — materials, suppliers, pricing — is just fulfilling a promise they already felt.</p>
       <div class="brand-sub-list">
         <div class="brand-sub-item">
-          <strong>Partnership Link Exchange</strong>
-          Leverage our existing manufacturer and supplier network to create co-citation rings and trusted partner directories, building natural cross-linking equity.
+          <strong>6 Emotional Entry Points = 6 SEO Landing Pages</strong>
+          Each Visualizer mode targets a specific emotional state: Interior ("I hate this living room"), Exterior ("My house looks dated"), Landscape ("This garden feels dead"), Sketch ("I have an idea but can't explain it"), Style Transfer ("I love this look but in MY home"). Each page leads with the feeling, not the feature.
         </div>
         <div class="brand-sub-item">
-          <strong>Earned Media PR Campaigns</strong>
-          Distribute press releases highlighting B2B trade data, construction technology integrations, and supplier verifications to build editor-injected news links.
+          <strong>UGC Share Loop: "Show Them Your Vision"</strong>
+          Add "Share My Design" on every render output — not "download" but "show your family what's possible." WhatsApp-optimized image with BuildingWorld.ai branding. Every share is a free brand impression and a natural backlink opportunity when posted on blogs or forums.
         </div>
         <div class="brand-sub-item">
-          <strong>Co-Citation Registries</strong>
-          Establish Name-Address-Phone (NAP) consistency across verified regional indices, linking back to localized supplier subpages.
+          <strong>B2B Hook: "Wow Your Client Before the Blueprint"</strong>
+          For architects and contractors — "Show your client exactly how their space will look before you start." Renders become sales tools. Firms embed the Visualizer in their client proposals, generating branded mentions and natural backlinks from architecture practice websites.
         </div>
       </div>
     </div>
 
-    <!-- Card 3: Social & Community -->
+    <!-- PILLAR 3: PARTNER TRUST BADGE PROGRAM -->
     <div class="brand-card">
-      <div class="brand-tag tag-omnichannel">Omnichannel Presence</div>
-      <div class="brand-card-icon">📢</div>
-      <h4 class="brand-card-title">Omnichannel Brand Velocity & Community</h4>
-      <p class="brand-card-desc">Build co-occurrence signals to feed AI search algorithms, demonstrating brand prominence in real-world discussions.</p>
-      
+      <div class="brand-tag tag-backlinks">Rocklink Authority</div>
+      <div class="brand-card-icon">🤝</div>
+      <h4 class="brand-card-title">Partners That Make the Promise Believable</h4>
+      <p class="brand-card-desc">Emotion sells the dream. Partners deliver the reality. The trust badge program turns BuildingWorld.ai's supplier network into a high-authority backlink engine — each partner's "Where to Buy" page links back and says: "We trust BuildingWorld.ai to represent us."</p>
       <div class="brand-sub-list">
         <div class="brand-sub-item">
-          <strong>Social Media Promotion Loops</strong>
-          Use YouTube for supplier factory walkthroughs, and Instagram & Threads for localized material aesthetic highlights and quick quote guides.
+          <strong>Named Partner Badge Launch</strong>
+          Deploy "Verified on BuildingWorld.ai" badges with: <strong>3M, A-Class Marble, Maniramka &amp; Associates, P&amp;D Associates, Alfa Associates, SAPL, A-1 Fence, 3C3</strong> — each partner's website links to their BuildingWorld.ai supplier profile page (natural DR boost from established B2B brands).
         </div>
         <div class="brand-sub-item">
-          <strong>Community Authority Hubs</strong>
-          Monitor and answer construction sourcing questions on Reddit (r/construction, r/civilengineering), Quora, Medium, and Tumblr to drive brand discussions.
+          <strong>PR Angle: "The Platform Brands Trust to Sell Their Products"</strong>
+          Pitch to <em>Construction World, Architecture + Design, Indian Construction News</em>: "India's First AI Visualizer Platform Signs Verified Supplier Partnerships with 3M, A-Class Marble and 6 Others" — earned media at DR 50–70 with verified brand name anchors.
         </div>
         <div class="brand-sub-item">
-          <strong>Branded Search Generation</strong>
-          Foster direct navigation search loops (e.g. users searching for 'buildingworld.ai steel prices'), signaling supreme brand authority to search engines.
+          <strong>NAP Consistency for AI Citation</strong>
+          IndiaMART, JustDial, TradeIndia, G2, Capterra — consistent brand identity across all directories feeds Gemini's local citation clusters and ensures BuildingWorld.ai appears when AI answers "where to buy verified construction materials in India."
         </div>
       </div>
     </div>
-  </div>
-</div>
+
+    <!-- PILLAR 4: FORUMONWORLD.AI -->
+    <div class="brand-card">
+      <div class="brand-tag tag-funnel" style="background:rgba(20,184,166,0.15);color:#99f6e4;border:1px solid rgba(20,184,166,0.3);">Knowledge Hub</div>
+      <div class="brand-card-icon">🏛️</div>
+      <h4 class="brand-card-title">FORUMONWORLD.AI — Where the Community Validates the Dream</h4>
+      <p class="brand-card-desc">People don't trust brands. They trust people like them. FORUMONWORLD.AI is the community platform where real homeowners, architects, and contractors share their transformation stories — and the data those stories generate feeds AI RAG pipelines as authoritative citations.</p>
+      <div class="brand-sub-list">
+        <div class="brand-sub-item">
+          <strong>Story-First Content Format (Also Reverse RAG Ready)</strong>
+          "Ravi from Pune transformed his 3BHK using A-Class Marble sourced through BuildingWorld.ai — here's the full project breakdown, material costs, and before/after renders." Human story first. Data (prices, suppliers, timelines) embedded within. ChatGPT, Perplexity, Gemini ingest this as authoritative local data.
+        </div>
+        <div class="brand-sub-item">
+          <strong>Monthly Price Index = Trust Signal + Link Magnet</strong>
+          "India Construction Material Price Index — July 2026." Journalists, WhatsApp construction groups, architecture blogs all link to it. Positions BuildingWorld.ai as the data authority, not just a marketplace.
+        </div>
+        <div class="brand-sub-item">
+          <strong>Community of Decision-Makers</strong>
+          Target founding members: architects, interior designers, structural engineers, procurement heads. Goal: 1,000+ active professionals by Q3 2026. Monthly AMA sessions with partner brands (3M engineers, A-Class Marble sourcing team) generate press coverage and LinkedIn brand mentions.
+        </div>
+      </div>
+    </div>
+
+    <!-- PILLAR 5: OMNICHANNEL EMOTION AMPLIFICATION -->
+    <div class="brand-card">
+      <div class="brand-tag tag-omnichannel">Omnichannel</div>
+      <div class="brand-card-icon">📡</div>
+      <h4 class="brand-card-title">Spread the Feeling Everywhere AI Models Are Watching</h4>
+      <p class="brand-card-desc">ChatGPT, Perplexity, and Gemini form their brand associations from what they read across Reddit, YouTube, LinkedIn, and forums. Every channel must consistently carry the same emotional narrative — from dissatisfied homeowner to empowered transformer.</p>
+      <div class="brand-sub-list">
+        <div class="brand-sub-item">
+          <strong>YouTube: Before &amp; After + Factory Reality</strong>
+          Two series: (1) "The Transformation" — homeowners show the room before, the AI Visualizer render, and the finished result. (2) "Behind the Material" — inside A-Class Marble quarry, 3M adhesive lab, SAPL fabrication floor. Emotion + authenticity + authority.
+        </div>
+        <div class="brand-sub-item">
+          <strong>Instagram &amp; Threads: The Scroll-Stopping Before/After</strong>
+          AI Visualizer render posted next to the real finished room. Caption: "She was tired of her 8-year-old kitchen. 20 minutes on BuildingWorld.ai's Visualizer. 3 weeks later — this." Tag materials, link to products. Interior design community reposts at zero cost.
+        </div>
+        <div class="brand-sub-item">
+          <strong>Reddit &amp; Quora: Be the Answer, Not the Ad</strong>
+          Answer "I want to renovate my bedroom but don't know where to start" with genuine help — a Visualizer walkthrough, material recommendations with prices, verified supplier links. No promotional language. Target: top-3 AI citation for "construction material marketplace India" and "AI home design tool India" within 6 months.
+        </div>
+      </div>
+    </div>
+
+    <!-- PILLAR 6: VALIDATION ECOSYSTEM (5-10 YEAR VISION) -->
+    <div class="brand-card" style="grid-column:1/-1;background:linear-gradient(135deg,rgba(99,102,241,0.06),rgba(20,184,166,0.04));border-color:rgba(99,102,241,0.3);">
+      <div class="brand-tag" style="background:rgba(99,102,241,0.15);color:#c7d2fe;border:1px solid rgba(99,102,241,0.3);">5–10 Year Moat</div>
+      <div class="brand-card-icon">🛡️</div>
+      <h4 class="brand-card-title">Validation Ecosystem — The Promise You Actually Keep: Pre · During · Post Service</h4>
+      <p class="brand-card-desc">Emotion sells the transformation. The Validation Ecosystem is what makes BuildingWorld.ai the platform that never breaks that promise. When insurance, returns, dispute resolution, and quality assurance are all handled in one place — the emotional trust becomes structural. No new entrant can build this in under 5 years.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-top:1rem;">
+        <div class="brand-sub-item">
+          <strong>🔵 Pre-Service: Verified Before You Commit</strong>
+          GST-verified suppliers, IS standards certificates, price-lock guarantee, delivery SLA, escrow-based payment release — the emotional fear of "what if it's wrong?" is eliminated before the order is placed.
+        </div>
+        <div class="brand-sub-item">
+          <strong>🟡 During Service: Real-Time Assurance</strong>
+          Live tracking, origin inspection, in-transit cargo insurance on orders above ₹50,000, damage flagging before delivery — disputes resolved before the customer experiences them.
+        </div>
+        <div class="brand-sub-item">
+          <strong>🟢 Post-Service: BuildingWorld.ai Stands Behind Every Order</strong>
+          Structured returns, damage claims portal, dual complaints channels (B2C + B2B partner), 24hr acknowledgment / 72hr resolution SLA — not deflection to the supplier. BuildingWorld.ai mediates. Every time.
+        </div>
+        <div class="brand-sub-item">
+          <strong>📊 Public Trust Dashboard = Compounding E-E-A-T</strong>
+          Live NPS score, resolution rate, verified supplier count, total disputes resolved — publicly visible. Directly lifts Trust pillar from 21/35 to 30+/35 and becomes the primary narrative: <em>"India's most trusted construction material platform."</em>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /branding-grid -->
 
 <hr class="section-divider"/>
 
-<!-- ═══════════════════════════════════════════
-     SPRINT PLAN
-═══════════════════════════════════════════ -->
-<div class="section-label">Action Plan</div>
-<div class="section-title">Prioritized Sprint Plan</div>
-<div class="section-sub">Systemic VDS fixes affect thousands of pages simultaneously — Sprint 1 is highest ROI.</div>
+<!-- ── EXECUTION ROADMAP ── -->
+<div class="section-label">Execution Roadmap</div>
+<div class="section-title">B2T Emotion-First Action Plan</div>
+<div class="section-sub">Every sprint item leads with emotion. Features support the feeling — never the other way around.</div>
 
 <div class="sprint-section">
-  <div class="sprint-header"><div class="sprint-badge" style="color:var(--red);border-color:rgba(239,68,68,.3)">🔴 Sprint 1 — This Week</div><span style="color:var(--text3);font-size:.82rem">Critical Technical & Visibility Stabilizations</span></div>
-  <div class="sprint-item"><span class="sprint-item-num">01</span><div class="sprint-item-text">Fix <code>undefined</code> in H1 — Product Detail + Category templates (CRIT-001)</div><span class="sprint-item-tag badge badge-critical">Critical</span></div>
-  <div class="sprint-item"><span class="sprint-item-num">02</span><div class="sprint-item-text">Fix multiple H1 tags on Category pages — convert filter titles to H2/H3 (CRIT-002)</div><span class="sprint-item-tag badge badge-critical">Critical</span></div>
-  <div class="sprint-item"><span class="sprint-item-num">03</span><div class="sprint-item-text">Move product name to H1 (currently relegated to H2) on Product templates (CRIT-003)</div><span class="sprint-item-tag badge badge-critical">Critical</span></div>
-  <div class="sprint-item"><span class="sprint-item-num">04</span><div class="sprint-item-text">Shift product listing grids CSR templates to Server Components (SSR) rendering (CRIT-003)</div><span class="sprint-item-tag badge badge-critical">Critical</span></div>
-  <div class="sprint-item"><span class="sprint-item-num">05</span><div class="sprint-item-text">Fix L2 canonical URL paths — remove query parameters (CRIT-004)</div><span class="sprint-item-tag badge badge-critical">Critical</span></div>
-  <div class="sprint-item"><span class="sprint-item-num">06</span><div class="sprint-item-text">Fix Next.js CDN chunks CORS unmounting hydration crashes for crawlers (CRIT-005)</div><span class="sprint-item-tag badge badge-critical">Critical</span></div>
-  <div class="sprint-item"><span class="sprint-item-num">07</span><div class="sprint-item-text">Add <code>lang="en-IN"</code> to <code>&lt;html&gt;</code> root template layout (HIGH-002)</div><span class="sprint-item-tag badge badge-high">High</span></div>
+  <div class="sprint-header"><div class="sprint-badge" style="color:var(--red);border-color:rgba(239,68,68,.3)">🔴 Sprint 1 — This Week</div><span style="color:var(--text3);font-size:.82rem">Own the Moment of Desire — Moat &amp; Foundation Activation</span></div>
+  <div class="sprint-item"><span class="sprint-item-num">01</span><div class="sprint-item-text">Rewrite all 6 Visualizer mode landing pages with <strong>emotion-first headlines</strong> — lead with the pain/desire ("Tired of this room?", "What if your home looked like this?") before any feature description. Add "Share My Design" button on every render output screen</div><span class="sprint-item-tag badge badge-critical">Critical</span></div>
+  <div class="sprint-item"><span class="sprint-item-num">02</span><div class="sprint-item-text">Launch <strong>Partner Trust Badge Program</strong> — brief 3M, A-Class Marble, Maniramka &amp; Associates, P&amp;D Associates, Alfa Associates, SAPL, A-1 Fence, 3C3 with badge + supplier profile link integration brief</div><span class="sprint-item-tag badge badge-critical">Critical</span></div>
+  <div class="sprint-item"><span class="sprint-item-num">03</span><div class="sprint-item-text">Claim &amp; optimize: <strong>IndiaMART, JustDial, TradeIndia, G2, Capterra</strong> — brand description: "India's AI-powered home design and construction material marketplace. Design it. Source it. Build it."</div><span class="sprint-item-tag badge badge-critical">Critical</span></div>
+  <div class="sprint-item"><span class="sprint-item-num">04</span><div class="sprint-item-text">Publish first emotion-first pillar piece: <em>"She Was Tired of Her 8-Year-Old Kitchen. Here's How She Redesigned It in 20 Minutes with AI and Sourced Everything Under ₹1.5L"</em> — real or composite story, real material prices, real Visualizer renders</div><span class="sprint-item-tag badge badge-high">High</span></div>
+  <div class="sprint-item"><span class="sprint-item-num">05</span><div class="sprint-item-text">Launch <strong>FORUMONWORLD.AI</strong> — onboard first 50 founding members with a "share your transformation story" brief. Seed with 10 before/after project posts formatted for Reverse RAG ingestion</div><span class="sprint-item-tag badge badge-high">High</span></div>
 </div>
 
 <div class="sprint-section">
-  <div class="sprint-header"><div class="sprint-badge" style="color:var(--high);border-color:rgba(249,115,22,.3)">🟠 Sprint 2 — This Month</div><span style="color:var(--text3);font-size:.82rem">Demand & Rich Results Activation</span></div>
-  <div class="sprint-item"><span class="sprint-item-num">08</span><div class="sprint-item-text">Complete Product schema — add rating, returns policy, shipping, seller (HIGH-001)</div><span class="sprint-item-tag badge badge-high">High</span></div>
-  <div class="sprint-item"><span class="sprint-item-num">09</span><div class="sprint-item-text">Add BreadcrumbList schema to all Category and Product templates (HIGH-004)</div><span class="sprint-item-tag badge badge-high">High</span></div>
-  <div class="sprint-item"><span class="sprint-item-num">10</span><div class="sprint-item-text">Fix Organization schema properties (type, empty telephone, email domain) (HIGH-003)</div><span class="sprint-item-tag badge badge-high">High</span></div>
-  <div class="sprint-item"><span class="sprint-item-num">11</span><div class="sprint-item-text">Fix WebSite SearchAction target path in schema (HIGH-006)</div><span class="sprint-item-tag badge badge-high">High</span></div>
-  <div class="sprint-item"><span class="sprint-item-num">12</span><div class="sprint-item-text">Add H1 and visible FAQ section to L0 page layout (HIGH-007)</div><span class="sprint-item-tag badge badge-high">High</span></div>
-  <div class="sprint-item"><span class="sprint-item-num">13</span><div class="sprint-item-text">Prompt Sentiment to Keyword Alignment — link keywords to on-page trust/guarantee cards</div><span class="sprint-item-tag badge badge-medium">Medium</span></div>
-  <div class="sprint-item"><span class="sprint-item-num">14</span><div class="sprint-item-text">Ingest and sync external reviews ratings into JSON-LD product markup</div><span class="sprint-item-tag badge badge-medium">Medium</span></div>
-  <div class="sprint-item"><span class="sprint-item-num">15</span><div class="sprint-item-text">Bind checkout forms to declarative W3C WebMCP attributes for AI agent checkout</div><span class="sprint-item-tag badge badge-medium">Medium</span></div>
+  <div class="sprint-header"><div class="sprint-badge" style="color:var(--high);border-color:rgba(249,115,22,.3)">🟠 Sprint 2 — This Month</div><span style="color:var(--text3);font-size:.82rem">Amplify the Story — PR, YouTube &amp; Partner Authority Burst</span></div>
+  <div class="sprint-item"><span class="sprint-item-num">06</span><div class="sprint-item-text">Deploy trust badges on partner sites — <strong>8 natural high-DR backlinks from named partners within 30 days</strong>. Each links to the partner's verified BuildingWorld.ai supplier profile</div><span class="sprint-item-tag badge badge-high">High</span></div>
+  <div class="sprint-item"><span class="sprint-item-num">07</span><div class="sprint-item-text">Pitch PR to <strong>Construction World, Architecture + Design, Indian Construction News</strong> — angle: "India's First Platform Where You Design a Room With AI and Source Every Material From a Verified Dealer in the Same Click" — target DR 50–70 editorial placements</div><span class="sprint-item-tag badge badge-high">High</span></div>
+  <div class="sprint-item"><span class="sprint-item-num">08</span><div class="sprint-item-text">Film first 3 YouTube videos: (1) <em>"Before &amp; After: Mumbai Apartment Transformed with AI in 20 Minutes"</em> (2) A-Class Marble quarry tour (3) <em>"How Architects Use BuildingWorld.ai to Wow Clients Before the Blueprint"</em></div><span class="sprint-item-tag badge badge-high">High</span></div>
+  <div class="sprint-item"><span class="sprint-item-num">09</span><div class="sprint-item-text">Publish <strong>"India Construction Material Price Index — July 2026"</strong> on FORUMONWORLD.AI — city-wise TMT bars, cement, marble prices. Share to construction WhatsApp groups for organic citation and link building</div><span class="sprint-item-tag badge badge-medium">Medium</span></div>
+  <div class="sprint-item"><span class="sprint-item-num">10</span><div class="sprint-item-text">Begin <strong>Reddit/Quora emotional authority seeding</strong> — answer renovation and sourcing questions with genuine help + AI render examples. Never mention the product first — solve the feeling first, show BuildingWorld.ai as the path to resolution second</div><span class="sprint-item-tag badge badge-medium">Medium</span></div>
 </div>
 
 <div class="sprint-section">
-  <div class="sprint-header"><div class="sprint-badge" style="color:var(--medium);border-color:rgba(234,179,8,.25)">🟡 Sprint 3 — Next Quarter</div><span style="color:var(--text3);font-size:.82rem">Scalability & Programmatic SEO Scale</span></div>
-  <div class="sprint-item"><span class="sprint-item-num">16</span><div class="sprint-item-text">Re-architect L1/L2 category views to nested dynamic path subfolders (SSG/ISR)</div><span class="sprint-item-tag badge badge-medium">Medium</span></div>
-  <div class="sprint-item"><span class="sprint-item-num">17</span><div class="sprint-item-text">Deploy CloudFront Edge redirect logs to reclaim migrated link equity</div><span class="sprint-item-tag badge badge-medium">Medium</span></div>
-  <div class="sprint-item"><span class="sprint-item-num">18</span><div class="sprint-item-text">Reverse RAG Formatting — format content grids to semantic answer-first chunks</div><span class="sprint-item-tag badge badge-medium">Medium</span></div>
-  <div class="sprint-item"><span class="sprint-item-num">19</span><div class="sprint-item-text">Add live-retrieval AI search crawlers (Perplexity-User, Claude-SearchBot) to robots.txt</div><span class="sprint-item-tag badge badge-medium">Medium</span></div>
+  <div class="sprint-header"><div class="sprint-badge" style="color:var(--medium);border-color:rgba(234,179,8,.25)">🟡 Sprint 3 — Next Quarter</div><span style="color:var(--text3);font-size:.82rem">Community, UGC Scale &amp; Topical Authority Compounding</span></div>
+  <div class="sprint-item"><span class="sprint-item-num">11</span><div class="sprint-item-text">Launch <strong>Visualizer "Project Showcase" campaign</strong> — architects and homeowners submit AI renders + final built photos. Feature on Instagram, LinkedIn, FORUMONWORLD.AI. Each showcase post = natural backlink bait for architecture and interior design bloggers</div><span class="sprint-item-tag badge badge-medium">Medium</span></div>
+  <div class="sprint-item"><span class="sprint-item-num">12</span><div class="sprint-item-text">Deploy <strong>emotion-first B2B calculators</strong>: "How Much Will My Dream Room Actually Cost?" (not "steel tonnage estimator") — TOFU traffic capture with high-intent branded return visits</div><span class="sprint-item-tag badge badge-medium">Medium</span></div>
+  <div class="sprint-item"><span class="sprint-item-num">13</span><div class="sprint-item-text">Build <strong>topical authority clusters</strong> on FORUMONWORLD.AI anchored in transformation stories — Cement grade choices for home builds, Steel selection for residential vs commercial, Marble vs engineered stone debate — feeds AI citations for material-specific queries</div><span class="sprint-item-tag badge badge-medium">Medium</span></div>
+  <div class="sprint-item"><span class="sprint-item-num">14</span><div class="sprint-item-text">Grow FORUMONWORLD.AI to <strong>500 active members</strong> — monthly AMA: "Ask a 3M Product Engineer Anything About Adhesives", "A-Class Marble Sourcing Team Live Q&amp;A" — drives press coverage and authentic brand co-citation</div><span class="sprint-item-tag badge badge-medium">Medium</span></div>
 </div>
 
 <div class="sprint-section">
-  <div class="sprint-header"><div class="sprint-badge" style="color:var(--low);border-color:rgba(34,197,94,.25)">🟢 Sprint 4 — Programmatic Authority Scale & Dynamic Funnels</div><span style="color:var(--text3);font-size:.82rem">Compounding link equity and content variety</span></div>
-  <div class="sprint-item"><span class="sprint-item-num">20</span><div class="sprint-item-text">NLP Dynamic Phrasing Engine — implement dynamic variations to avoid duplicate content penalties</div><span class="sprint-item-tag badge badge-low">Low</span></div>
-  <div class="sprint-item"><span class="sprint-item-num">21</span><div class="sprint-item-text">Deploy B2B steel/cement calculators and launch TOFU/MOFU/BOFU content engines</div><span class="sprint-item-tag badge badge-low">Low</span></div>
-  <div class="sprint-item"><span class="sprint-item-num">22</span><div class="sprint-item-text">Establish partner link exchanges & press release earned media PR backlinks</div><span class="sprint-item-tag badge badge-low">Low</span></div>
-  <div class="sprint-item"><span class="sprint-item-num">23</span><div class="sprint-item-text">Cultivate brand mentions loop on LinkedIn/Reddit/X/Threads/YouTube/Quora/Medium</div><span class="sprint-item-tag badge badge-low">Low</span></div>
+  <div class="sprint-header"><div class="sprint-badge" style="color:var(--low);border-color:rgba(34,197,94,.25)">🟢 Sprint 4 — Long Term</div><span style="color:var(--text3);font-size:.82rem">AI Entity Compounding &amp; Market Leader Narrative</span></div>
+  <div class="sprint-item"><span class="sprint-item-num">15</span><div class="sprint-item-text">Establish <strong>Wikipedia / Wikidata entity</strong> for BuildingWorld.ai — enables direct Knowledge Graph ingestion. Once established, ChatGPT, Gemini, Perplexity recall the brand without any prompt engineering</div><span class="sprint-item-tag badge badge-low">Low</span></div>
+  <div class="sprint-item"><span class="sprint-item-num">16</span><div class="sprint-item-text">Engineer <strong>branded search loops</strong> — newsletters and partner campaigns drive users to search "buildingworld.ai room design", "buildingworld visualizer" — branded search volume signals market leader authority to Google</div><span class="sprint-item-tag badge badge-low">Low</span></div>
+  <div class="sprint-item"><span class="sprint-item-num">17</span><div class="sprint-item-text">Scale <strong>FORUMONWORLD.AI to 1,000+ professionals</strong> — forum becomes primary co-citation engine feeding AI RAG pipelines as India's #1 construction procurement and design reference</div><span class="sprint-item-tag badge badge-low">Low</span></div>
+  <div class="sprint-item"><span class="sprint-item-num">18</span><div class="sprint-item-text">Achieve <strong>top-3 AI citation</strong> in ChatGPT, Perplexity, Gemini for: "AI interior design tool India", "construction material marketplace India", "verified building material suppliers India", "home design and material sourcing India"</div><span class="sprint-item-tag badge badge-low">Low</span></div>
 </div>
 
-<hr class="section-divider"/>
-
-<div style="text-align: center; margin-top: 3rem; color: var(--text3); font-size: 0.85rem; padding: 1.5rem 1.5rem 4rem; border-top: 1px solid var(--border);">
-  Report Signature: <strong>Giriish | Organic Gorwth Architec | Founders of VDS | Father of SEO</strong>
-  <span style="font-size: 0.78rem; color: var(--text3); margin-top: 0.5rem; display: block;">
-    Audited & Certified via the Visibility-to-Demand System (VDS) Framework · <a href="https://github.com/seobiopse/buildingworld-dot-ai-VDS-signature-audit.git" target="_blank" style="color: var(--accent); text-decoration: none; font-weight: 600;">Git Repo</a>
-  </span>
+<div class="sprint-section">
+  <div class="sprint-header"><div class="sprint-badge" style="color:#a5b4fc;border-color:rgba(99,102,241,.4);font-size:.85rem;padding:.4rem 1rem;">🌐 5–10 Year Vision</div><span style="color:var(--text3);font-size:.82rem">Validation Ecosystem — The Moat Competitors Cannot Build Overnight</span></div>
+  <div style="background:rgba(99,102,241,0.06);border:1px solid rgba(99,102,241,0.2);border-radius:8px;padding:.75rem 1rem;margin-bottom:1rem;font-size:.83rem;color:var(--text2);line-height:1.6;"><strong style="color:#a5b4fc;">Strategic Horizon: 2031–2036.</strong> These are not sprint items — they are the foundations of a structural ecosystem moat. Each layer takes 1–2 years to build correctly. Begun early, they compound into an insurmountable competitive advantage that no new entrant can replicate without matching time investment.</div>
+  <div class="sprint-item"><span class="sprint-item-num">19</span><div class="sprint-item-text">Deploy <strong>Supplier Credential Verification System</strong> — GST check, IS standards compliance badge, factory inspection checklist. "BuildingWorld.ai Verified" badge becomes the trust signal customers search for before any order is placed</div><span class="sprint-item-tag badge badge-critical">Critical</span></div>
+  <div class="sprint-item"><span class="sprint-item-num">20</span><div class="sprint-item-text">Launch <strong>Escrow-Based Payment System</strong> — payment released only after delivery confirmation + quality check. Eliminates India's #1 B2B construction fear: "What if I pay and the material arrives wrong or never?"</div><span class="sprint-item-tag badge badge-high">High</span></div>
+  <div class="sprint-item"><span class="sprint-item-num">21</span><div class="sprint-item-text">Partner with <strong>cargo insurance provider</strong> — all orders above ₹50,000 auto-insured for in-transit damage, BuildingWorld.ai manages claims end-to-end. Creates SEO content moat: "insured building material delivery India"</div><span class="sprint-item-tag badge badge-high">High</span></div>
+  <div class="sprint-item"><span class="sprint-item-num">22</span><div class="sprint-item-text">Build <strong>dual complaints portal</strong> — separate B2C (customers) and B2B (partner dealers) channels. SLA: 24hr acknowledgment, 72hr resolution. Public resolution rate transforms complaint handling into a trust signal and E-E-A-T asset</div><span class="sprint-item-tag badge badge-medium">Medium</span></div>
+  <div class="sprint-item"><span class="sprint-item-num">23</span><div class="sprint-item-text">Publish <strong>live Public Trust Dashboard</strong> — NPS score, resolution rate, verified supplier count. Lifts E-E-A-T Trust pillar from 21/35 to 30+/35 and becomes the primary brand narrative: <em>"India's most trusted construction and design platform"</em></div><span class="sprint-item-tag badge badge-low">Low</span></div>
 </div>
+
+</div><!-- /panel-branding -->
+
+
 </div><!-- /container -->
 
 <!-- STICKY FOOTER -->
