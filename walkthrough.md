@@ -90,3 +90,15 @@ To certify the audit deliverables under the proprietary organic growth framework
    - Updated all report signatures to include: `Audited & Certified via the Visibility-to-Demand System (VDS) Framework · seobiopse.com` across `index.html`, `FULL-AUDIT-REPORT-2026-06-15.md`, `RAW-vs-RENDERED-AUDIT-2026-06-15.md`, and `amazon_vs_buildingworld_comparison.md`.
    - Updated `README.md` to index the new VDS report file `vds-audit.md`.
 
+---
+
+## 🗑️ Screenshot Cleanup and General Polish (June 17, 2026)
+
+To ensure all visuals in the audit report are contextually relevant to the technical cards, we removed placeholder screenshots and replaced card contents with highly optimized representations:
+1. **Removed Irrelevant Screenshots:**
+   - **AXO-1.5 (AI Crawler Access):** Removed the SEMrush backlinks list screenshot and corresponding caption.
+   - **AXO-1.7 (Corpus Permissions):** Removed the SEMrush backlinks list screenshot and caption.
+   - **AXO-1.8 (Machine Index):** Removed the SEMrush backlinks list screenshot and caption.
+   - **Genuine Strengths:** Removed the `screenshot-gallery` containing SEMrush domain statistics and backlinks list screenshots, as they were not matching the sitemaps and robots.txt descriptions.
+2. **Verified Branding Strategy Layout:**
+   - Confirmed that Pillars 1, 2, and 3 have clean vertical paragraph spacing, lists, and formatted headers matching Pillars 4, 5, and 6, showing correctly on mobile/tablet resolutions.
