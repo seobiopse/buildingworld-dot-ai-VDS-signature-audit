@@ -1,0 +1,11 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# Agent files
+.gemini/
+*~
+*.tmp
+implementation_plan.md
+task.md
+walkthrough.md
