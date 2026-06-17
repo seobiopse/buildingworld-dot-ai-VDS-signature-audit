@@ -44,7 +44,7 @@ name: Deploy Audit Report to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - master
     paths:
       - 'index.html'
       - 'screenshots/**'
