@@ -29,52 +29,6 @@ Additionally, the following detailed reports are stored in the repository:
 
 ---
 
-## 🌐 How to Share the Interactive HTML Dashboard
-
-The dashboard [index.html](file:///e:/Personal%20Project/SEO%20Biopse/Building%20World%20AI/index.html) is built with vanilla HTML/CSS and is fully responsive. It functions as a client-shareable dashboard with interactive checklist capability (saves checked progress in localStorage).
-
-### Method 1: Automatic Deployment via GitHub Actions (Recommended)
-You can configure a GitHub Action to deploy the dashboard directly to GitHub Pages whenever you push updates.
-
-Create a workflow file in `.github/workflows/deploy-report.yml`:
-
-```yaml
-name: Deploy Audit Report to GitHub Pages
-
-on:
-  push:
-    branches:
-      - master
-    paths:
-      - 'index.html'
-      - 'screenshots/**'
-
-permissions:
-  contents: write
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
-```
-
-Once the action runs, the report will be available publicly at `https://<your-username>.github.io/<repository-name>/`.
-
-### Method 2: Manual Sharing
-Because `index.html` is a standalone file, you can:
-1. Double-click the file to run it locally in any web browser.
-2. Zip the repository files (`index.html` and `screenshots` folder) and email it directly to the client.
-
----
-
 ## ⚡ Key Findings Summarized (Amazon vs. BuildingWorld.ai)
 
 1. **The URL Routing Fallacy:** The client's assertion that "Amazon uses query parameters for category levels" is incorrect. Amazon uses unique path-based slugs (e.g., `/Kitchen-Fixtures/b` vs `/Kitchen-Taps/b`) for different levels and only uses parameters for lookups. BuildingWorld's L1/L2 path sharing causes search engines to de-index L2 pages.
